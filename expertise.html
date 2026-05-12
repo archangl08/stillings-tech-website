@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Software & Technology Expertise | Stillings Technology Group | San Diego</title>
+<meta name="description" content="50+ tools and platforms deployed across managed IT, cybersecurity, identity management, AI automation, and more. See the full technology stack from Stillings Technology Group.">
+<link rel="canonical" href="https://stillings.tech/expertise">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{overflow-x:hidden;max-width:100%;touch-action:pan-y}
+:root{
+  --navy:#0D2137;--primary:#1B3A5C;--accent:#2E86AB;--light-accent:#48B8D0;
+  --bg-light:#E8F1F8;--bg:#f8fafc;--card:#fff;--text:#2a2a2a;--muted:#6b7280;
+  --white:#ffffff;--warm:#f0f7fb;
+  --serif:'DM Serif Display',Georgia,serif;--sans:'Plus Jakarta Sans','Segoe UI',sans-serif;
+}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--bg);color:var(--text);overflow-x:hidden}
+
+/* === NAV === */
+nav{position:fixed;top:0;width:100%;z-index:100;padding:18px 0;transition:background .3s,padding .3s,box-shadow .3s;background:rgba(13,33,55,0.98)}
+nav.scrolled{background:rgba(13,33,55,0.98);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);padding:12px 0;box-shadow:0 2px 20px rgba(0,0,0,0.2)}
+.nav-inner{max-width:1200px;margin:0 auto;padding:0 40px;display:flex;align-items:center;justify-content:space-between}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none}
+.logo svg{display:block}
+.logo-bar{width:3px;height:36px;background:linear-gradient(180deg,var(--accent),var(--light-accent));border-radius:2px}
+.logo-text{display:flex;flex-direction:column}
+.logo-name{font-family:var(--serif);font-size:22px;color:var(--white);letter-spacing:2px;line-height:1.1}
+.logo-sub{font-size:10px;color:var(--light-accent);letter-spacing:4px;text-transform:uppercase;margin-top:2px}
+.nav-links{display:flex;gap:32px;align-items:center}
+.nav-links a{color:rgba(255,255,255,0.8);text-decoration:none;font-size:14px;font-weight:500;letter-spacing:.5px;transition:color .2s}
+.nav-links a:hover{color:var(--white)}
+.nav-cta{background:var(--accent)!important;color:var(--white)!important;padding:10px 24px;border-radius:6px;font-weight:600;transition:all .2s!important}
+.nav-cta:hover{background:var(--light-accent)!important;transform:translateY(-1px)}
+.menu-toggle{display:none;background:none;border:none;cursor:pointer;padding:8px}
+.menu-toggle svg{stroke:white;width:28px;height:28px}
+
+/* === PAGE HERO === */
+.page-hero{overflow:hidden;background:linear-gradient(135deg,var(--navy) 0%,var(--primary) 55%,#1a4a6e 100%);padding:140px 40px 80px;position:relative;overflow:hidden}
+.page-hero::before{content:'';position:absolute;inset:0;
+  background:radial-gradient(ellipse at 75% 30%,rgba(46,134,171,0.15) 0%,transparent 60%),
+              radial-gradient(ellipse at 15% 80%,rgba(72,184,208,0.08) 0%,transparent 50%);pointer-events:none}
+.page-hero-grid{position:absolute;inset:0;
+  background-image:linear-gradient(rgba(255,255,255,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.03) 1px,transparent 1px);
+  background-size:60px 60px;pointer-events:none}
+.page-hero-inner{max-width:1200px;margin:0 auto;position:relative;z-index:2}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(46,134,171,0.15);border:1px solid rgba(46,134,171,0.3);
+  padding:8px 18px;border-radius:100px;margin-bottom:28px}
+.hero-badge span{font-size:12px;color:var(--light-accent);letter-spacing:2px;text-transform:uppercase;font-weight:600}
+.hero-badge .dot{width:6px;height:6px;background:var(--light-accent);border-radius:50%;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+.page-hero h1{font-family:var(--serif);font-size:clamp(36px,4.5vw,56px);color:var(--white);line-height:1.1;margin-bottom:16px}
+.page-hero h1 em{font-style:normal;color:var(--light-accent)}
+.page-hero p{font-size:18px;color:rgba(255,255,255,0.7);max-width:640px;line-height:1.7;margin-bottom:36px}
+.stats-row{display:flex;gap:20px;flex-wrap:wrap}
+.stat-pill{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);border-radius:12px;padding:14px 24px;display:flex;align-items:center;gap:12px}
+.stat-pill .num{font-family:var(--serif);font-size:28px;color:var(--light-accent)}
+.stat-pill .label{font-size:12px;color:rgba(255,255,255,0.5);line-height:1.4}
+
+/* === CONTENT === */
+.content{max-width:1100px;margin:0 auto;padding:64px 40px 80px}
+
+.category{margin-bottom:40px}
+.cat-header{display:flex;align-items:center;gap:14px;margin-bottom:18px}
+.cat-icon{width:44px;height:44px;background:linear-gradient(135deg,var(--primary),var(--accent));border-radius:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.cat-icon svg{width:22px;height:22px;stroke:white;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.cat-title{font-family:var(--serif);font-size:22px;color:var(--primary)}
+.tools-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:10px}
+.tool{background:var(--card);border:1px solid #e5e7eb;border-radius:10px;padding:14px 18px;transition:all .2s;position:relative;overflow:hidden}
+.tool::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--accent),var(--light-accent));transform:scaleX(0);transition:transform .3s;transform-origin:left}
+.tool:hover{border-color:var(--accent);box-shadow:0 4px 16px rgba(27,58,92,0.07);transform:translateY(-2px)}
+.tool:hover::before{transform:scaleX(1)}
+.tool-name{font-size:14px;font-weight:700;color:var(--primary)}
+.tool-desc{font-size:11px;color:var(--muted);margin-top:3px;line-height:1.5}
+
+/* Section divider */
+.cat-divider{height:1px;background:linear-gradient(90deg,#e5e7eb,transparent);margin-bottom:40px}
+
+/* === CTA STRIP === */
+.cta-strip{background:linear-gradient(135deg,var(--navy),var(--primary));padding:64px 40px;text-align:center;position:relative;overflow:hidden}
+.cta-strip::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 50%,rgba(72,184,208,0.1),transparent 60%);pointer-events:none}
+.cta-strip-inner{max-width:600px;margin:0 auto;position:relative;z-index:1}
+.cta-strip h2{font-family:var(--serif);font-size:clamp(28px,3vw,40px);color:var(--white);margin-bottom:12px}
+.cta-strip p{font-size:17px;color:rgba(255,255,255,0.65);margin-bottom:32px;line-height:1.7}
+.btn-primary{background:var(--accent);color:var(--white);padding:16px 36px;border-radius:8px;text-decoration:none;font-weight:600;font-size:16px;
+  transition:all .3s;display:inline-flex;align-items:center;gap:8px}
+.btn-primary:hover{background:var(--light-accent);transform:translateY(-2px);box-shadow:0 8px 30px rgba(46,134,171,0.3)}
+.btn-primary svg{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+
+/* === FOOTER === */
+footer{background:var(--navy);padding:40px 40px 28px;border-top:1px solid rgba(255,255,255,0.06)}
+.footer-inner{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px}
+.footer-logo{display:flex;align-items:center;gap:10px}
+.footer-name{font-family:var(--serif);font-size:18px;color:var(--white);letter-spacing:1px}
+.footer-sub{font-size:9px;color:rgba(255,255,255,0.3);letter-spacing:3px;text-transform:uppercase}
+.footer-copy{font-size:13px;color:rgba(255,255,255,0.3)}
+.footer-links{display:flex;gap:24px}
+.footer-links a{color:rgba(255,255,255,0.4);text-decoration:none;font-size:13px;transition:color .2s}
+.footer-links a:hover{color:var(--white)}
+
+/* === RESPONSIVE === */
+@media(max-width:900px){
+  .nav-links{display:none}
+  .menu-toggle{display:block}
+  .page-hero{overflow:hidden;padding:120px 24px 60px}
+  .content{padding:48px 24px 64px}
+  .cta-strip{padding:48px 24px}
+  footer{padding:32px 24px}
+  .footer-inner{flex-direction:column;align-items:flex-start;gap:16px}
+  .footer-links{flex-wrap:wrap;gap:16px}
+  .tools-grid{grid-template-columns:repeat(auto-fill,minmax(160px,1fr))}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="https://stillings.tech" class="logo" aria-label="Stillings Technology Group">
+      <svg height="40" viewBox="0 0 260 40" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:block;overflow:visible">
+        <rect x="0"  y="29" width="8" height="11" rx="2" fill="#48B8D0"/>
+        <rect x="11" y="23" width="8" height="17" rx="2" fill="#3AA3BE"/>
+        <rect x="22" y="16" width="8" height="24" rx="2" fill="#2E86AB"/>
+        <rect x="33" y="8"  width="8" height="32" rx="2" fill="#246089"/>
+        <rect x="44" y="1"  width="8" height="39" rx="2" fill="#1B3A5C"/>
+        <text x="60" y="26" font-family="Sora,'Plus Jakarta Sans',sans-serif" font-weight="700" font-size="22" letter-spacing="2" fill="white" textLength="152" lengthAdjust="spacing">STILLINGS</text>
+        <text x="60" y="38" font-family="Sora,'Plus Jakarta Sans',sans-serif" font-weight="400" font-size="9.2" fill="#48B8D0" textLength="152" lengthAdjust="spacing">TECHNOLOGY GROUP</text>
+      </svg>
+    </a>
+    <div class="nav-links">
+      <a href="https://stillings.tech#services">Services</a>
+      <a href="https://stillings.tech/about">About</a>
+      <a href="https://stillings.tech#process">How We Work</a>
+      <a href="https://stillings.tech/expertise">Tech Stack</a>
+      <a href="https://stillings.tech#service-area">Service Area</a>
+      <a href="https://stillings.tech/consultation" class="nav-cta">Free Consultation</a>
+    </div>
+    <button class="menu-toggle" aria-label="Menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+  </div>
+</nav>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="page-hero-grid"></div>
+  <div class="page-hero-inner">
+    <div class="hero-badge"><div class="dot"></div><span>Technology Stack</span></div>
+    <h1>Software & <em>Technology</em> Expertise</h1>
+    <p>The platforms, tools, and technologies we deploy, manage, and support across our client environments — from SMBs to enterprise-scale organizations.</p>
+    <div class="stats-row">
+      <div class="stat-pill"><div class="num">50+</div><div class="label">Tools &<br>Platforms</div></div>
+      <div class="stat-pill"><div class="num">15+</div><div class="label">Years<br>Experience</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTENT -->
+<div class="content">
+
+  <!-- IDENTITY & ACCESS MANAGEMENT -->
+  <div class="category">
+    <div class="cat-header">
+      <div class="cat-icon"><svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
+      <div class="cat-title">Identity & Access Management</div>
+    </div>
+    <div class="tools-grid">
+      <div class="tool"><div class="tool-name">Okta</div><div class="tool-desc">SSO, MFA, lifecycle management</div></div>
+      <div class="tool"><div class="tool-name">Microsoft Entra ID</div><div class="tool-desc">Azure AD, conditional access</div></div>
+      <div class="tool"><div class="tool-name">BeyondTrust</div><div class="tool-desc">Privileged access management</div></div>
+      <div class="tool"><div class="tool-name">Azure PIM</div><div class="tool-desc">Privileged Identity Management</div></div>
+      <div class="tool"><div class="tool-name">Duo Security</div><div class="tool-desc">MFA, trusted access (beta tester)</div></div>
+      <div class="tool"><div class="tool-name">Zero-Trust Architecture</div><div class="tool-desc">Design & implementation</div></div>
+      <div class="tool"><div class="tool-name">Conditional Access Policies</div><div class="tool-desc">RBAC, least-privilege governance</div></div>
+      <div class="tool"><div class="tool-name">Employee Lifecycle Management</div><div class="tool-desc">Joiner/Mover/Leaver workflows</div></div>
+    </div>
+  </div>
+  <div class="cat-divider"></div>
+
+  <!-- ENDPOINT & DEVICE MANAGEMENT -->
+  <div class="category">
+    <div class="cat-header">
+      <div class="cat-icon"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
+      <div class="cat-title">Endpoint & Device Management</div>
+    </div>
+    <div class="tools-grid">
+      <div class="tool"><div class="tool-name">JAMF Pro</div><div class="tool-desc">Apple MDM, macOS fleet management</div></div>
+      <div class="tool"><div class="tool-name">Microsoft Intune</div><div class="tool-desc">Windows/cross-platform MDM</div></div>
+      <div class="tool"><div class="tool-name">Apple Business Manager</div><div class="tool-desc">Device enrollment, VPP, DEP</div></div>
+      <div class="tool"><div class="tool-name">CrashPlan</div><div class="tool-desc">Endpoint backup & recovery</div></div>
+      <div class="tool"><div class="tool-name">Veeam</div><div class="tool-desc">Backup & disaster recovery</div></div>
+      <div class="tool"><div class="tool-name">BlueTally</div><div class="tool-desc">IT asset management & tracking</div></div>
+    </div>
+  </div>
+  <div class="cat-divider"></div>
+
+  <!-- PLATFORMS & SAAS -->
+  <div class="category">
+    <div class="cat-header">
+      <div class="cat-icon"><svg viewBox="0 0 24 24"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg></div>
+      <div class="cat-title">Platforms & SaaS</div>
+    </div>
+    <div class="tools-grid">
+      <div class="tool"><div class="tool-name">Google Workspace</div><div class="tool-desc">Admin, security, migration (certified)</div></div>
+      <div class="tool"><div class="tool-name">Microsoft 365</div><div class="tool-desc">Admin, Exchange, SharePoint, Teams</div></div>
+      <div class="tool"><div class="tool-name">Slack</div><div class="tool-desc">Enterprise deployment & admin</div></div>
+      <div class="tool"><div class="tool-name">Zoom</div><div class="tool-desc">Enterprise video, Zoom Rooms</div></div>
+      <div class="tool"><div class="tool-name">Microsoft Teams</div><div class="tool-desc">Teams Rooms, enterprise voice</div></div>
+      <div class="tool"><div class="tool-name">SaaS Onboarding & Support</div><div class="tool-desc">Setup, configuration, integration & ongoing support</div></div>
+      <div class="tool"><div class="tool-name">Website Development</div><div class="tool-desc">Business websites — design, build, maintenance</div></div>
+    </div>
+  </div>
+  <div class="cat-divider"></div>
+
+  <!-- ITSM & PROJECT MANAGEMENT -->
+  <div class="category">
+    <div class="cat-header">
+      <div class="cat-icon"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
+      <div class="cat-title">ITSM & Project Management</div>
+    </div>
+    <div class="tools-grid">
+      <div class="tool"><div class="tool-name">Jira</div><div class="tool-desc">Project tracking, agile workflows</div></div>
+      <div class="tool"><div class="tool-name">Jira Service Management</div><div class="tool-desc">ITSM, service desk, SLAs</div></div>
+      <div class="tool"><div class="tool-name">Confluence</div><div class="tool-desc">Knowledge base, documentation</div></div>
+      <div class="tool"><div class="tool-name">Jira Automation</div><div class="tool-desc">Workflow automation rules</div></div>
+      <div class="tool"><div class="tool-name">Zendesk</div><div class="tool-desc">Helpdesk, ticket management</div></div>
+    </div>
+  </div>
+  <div class="cat-divider"></div>
+
+  <!-- AI & AUTOMATION -->
+  <div class="category">
+    <div class="cat-header">
+      <div class="cat-icon"><svg viewBox="0 0 24 24"><path d="M12 2a4 4 0 0 1 4 4 4 4 0 0 1-1.18 2.84L12 12l-2.82-3.16A4 4 0 0 1 8 6a4 4 0 0 1 4-4z"/><path d="M12 12l5.5 5.5"/><path d="M12 12l-5.5 5.5"/><circle cx="6.5" cy="17.5" r="2.5"/><circle cx="17.5" cy="17.5" r="2.5"/></svg></div>
+      <div class="cat-title">AI & Automation</div>
+    </div>
+    <div class="tools-grid">
+      <div class="tool"><div class="tool-name">Moveworks</div><div class="tool-desc">AI chatbot, Tier-1 ticket deflection</div></div>
+      <div class="tool"><div class="tool-name">Microsoft Copilot</div><div class="tool-desc">AI productivity assistant</div></div>
+      <div class="tool"><div class="tool-name">Atlassian Rovo</div><div class="tool-desc">AI knowledge & search</div></div>
+      <div class="tool"><div class="tool-name">Claude (Anthropic)</div><div class="tool-desc">AI assistant, workflow automation</div></div>
+    </div>
+  </div>
+  <div class="cat-divider"></div>
+
+  <!-- NETWORKING -->
+  <div class="category">
+    <div class="cat-header">
+      <div class="cat-icon"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"/><rect x="2" y="14" width="20" height="8" rx="2" ry="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg></div>
+      <div class="cat-title">Networking</div>
+    </div>
+    <div class="tools-grid">
+      <div class="tool"><div class="tool-name">Cisco Meraki</div><div class="tool-desc">Cloud-managed switching, wireless, security</div></div>
+      <div class="tool"><div class="tool-name">Ubiquiti UniFi</div><div class="tool-desc">Wireless access points, switching, routing</div></div>
+      <div class="tool"><div class="tool-name">Ubiquiti UISP</div><div class="tool-desc">ISP-grade network management & monitoring</div></div>
+      <div class="tool"><div class="tool-name">Structured Cabling</div><div class="tool-desc">Cat6/Cat6A, fiber, patch panel design</div></div>
+      <div class="tool"><div class="tool-name">Firewall Configuration</div><div class="tool-desc">Perimeter security, VPN, traffic policies</div></div>
+      <div class="tool"><div class="tool-name">Network Design</div><div class="tool-desc">Office & commercial buildouts, upgrades</div></div>
+      <div class="tool"><div class="tool-name">Starlink</div><div class="tool-desc">Satellite internet setup & integration</div></div>
+    </div>
+  </div>
+  <div class="cat-divider"></div>
+
+  <!-- AV & COLLABORATION -->
+  <div class="category">
+    <div class="cat-header">
+      <div class="cat-icon"><svg viewBox="0 0 24 24"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg></div>
+      <div class="cat-title">AV & Collaboration Hardware</div>
+    </div>
+    <div class="tools-grid">
+      <div class="tool"><div class="tool-name">Microsoft Teams Rooms</div><div class="tool-desc">Design, deployment, management</div></div>
+      <div class="tool"><div class="tool-name">Crestron</div><div class="tool-desc">AV control systems</div></div>
+      <div class="tool"><div class="tool-name">Extron</div><div class="tool-desc">AV signal processing & control</div></div>
+      <div class="tool"><div class="tool-name">QSC / Q-SYS</div><div class="tool-desc">Audio DSP, networked AV</div></div>
+      <div class="tool"><div class="tool-name">BlueJeans</div><div class="tool-desc">Video conferencing (global rollout)</div></div>
+      <div class="tool"><div class="tool-name">LifeSize</div><div class="tool-desc">Video conferencing hardware</div></div>
+      <div class="tool"><div class="tool-name">Google Meet</div><div class="tool-desc">Enterprise video (global rollout)</div></div>
+      <div class="tool"><div class="tool-name">Live Event Production</div><div class="tool-desc">Investor calls, mission launches, conferences</div></div>
+    </div>
+  </div>
+  <div class="cat-divider"></div>
+
+  <!-- SECURITY & COMPLIANCE -->
+  <div class="category">
+    <div class="cat-header">
+      <div class="cat-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+      <div class="cat-title">Security & Compliance</div>
+    </div>
+    <div class="tools-grid">
+      <div class="tool"><div class="tool-name">Zero-Trust Architecture</div><div class="tool-desc">Design & policy implementation</div></div>
+      <div class="tool"><div class="tool-name">ITAR Compliance</div><div class="tool-desc">International travel protocols (authored runbook)</div></div>
+      <div class="tool"><div class="tool-name">TS/SCI Clearance</div><div class="tool-desc">Previously granted, re-sponsorable</div></div>
+      <div class="tool"><div class="tool-name">InfoSec Collaboration</div><div class="tool-desc">Executive security policies, access controls</div></div>
+      <div class="tool"><div class="tool-name">Conditional Access</div><div class="tool-desc">Compliance posture, policy enforcement</div></div>
+    </div>
+  </div>
+  <div class="cat-divider"></div>
+
+  <!-- OPERATIONAL & STRATEGIC -->
+  <div class="category">
+    <div class="cat-header">
+      <div class="cat-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg></div>
+      <div class="cat-title">Operational & Strategic</div>
+    </div>
+    <div class="tools-grid">
+      <div class="tool"><div class="tool-name">IT Strategy & Roadmapping</div><div class="tool-desc">Multi-year planning, budget ownership</div></div>
+      <div class="tool"><div class="tool-name">Vendor Management</div><div class="tool-desc">Evaluation, negotiation, SLA frameworks</div></div>
+      <div class="tool"><div class="tool-name">Team Building & Scaling</div><div class="tool-desc">Grew teams from 4→11; managed service partnerships</div></div>
+      <div class="tool"><div class="tool-name">M&A IT Integration</div><div class="tool-desc">18 acquisitions at Twitter (repeatable playbooks)</div></div>
+      <div class="tool"><div class="tool-name">Onboarding/Offboarding Automation</div><div class="tool-desc">2,400+ hires / 2,100+ offboards annually</div></div>
+      <div class="tool"><div class="tool-name">Retail & Multi-Site IT</div><div class="tool-desc">30→120+ locations, field support at scale</div></div>
+      <div class="tool"><div class="tool-name">Executive IT Support</div><div class="tool-desc">C-suite, board, investor-facing technology</div></div>
+    </div>
+  </div>
+
+</div>
+
+<!-- CTA STRIP -->
+<section class="cta-strip">
+  <div class="cta-strip-inner">
+    <h2>Don't see your stack listed?</h2>
+    <p>This list grows with every client engagement. If you have a specific platform or tool in mind, reach out — chances are we've worked with it or can get up to speed quickly.</p>
+    <a href="https://stillings.tech/consultation" class="btn-primary">
+      Schedule a Free Consultation
+      <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+    </a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">
+      <div style="width:3px;height:28px;background:linear-gradient(180deg,#2E86AB,#48B8D0);border-radius:2px"></div>
+      <div>
+        <div class="footer-name">STILLINGS</div>
+        <div class="footer-sub">Technology Group</div>
+      </div>
+    </div>
+    <div class="footer-links">
+      <a href="https://stillings.tech#services">Services</a>
+      <a href="https://stillings.tech/about">About</a>
+      <a href="https://stillings.tech#process">How We Work</a>
+      <a href="https://stillings.tech/expertise">Tech Stack</a>
+      <a href="https://stillings.tech#service-area">Service Area</a>
+      <a href="https://stillings.tech/consultation">Consultation</a>
+    </div>
+    <div class="footer-copy">&copy; 2026 Stillings Technology Group. All rights reserved.</div>
+  </div>
+</footer>
+
+<script>
+const nav = document.getElementById('navbar');
+function handleScroll(){
+  if(window.scrollY > 80){ nav.classList.add('scrolled'); }
+  else { nav.classList.remove('scrolled'); }
+}
+window.addEventListener('scroll', handleScroll, {passive:true});
+handleScroll();
+</script>
+</body>
+</html>

@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stillings Technology Group | IT Services & Consulting | San Diego, CA</title>
+<meta name="description" content="Managed IT services, cybersecurity, and business consulting for growing companies in San Diego. 15+ years of enterprise experience from Twitter, SpaceX, and Vuori — now in your corner.">
+<link rel="canonical" href="https://stillings.tech/">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://stillings.tech/#business",
+      "name": "Stillings Technology Group",
+      "description": "Managed IT services, cybersecurity, and business consulting for growing companies in San Diego and beyond.",
+      "url": "https://stillings.tech",
+      "email": "hello@stillings.tech",
+      "logo": "https://stillings.tech/og-image.png",
+      "image": "https://stillings.tech/og-image.png",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "1084 N El Camino Real STE B # 267",
+        "addressLocality": "Encinitas",
+        "addressRegion": "CA",
+        "postalCode": "92024",
+        "addressCountry": "US"
+      },
+      "founder": { "@id": "https://stillings.tech/#alex" }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://stillings.tech/#alex",
+      "name": "Alex Stillings",
+      "jobTitle": "Founder",
+      "worksFor": { "@id": "https://stillings.tech/#business" }
+    }
+  ]
+}
+</script>
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://stillings.tech">
+<meta property="og:title" content="Stillings Technology Group | IT & Business Consulting | San Diego">
+<meta property="og:description" content="Managed IT services and business consulting for growing companies in San Diego and beyond. Corporate experience. Small business solutions.">
+<meta property="og:image" content="https://stillings.tech/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Stillings Technology Group | IT & Business Consulting">
+<meta name="twitter:description" content="Managed IT services and business consulting for growing companies in San Diego and beyond.">
+<meta name="twitter:image" content="https://stillings.tech/og-image.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;700&family=DM+Serif+Display&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{overflow-x:hidden;max-width:100%;touch-action:pan-y}
+:root{
+  --navy:#0D2137;--primary:#1B3A5C;--accent:#2E86AB;--light-accent:#48B8D0;
+  --bg-light:#E8F1F8;--text:#2a2a2a;--text-light:#6b7280;--white:#ffffff;
+  --serif:'DM Serif Display',Georgia,serif;--sans:'Plus Jakarta Sans','Segoe UI',sans-serif;
+  --warm:#f0f7fb;
+}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);color:var(--text);background:var(--white);overflow-x:hidden;max-width:100%;position:relative}
+
+/* === NAV === */
+nav{position:fixed;top:0;width:100%;z-index:100;padding:18px 0;transition:all .3s;background:rgba(13,33,55,0.97);backdrop-filter:blur(12px)}
+nav.at-hero{background:transparent;backdrop-filter:none;box-shadow:none}
+nav.scrolled{padding:12px 0;box-shadow:0 2px 20px rgba(0,0,0,0.15)}
+.nav-inner{max-width:1200px;margin:0 auto;padding:0 40px;display:flex;align-items:center;justify-content:space-between}
+.logo{display:flex;align-items:center;text-decoration:none}
+.logo svg{display:block}
+.nav-links{display:flex;gap:32px;align-items:center}
+.nav-links a{color:rgba(255,255,255,0.8);text-decoration:none;font-size:14px;font-weight:500;letter-spacing:.5px;transition:color .2s}
+.nav-links a:hover{color:var(--white)}
+.nav-cta{background:var(--accent)!important;color:var(--white)!important;padding:10px 24px;border-radius:6px;font-weight:600;transition:all .2s!important}
+.nav-cta:hover{background:var(--light-accent)!important;transform:translateY(-1px)}
+.menu-toggle{display:none;background:none;border:none;cursor:pointer;padding:8px}
+.menu-toggle svg{stroke:white;width:28px;height:28px}
+.mobile-menu{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(13,33,55,0.98);z-index:200;flex-direction:column;align-items:center;justify-content:center;gap:32px}
+.mobile-menu.open{display:flex}
+.mobile-menu a{color:var(--white);text-decoration:none;font-size:20px;font-weight:500;letter-spacing:1px;transition:color .2s}
+.mobile-menu a:hover{color:var(--light-accent)}
+.mobile-menu .nav-cta{background:var(--accent);padding:14px 36px;border-radius:8px;font-weight:600;font-size:18px}
+.mobile-close{position:absolute;top:24px;right:24px;background:none;border:none;cursor:pointer;padding:8px}
+.mobile-close svg{stroke:white;width:32px;height:32px}
+
+/* === HERO === */
+.hero{min-height:75vh;background:linear-gradient(135deg,var(--navy) 0%,var(--primary) 50%,#1a4a6e 100%);position:relative;display:flex;align-items:center;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;
+  background:radial-gradient(ellipse at 70% 20%,rgba(46,134,171,0.15) 0%,transparent 60%),
+              radial-gradient(ellipse at 20% 80%,rgba(72,184,208,0.08) 0%,transparent 50%);pointer-events:none}
+.hero-grid{position:absolute;inset:0;
+  background-image:linear-gradient(rgba(255,255,255,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.03) 1px,transparent 1px);
+  background-size:60px 60px;pointer-events:none}
+.hero-content{max-width:1200px;margin:0 auto;padding:100px 40px 60px;position:relative;z-index:2}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(46,134,171,0.15);border:1px solid rgba(46,134,171,0.3);
+  padding:8px 18px;border-radius:100px;margin-bottom:32px}
+.hero-badge span{font-size:12px;color:var(--light-accent);letter-spacing:2px;text-transform:uppercase;font-weight:600}
+.hero-badge .dot{width:6px;height:6px;background:var(--light-accent);border-radius:50%;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+.hero h1{font-family:var(--serif);font-size:clamp(40px,5.5vw,72px);color:var(--white);line-height:1.1;margin-bottom:24px;max-width:800px}
+.hero h1 em{font-style:normal;color:var(--light-accent)}
+.hero p{font-size:clamp(16px,1.8vw,20px);color:rgba(255,255,255,0.7);max-width:600px;line-height:1.7;margin-bottom:40px}
+.hero-buttons{display:flex;gap:16px;flex-wrap:wrap}
+.btn-primary{background:var(--accent);color:var(--white);padding:16px 36px;border-radius:8px;text-decoration:none;font-weight:600;font-size:16px;
+  transition:all .3s;display:inline-flex;align-items:center;gap:8px}
+.btn-primary:hover{background:var(--light-accent);transform:translateY(-2px);box-shadow:0 8px 30px rgba(46,134,171,0.3)}
+.btn-secondary{background:transparent;color:var(--white);padding:16px 36px;border-radius:8px;text-decoration:none;font-weight:600;font-size:16px;
+  border:1.5px solid rgba(255,255,255,0.25);transition:all .3s}
+.btn-secondary:hover{border-color:var(--light-accent);color:var(--light-accent);transform:translateY(-2px)}
+.hero-stats{display:flex;gap:48px;margin-top:40px;padding-top:28px;border-top:1px solid rgba(255,255,255,0.1)}
+.stat{text-align:left}
+.stat-num{font-family:var(--serif);font-size:36px;color:var(--light-accent)}
+.stat-label{font-size:13px;color:rgba(255,255,255,0.5);margin-top:4px;letter-spacing:.5px}
+.hero-nodes{position:absolute;right:5%;top:50%;transform:translateY(-50%);opacity:.12;pointer-events:none}
+
+/* === GLOBAL SECTIONS === */
+section{padding:80px 40px}
+.section-inner{max-width:1200px;margin:0 auto}
+.section-label{display:inline-block;font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--accent);font-weight:700;margin-bottom:12px}
+.section-title{font-family:var(--serif);font-size:clamp(28px,3.5vw,44px);color:var(--primary);line-height:1.2;margin-bottom:16px}
+.section-desc{font-size:17px;color:var(--text-light);max-width:640px;line-height:1.7}
+.icon-wrap{width:52px;height:52px;background:var(--bg-light);border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:24px;flex-shrink:0}
+.icon-wrap svg{width:26px;height:26px;stroke:var(--accent);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+
+/* === SERVICES === */
+.services{background:var(--white)}
+.services-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:24px;margin-top:48px}
+.service-card{width:calc(33.333% - 16px);min-width:280px;max-width:360px;flex-shrink:0;flex-grow:0;background:var(--white);border:1px solid #e5e7eb;border-radius:16px;padding:32px 28px;transition:all .4s;position:relative;overflow:hidden}
+.service-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--accent),var(--light-accent));transform:scaleX(0);transition:transform .4s;transform-origin:left}
+.service-card:hover{border-color:var(--accent);transform:translateY(-4px);box-shadow:0 16px 48px rgba(27,58,92,0.08)}
+.service-card:hover::before{transform:scaleX(1)}
+.service-card h3{font-family:var(--serif);font-size:20px;color:var(--primary);margin-bottom:10px}
+.service-card p{font-size:14px;color:var(--text-light);line-height:1.7;margin-bottom:16px}
+.service-tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:20px}
+.service-tags span{font-size:11px;background:var(--bg-light);color:var(--accent);padding:4px 10px;border-radius:100px;font-weight:600;letter-spacing:.3px}
+.service-learn{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;transition:gap .2s}
+.service-learn:hover{gap:10px}
+.service-learn svg{width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+
+/* === ABOUT TEASER === */
+.about-teaser{background:var(--warm)}
+.about-teaser-inner{display:grid;grid-template-columns:280px 1fr;gap:56px;align-items:center;margin-top:40px}
+.about-photo-wrap{position:relative}
+.about-photo-thumb{width:100%;aspect-ratio:1;border-radius:20px;overflow:hidden;position:relative}
+.about-photo-thumb img{width:100%;height:100%;object-fit:cover;object-position:center top}
+.about-photo-accent{position:absolute;bottom:-10px;right:-10px;width:80px;height:80px;border:3px solid var(--light-accent);border-radius:12px;opacity:.35;z-index:0}
+.about-teaser-text h3{font-family:var(--serif);font-size:clamp(24px,2.5vw,32px);color:var(--primary);margin-bottom:8px}
+.about-teaser-text .role{font-size:14px;color:var(--accent);font-weight:600;letter-spacing:.5px;margin-bottom:20px}
+.about-teaser-text p{font-size:16px;color:var(--text-light);line-height:1.8;margin-bottom:24px}
+.btn-outline{display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:600;color:var(--accent);text-decoration:none;border:1.5px solid var(--accent);padding:11px 24px;border-radius:7px;transition:all .2s}
+.btn-outline:hover{background:var(--bg-light)}
+.btn-outline svg{width:15px;height:15px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+
+/* === SOCIAL PROOF / QUOTES === */
+.social-proof{background:var(--navy);position:relative;overflow:hidden}
+.social-proof::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 60% 40%,rgba(72,184,208,0.08),transparent 60%);pointer-events:none}
+.social-proof-inner{position:relative;z-index:1}
+.proof-top{display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-top:48px}
+.quote-card{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);border-radius:16px;padding:36px;position:relative}
+.quote-card::before{content:'\201C';font-family:var(--serif);font-size:80px;color:var(--light-accent);opacity:.2;position:absolute;top:12px;left:24px;line-height:1}
+.quote-text{font-family:var(--serif);font-size:20px;color:var(--white);line-height:1.6;margin-bottom:20px;position:relative;z-index:1;padding-top:20px}
+.quote-attr{font-size:13px;color:rgba(255,255,255,0.4);letter-spacing:.5px}
+.proof-stats{display:flex;gap:0;margin-top:40px;border-top:1px solid rgba(255,255,255,0.08);padding-top:40px}
+.proof-stat{flex:1;text-align:center;padding:0 24px;border-right:1px solid rgba(255,255,255,0.08)}
+.proof-stat:last-child{border-right:none}
+.proof-stat-num{font-family:var(--serif);font-size:36px;color:var(--light-accent);margin-bottom:6px}
+.proof-stat-label{font-size:13px;color:rgba(255,255,255,0.45);line-height:1.4}
+
+/* === HOW WE WORK === */
+.process{background:var(--white)}
+.process-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:32px;margin-top:48px;position:relative}
+.process-steps::before{content:'';position:absolute;top:36px;left:calc(12.5% + 16px);right:calc(12.5% + 16px);height:2px;background:linear-gradient(90deg,var(--accent),var(--light-accent));opacity:.2;z-index:0}
+.process-step{text-align:center;position:relative;z-index:1}
+.step-circle{width:72px;height:72px;border-radius:50%;background:var(--white);border:2px solid var(--accent);display:flex;align-items:center;justify-content:center;margin:0 auto 20px;transition:all .3s}
+.step-circle svg{width:28px;height:28px;stroke:var(--accent);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;transition:stroke .3s}
+.process-step:hover .step-circle{background:var(--accent);border-color:var(--accent)}
+.process-step:hover .step-circle svg{stroke:white}
+.step-num{font-size:11px;color:var(--accent);font-weight:700;letter-spacing:2px;margin-bottom:8px}
+.process-step h4{font-family:var(--serif);font-size:18px;color:var(--primary);margin-bottom:8px}
+.process-step p{font-size:13px;color:var(--text-light);line-height:1.6;max-width:220px;margin:0 auto}
+
+/* === INDUSTRIES STRIP === */
+.industries{background:var(--warm)}
+.industry-strip{display:grid;grid-template-columns:repeat(6,1fr);gap:16px;margin-top:40px}
+.industry-item{text-align:center;padding:24px 12px;border-radius:12px;border:1px solid #e5e7eb;background:var(--white);transition:all .3s}
+.industry-item:hover{border-color:var(--accent);box-shadow:0 6px 20px rgba(27,58,92,0.06);transform:translateY(-2px)}
+.industry-icon{width:44px;height:44px;background:var(--bg-light);border-radius:10px;display:flex;align-items:center;justify-content:center;margin:0 auto 10px}
+.industry-icon svg{width:22px;height:22px;stroke:var(--accent);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.industry-item h4{font-size:13px;color:var(--primary);font-weight:700;line-height:1.3}
+.industry-item p{font-size:11px;color:var(--text-light);margin-top:3px;line-height:1.3}
+
+/* === SERVICE AREA === */
+.service-area{background:var(--white)}
+.area-layout{display:grid;grid-template-columns:300px 1fr;gap:56px;margin-top:48px;align-items:start}
+.area-visual{position:sticky;top:120px}
+.rings-container{position:relative;width:280px;height:280px;margin:0 auto}
+.ring{position:absolute;border-radius:50%;border:2px solid;display:flex;align-items:center;justify-content:center}
+.ring-outer{width:280px;height:280px;top:0;left:0;border-color:rgba(46,134,171,0.15);background:rgba(46,134,171,0.03)}
+.ring-core{width:150px;height:150px;top:65px;left:65px;border-color:var(--accent);background:linear-gradient(135deg,rgba(27,58,92,0.08),rgba(46,134,171,0.12));flex-direction:column;gap:4px}
+.ring-core svg{stroke:var(--accent);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.ring-label{position:absolute;font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;white-space:nowrap}
+.ring-label-outer{bottom:-26px;left:50%;transform:translateX(-50%);color:var(--text-light)}
+.ring-label-core{font-size:10px;color:var(--primary);position:static;margin-top:4px}
+.area-tiers{display:flex;flex-direction:column;gap:20px}
+.area-tier{display:flex;gap:20px;padding:24px;background:var(--white);border:1px solid #e5e7eb;border-radius:16px;transition:all .3s}
+.area-tier:hover{border-color:var(--accent);box-shadow:0 8px 32px rgba(27,58,92,0.06)}
+.tier-marker{width:4px;min-width:4px;border-radius:4px;flex-shrink:0}
+.tier-core{background:var(--accent)}
+.tier-outer{background:linear-gradient(180deg,var(--light-accent),rgba(46,134,171,0.3))}
+.tier-content h4{font-family:var(--serif);font-size:18px;color:var(--primary);margin-bottom:4px}
+.tier-geo{font-size:13px;color:var(--accent);font-weight:600;margin-bottom:10px;letter-spacing:.3px}
+.tier-content>p:last-of-type{font-size:14px;color:var(--text-light);line-height:1.7}
+.tier-services{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
+.tier-services span{font-size:11px;background:var(--bg-light);color:var(--accent);padding:3px 10px;border-radius:100px;font-weight:600;letter-spacing:.3px}
+
+/* === CTA === */
+.cta{background:linear-gradient(135deg,var(--navy),var(--primary));position:relative;overflow:hidden}
+.cta::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 30% 50%,rgba(72,184,208,0.1),transparent 60%);pointer-events:none}
+.cta-inner{text-align:center;position:relative;z-index:1;max-width:700px;margin:0 auto}
+.cta h2{font-family:var(--serif);font-size:clamp(28px,4vw,44px);color:var(--white);margin-bottom:16px}
+.cta p{font-size:17px;color:rgba(255,255,255,0.7);margin-bottom:32px;line-height:1.7}
+.cta .btn-primary{font-size:17px;padding:17px 40px}
+.cta-contact{margin-top:36px;display:flex;justify-content:center;gap:40px;flex-wrap:wrap}
+.cta-contact a{color:rgba(255,255,255,0.6);text-decoration:none;font-size:14px;transition:color .2s;display:flex;align-items:center;gap:8px}
+.cta-contact a svg{width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.cta-contact a:hover{color:var(--white)}
+
+/* === FOOTER === */
+footer{background:var(--navy);padding:40px 40px 28px;border-top:1px solid rgba(255,255,255,0.06)}
+.footer-inner{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px}
+.footer-name{font-family:var(--serif);font-size:18px;color:var(--white);letter-spacing:1px}
+.footer-sub{font-size:9px;color:rgba(255,255,255,0.3);letter-spacing:3px;text-transform:uppercase}
+.footer-copy{font-size:13px;color:rgba(255,255,255,0.3)}
+.footer-links{display:flex;gap:24px;flex-wrap:wrap}
+.footer-links a{color:rgba(255,255,255,0.4);text-decoration:none;font-size:13px;transition:color .2s}
+.footer-links a:hover{color:var(--white)}
+
+/* === RESPONSIVE === */
+@media(max-width:900px){
+  .hero-nodes{display:none}
+  .nav-links{display:none}
+  .menu-toggle{display:block}
+  .hero-stats{flex-direction:column;gap:20px}
+  section{padding:60px 24px}
+  .services-grid{gap:16px}
+  .service-card{width:100%;max-width:100%;min-width:unset}
+  .about-teaser-inner{grid-template-columns:1fr;gap:32px}
+  .about-photo-wrap{max-width:260px;margin:0 auto}
+  .proof-top{grid-template-columns:1fr}
+  .proof-stats{flex-direction:column;gap:24px}
+  .proof-stat{border-right:none;border-bottom:1px solid rgba(255,255,255,0.08);padding-bottom:24px}
+  .proof-stat:last-child{border-bottom:none}
+  .process-steps{grid-template-columns:1fr 1fr;gap:32px}
+  .process-steps::before{display:none}
+  .industry-strip{grid-template-columns:repeat(3,1fr)}
+  .area-layout{grid-template-columns:1fr;gap:32px}
+  .area-visual{position:static}
+  .rings-container{width:240px;height:240px}
+  .ring-outer{width:240px;height:240px}
+  .ring-core{width:128px;height:128px;top:56px;left:56px}
+  footer{padding:28px 24px}
+  .footer-inner{flex-direction:column;align-items:flex-start;gap:16px}
+}
+@media(max-width:500px){
+  .process-steps{grid-template-columns:1fr}
+  .industry-strip{grid-template-columns:repeat(2,1fr)}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="#" class="logo" aria-label="Stillings Technology Group">
+      <svg height="40" viewBox="0 0 260 40" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:block;overflow:visible">
+        <rect x="0"  y="29" width="8" height="11" rx="2" fill="#48B8D0"/>
+        <rect x="11" y="23" width="8" height="17" rx="2" fill="#3AA3BE"/>
+        <rect x="22" y="16" width="8" height="24" rx="2" fill="#2E86AB"/>
+        <rect x="33" y="8"  width="8" height="32" rx="2" fill="#246089"/>
+        <rect x="44" y="1"  width="8" height="39" rx="2" fill="#1B3A5C"/>
+        <text x="60" y="26" font-family="Sora,'Plus Jakarta Sans',sans-serif" font-weight="700" font-size="22" letter-spacing="2" fill="white" textLength="152" lengthAdjust="spacing">STILLINGS</text>
+        <text x="60" y="38" font-family="Sora,'Plus Jakarta Sans',sans-serif" font-weight="400" font-size="9.2" fill="#48B8D0" textLength="152" lengthAdjust="spacing">TECHNOLOGY GROUP</text>
+      </svg>
+    </a>
+    <div class="nav-links">
+      <a href="#services">Services</a>
+      <a href="https://stillings.tech/about">About</a>
+      <a href="#process">How We Work</a>
+      <a href="https://stillings.tech/expertise">Tech Stack</a>
+      <a href="#service-area">Service Area</a>
+      <a href="https://stillings.tech/consultation" class="nav-cta">Free Consultation</a>
+    </div>
+    <button class="menu-toggle" aria-label="Menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" id="mobileClose" aria-label="Close menu">
+    <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </button>
+  <a href="#services" class="mobile-nav-link">Services</a>
+  <a href="https://stillings.tech/about" class="mobile-nav-link">About</a>
+  <a href="#process" class="mobile-nav-link">How We Work</a>
+  <a href="https://stillings.tech/expertise" class="mobile-nav-link">Tech Stack</a>
+  <a href="#service-area" class="mobile-nav-link">Service Area</a>
+  <a href="https://stillings.tech/consultation" class="nav-cta mobile-nav-link">Free Consultation</a>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-grid"></div>
+  <svg class="hero-nodes" width="400" height="400" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="200" cy="200" r="100" fill="none" stroke="white" stroke-width="1"/>
+    <circle cx="200" cy="200" r="160" fill="none" stroke="white" stroke-width=".5"/>
+    <circle cx="200" cy="100" r="8" fill="white"/><circle cx="300" cy="200" r="8" fill="white"/>
+    <circle cx="200" cy="300" r="8" fill="white"/><circle cx="100" cy="200" r="8" fill="white"/>
+    <circle cx="280" cy="120" r="5" fill="white"/><circle cx="120" cy="280" r="5" fill="white"/>
+    <circle cx="280" cy="280" r="5" fill="white"/><circle cx="120" cy="120" r="5" fill="white"/>
+    <line x1="200" y1="100" x2="280" y2="120" stroke="white" stroke-width=".5"/>
+    <line x1="280" y1="120" x2="300" y2="200" stroke="white" stroke-width=".5"/>
+    <line x1="300" y1="200" x2="280" y2="280" stroke="white" stroke-width=".5"/>
+    <line x1="280" y1="280" x2="200" y2="300" stroke="white" stroke-width=".5"/>
+    <line x1="200" y1="300" x2="120" y2="280" stroke="white" stroke-width=".5"/>
+    <line x1="120" y1="280" x2="100" y2="200" stroke="white" stroke-width=".5"/>
+    <line x1="100" y1="200" x2="120" y2="120" stroke="white" stroke-width=".5"/>
+    <line x1="120" y1="120" x2="200" y2="100" stroke="white" stroke-width=".5"/>
+  </svg>
+  <div class="hero-content">
+    <div class="hero-badge">
+      <span class="dot"></span>
+      <span>Based in Carlsbad &bull; Serving San Diego &amp; Beyond</span>
+    </div>
+    <h1>Corporate experience. <em>Small business</em> solutions.</h1>
+    <p>IT support and strategic consulting built around your business, not a ticket queue. We partner with owners across San Diego and beyond to solve real problems and keep technology out of the way.</p>
+    <div class="hero-buttons">
+      <a href="https://stillings.tech/consultation" class="btn-primary">Schedule a Free Consultation
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+      <a href="#services" class="btn-secondary">Explore Services</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat"><div class="stat-num">15+</div><div class="stat-label">Years in Enterprise IT</div></div>
+      <div class="stat"><div class="stat-num">50+</div><div class="stat-label">Tools & Platforms Deployed</div></div>
+      <div class="stat"><div class="stat-num">100%</div><div class="stat-label">Follow-Through, Every Time</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="section-inner">
+    <span class="section-label">What We Do</span>
+    <h2 class="section-title">Everything your business needs to run on solid technology.</h2>
+    <p class="section-desc">From day-to-day IT support to long-term strategy, we handle the full picture — so you can stop worrying about technology and focus on your business.</p>
+
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="icon-wrap"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
+        <h3>Managed IT Services</h3>
+        <p>Proactive monitoring, helpdesk, patch management, and on-site support. We take ownership so your team stops fighting technology.</p>
+        <div class="service-tags"><span>Monitoring</span><span>Helpdesk</span><span>On-Site</span><span>Vendor Mgmt</span></div>
+        <a href="https://stillings.tech/expertise" class="service-learn">See our full tech stack <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+      </div>
+
+      <div class="service-card">
+        <div class="icon-wrap"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <h3>Cybersecurity</h3>
+        <p>Enterprise-grade protection built for small business budgets. Endpoint security, email filtering, phishing training, and compliance documentation.</p>
+        <div class="service-tags"><span>Endpoint</span><span>Email Security</span><span>HIPAA</span><span>CMMC</span><span>PCI</span></div>
+        <a href="https://stillings.tech/expertise" class="service-learn">See our full tech stack <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+      </div>
+
+      <div class="service-card">
+        <div class="icon-wrap"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg></div>
+        <h3>Tech Stack Assessment</h3>
+        <p>We audit your current infrastructure, identify what's working and what's costing you, then build a roadmap that scales with your business.</p>
+        <div class="service-tags"><span>Audit</span><span>Roadmapping</span><span>vCIO</span><span>Vendor Eval</span></div>
+        <a href="https://stillings.tech/expertise" class="service-learn">See our full tech stack <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+      </div>
+
+      <div class="service-card">
+        <div class="icon-wrap"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
+        <h3>Project-Based Consulting</h3>
+        <p>Scoped engagements for specific initiatives — ITSM implementations, lifecycle automation, office buildouts, and technology migrations.</p>
+        <div class="service-tags"><span>ITSM</span><span>Lifecycle</span><span>Migrations</span><span>Automation</span></div>
+        <a href="https://stillings.tech/expertise" class="service-learn">See our full tech stack <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+      </div>
+
+      <div class="service-card">
+        <div class="icon-wrap"><svg viewBox="0 0 24 24"><path d="M12 2a4 4 0 0 1 4 4 4 4 0 0 1-1.18 2.84L12 12l-2.82-3.16A4 4 0 0 1 8 6a4 4 0 0 1 4-4z"/><path d="M12 12l5.5 5.5"/><path d="M12 12l-5.5 5.5"/><circle cx="6.5" cy="17.5" r="2.5"/><circle cx="17.5" cy="17.5" r="2.5"/></svg></div>
+        <h3>AI Strategy & Adoption</h3>
+        <p>Cut through the noise. We assess where AI creates real value for your business, then build a practical strategy that evolves as the landscape shifts.</p>
+        <div class="service-tags"><span>AI Readiness</span><span>Build vs. Buy</span><span>Implementation</span></div>
+        <a href="https://stillings.tech/expertise" class="service-learn">See our full tech stack <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+      </div>
+
+      <div class="service-card">
+        <div class="icon-wrap"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"/><rect x="2" y="14" width="20" height="8" rx="2" ry="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg></div>
+        <h3>Networking Installations & Upgrades</h3>
+        <p>Reliable, properly designed networks for offices and commercial spaces. From structured cabling to wireless infrastructure, switches, and firewalls — built to perform from day one.</p>
+        <div class="service-tags"><span>Meraki</span><span>UniFi</span><span>Starlink</span><span>Wireless</span><span>Firewalls</span></div>
+        <a href="https://stillings.tech/expertise" class="service-learn">See our full tech stack <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+      </div>
+
+      <div class="service-card">
+        <div class="icon-wrap"><svg viewBox="0 0 24 24"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg></div>
+        <h3>Audio/Video Consultation</h3>
+        <p>Conference rooms, displays, speakers, and AV systems that actually work when you need them. We design and integrate solutions for meeting rooms, huddle spaces, and commercial environments.</p>
+        <div class="service-tags"><span>AV Design</span><span>Conferencing</span><span>Displays</span><span>Integration</span></div>
+        <a href="https://stillings.tech/expertise" class="service-learn">See our full tech stack <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+      </div>
+
+      <div class="service-card">
+        <div class="icon-wrap"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
+        <h3>Website Development</h3>
+        <p>Clean, fast websites built for small and growing businesses. We handle design, development, and ongoing maintenance — so your site works as hard as you do.</p>
+        <div class="service-tags"><span>Design</span><span>Development</span><span>Maintenance</span><span>SEO</span></div>
+        <a href="https://stillings.tech/consultation" class="service-learn">Schedule a consultation <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+      </div>
+
+      <div class="service-card">
+        <div class="icon-wrap"><svg viewBox="0 0 24 24"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg></div>
+        <h3>SaaS Software Setup & Support</h3>
+        <p>We get your cloud tools working the way they should. Onboarding, configuration, integrations, and ongoing support for the business software your team depends on.</p>
+        <div class="service-tags"><span>Onboarding</span><span>Configuration</span><span>Integrations</span><span>Support</span></div>
+        <a href="https://stillings.tech/expertise" class="service-learn">See our full tech stack <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT TEASER -->
+<section class="about-teaser" id="about">
+  <div class="section-inner">
+    <span class="section-label">Meet Your Partner</span>
+    <div class="about-teaser-inner">
+      <div class="about-photo-wrap">
+        <div class="about-photo-thumb">
+          <img src="alex-stillings.jpg" alt="Alex Stillings, Founder of Stillings Technology Group">
+        </div>
+        <div class="about-photo-accent"></div>
+      </div>
+      <div class="about-teaser-text">
+        <h3>Hi, I'm Alex Stillings</h3>
+        <div class="role">Founder, Stillings Technology Group</div>
+        <p>I've spent over 15 years in high tech — building and leading IT teams at Twitter, SpaceX, and Vuori. I founded STG to give growing businesses the same level of expertise I brought to some of the most demanding environments in the industry.</p>
+        <p>My approach is simple: start with the real problem, take complete ownership, and follow through until it's done right.</p>
+        <a href="https://stillings.tech/about" class="btn-outline">
+          My full story & approach
+          <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SOCIAL PROOF -->
+<section class="social-proof" id="results">
+  <div class="section-inner social-proof-inner">
+    <span class="section-label" style="color:var(--light-accent)">What Clients Say</span>
+    <h2 class="section-title" style="color:var(--white);margin-bottom:0">Results that speak for themselves.</h2>
+
+    <div class="proof-top">
+      
+      <div class="quote-card">
+        <p class="quote-text">"Alex communicates in non-technical terms so I actually understand the solutions being put in place."</p>
+        <div class="quote-attr">— Commercial Real Estate Broker, San Diego CA</div>
+      </div>
+      <div class="quote-card">
+        <p class="quote-text">"Wait... why does everything just work?"</p>
+        <div class="quote-attr">— Client, Fallbrook CA &nbsp;·&nbsp; After a full WiFi infrastructure install with near-zero downtime</div>
+      </div>
+    </div>
+
+    <div class="proof-stats">
+      <div class="proof-stat">
+        <div class="proof-stat-num">65–80%</div>
+        <div class="proof-stat-label">Helpdesk ticket deflection via AI-powered support at a 700-person company</div>
+      </div>
+      <div class="proof-stat">
+        <div class="proof-stat-num">2,400+</div>
+        <div class="proof-stat-label">Employees onboarded annually via fully automated provisioning workflows</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW WE WORK -->
+<section class="process" id="process">
+  <div class="section-inner">
+    <span class="section-label">How We Work</span>
+    <h2 class="section-title">Simple, transparent, no surprises.</h2>
+    <p class="section-desc">Getting started isn't complicated. Here's what to expect when you reach out.</p>
+    <div class="process-steps">
+      <div class="process-step">
+        <div class="step-circle"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+        <div class="step-num">STEP 01</div>
+        <h4>Conversation</h4>
+        <p>We sit down (or jump on a call) and learn about your business, your pain points, and where you want to go.</p>
+      </div>
+      <div class="process-step">
+        <div class="step-circle"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+        <div class="step-num">STEP 02</div>
+        <h4>Assessment</h4>
+        <p>We evaluate your current technology and operations, identify gaps, and map out what's working and what isn't.</p>
+      </div>
+      <div class="process-step">
+        <div class="step-circle"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
+        <div class="step-num">STEP 03</div>
+        <h4>Custom Plan</h4>
+        <p>You get a clear, jargon-free roadmap with priorities, timelines, and transparent pricing. No surprises.</p>
+      </div>
+      <div class="process-step">
+        <div class="step-circle"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <div class="step-num">STEP 04</div>
+        <h4>Partnership</h4>
+        <p>We execute, confirm everything is working, and document what was done. Project complete — or ongoing support locked in.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INDUSTRIES -->
+<section class="industries" id="industries">
+  <div class="section-inner">
+    <span class="section-label">Who We Serve</span>
+    <h2 class="section-title">Industries we know inside and out.</h2>
+    <p class="section-desc">San Diego's economy is diverse — and so is our expertise.</p>
+    <div class="industry-strip">
+      <div class="industry-item">
+        <div class="industry-icon"><svg viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
+        <h4>Technology & SaaS</h4>
+        <p>Scaling infrastructure</p>
+      </div>
+      <div class="industry-item">
+        <div class="industry-icon"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></div>
+        <h4>Professional Services</h4>
+        <p>Law, accounting, real estate</p>
+      </div>
+      <div class="industry-item">
+        <div class="industry-icon"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div>
+        <h4>Aerospace & Defense</h4>
+        <p>ITAR, CMMC, DOD</p>
+      </div>
+      <div class="industry-item">
+        <div class="industry-icon"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+        <h4>Hospitality & Tourism</h4>
+        <p>POS, WiFi, PCI</p>
+      </div>
+      <div class="industry-item">
+        <div class="industry-icon"><svg viewBox="0 0 24 24"><path d="M6 3v18"/><path d="M18 3v18"/><path d="M6 8h12"/><path d="M6 16h12"/><path d="M6 12h12"/></svg></div>
+        <h4>Life Sciences & Biotech</h4>
+        <p>Regulated data, compliance</p>
+      </div>
+      <div class="industry-item">
+        <div class="industry-icon"><svg viewBox="0 0 24 24"><rect x="1" y="6" width="18" height="12" rx="2"/><line x1="23" y1="13" x2="23" y2="11"/><line x1="23" y1="17" x2="23" y2="15"/><line x1="23" y1="9" x2="23" y2="7"/></svg></div>
+        <h4>Construction & Trades</h4>
+        <p>Field ops, project tools</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICE AREA -->
+<section class="service-area" id="service-area">
+  <div class="section-inner">
+    <span class="section-label">Where We Work</span>
+    <h2 class="section-title">Based in Carlsbad. Not limited to it.</h2>
+    <p class="section-desc">Hands-on IT support close to home, and consulting expertise that travels wherever your business needs it.</p>
+    <div class="area-layout">
+      <div class="area-visual">
+        <div class="rings-container">
+          <div class="ring ring-outer">
+            <span class="ring-label ring-label-outer">Southern California & Beyond</span>
+          </div>
+          <div class="ring ring-core">
+            <svg viewBox="0 0 24 24" width="26" height="26"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span class="ring-label ring-label-core">Carlsbad</span>
+          </div>
+        </div>
+      </div>
+      <div class="area-tiers">
+        <div class="area-tier">
+          <div class="tier-marker tier-core"></div>
+          <div class="tier-content">
+            <h4>Greater San Diego County</h4>
+            <p class="tier-geo">Carlsbad, Encinitas, Oceanside, La Jolla, Downtown, Rancho Bernardo, Poway & more</p>
+            <p>Full-service managed IT and consulting with on-site support throughout the county. Proactive monitoring, hands-on infrastructure management, and a team that actually shows up.</p>
+            <div class="tier-services"><span>On-Site IT Support</span><span>Managed Services</span><span>Cybersecurity</span><span>Consulting</span></div>
+          </div>
+        </div>
+        <div class="area-tier">
+          <div class="tier-marker tier-outer"></div>
+          <div class="tier-content">
+            <h4>Southern California & Beyond</h4>
+            <p class="tier-geo">Orange County, Los Angeles, and remote clients nationwide</p>
+            <p>Strategic consulting, fractional CIO engagements, vCIO advisory, and technology roadmapping — delivered remotely. Enterprise-level expertise without geography as a barrier.</p>
+            <div class="tier-services"><span>vCIO Advisory</span><span>Fractional CIO</span><span>Strategy & Roadmapping</span><span>Remote IT Consulting</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta" id="contact">
+  <div class="section-inner">
+    <div class="cta-inner">
+      <h2>Let's talk about what's next for your business.</h2>
+      <p>Whether you need IT support that actually shows up, a consultant who understands operations, or both — we'd love to hear what you're working on.</p>
+      <a href="https://stillings.tech/consultation" class="btn-primary">Schedule a Free Consultation
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+      <div class="cta-contact">
+        <a href="mailto:hello@stillings.tech">
+          <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          hello@stillings.tech
+        </a>
+        <a href="#">
+          <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Carlsbad, California
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div style="display:flex;align-items:center;gap:10px">
+      <div style="display:flex;gap:2px;align-items:flex-end;padding-bottom:2px">
+        <div style="width:4px;height:8px;background:#48B8D0;border-radius:2px"></div>
+        <div style="width:4px;height:13px;background:#3AA3BE;border-radius:2px"></div>
+        <div style="width:4px;height:18px;background:#2E86AB;border-radius:2px"></div>
+        <div style="width:4px;height:23px;background:#246089;border-radius:2px"></div>
+        <div style="width:4px;height:28px;background:#1B3A5C;border-radius:2px"></div>
+      </div>
+      <div>
+        <div class="footer-name">STILLINGS</div>
+        <div class="footer-sub">Technology Group</div>
+      </div>
+    </div>
+    <div class="footer-links">
+      <a href="#services">Services</a>
+      <a href="https://stillings.tech/about">About</a>
+      <a href="https://stillings.tech/expertise">Tech Stack</a>
+      <a href="#service-area">Service Area</a>
+      <a href="https://stillings.tech/consultation">Consultation</a>
+    </div>
+    <div class="footer-copy">&copy; 2026 Stillings Technology Group. All rights reserved.</div>
+  </div>
+</footer>
+
+<script>
+const nav=document.getElementById('navbar');
+const hero=document.querySelector('.hero');
+const menuToggle=document.querySelector('.menu-toggle');
+const mobileMenu=document.getElementById('mobileMenu');
+const mobileClose=document.getElementById('mobileClose');
+
+function updateNav(){
+  const heroBottom=hero.getBoundingClientRect().bottom;
+  if(heroBottom>80){nav.classList.add('at-hero');nav.classList.remove('scrolled');}
+  else{nav.classList.remove('at-hero');nav.classList.add('scrolled');}
+}
+updateNav();
+window.addEventListener('scroll',updateNav,{passive:true});
+window.addEventListener('resize',updateNav);
+
+menuToggle.addEventListener('click',()=>{mobileMenu.classList.add('open');document.body.style.overflow='hidden'});
+mobileClose.addEventListener('click',()=>{mobileMenu.classList.remove('open');document.body.style.overflow=''});
+document.querySelectorAll('.mobile-nav-link').forEach(a=>{
+  a.addEventListener('click',()=>{mobileMenu.classList.remove('open');document.body.style.overflow=''});
+});
+
+document.querySelectorAll('a[href^="#"]').forEach(a=>{
+  a.addEventListener('click',e=>{
+    e.preventDefault();
+    const t=document.querySelector(a.getAttribute('href'));
+    if(t)t.scrollIntoView({behavior:'smooth',block:'start'});
+  });
+});
+
+const obs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting){e.target.style.opacity='1';e.target.style.transform='translateY(0)'}});
+},{threshold:0.1,rootMargin:'0px 0px -40px 0px'});
+
+document.querySelectorAll('.service-card,.industry-item,.process-step,.area-tier,.quote-card,.proof-stat').forEach(el=>{
+  el.style.opacity='0';el.style.transform='translateY(20px)';el.style.transition='opacity .6s ease, transform .6s ease';
+  obs.observe(el);
+});
+</script>
+</body>
+</html>

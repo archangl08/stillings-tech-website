@@ -1,0 +1,41 @@
+# Stillings Technology Group
+
+> Managed IT services, cybersecurity, and business consulting for growing companies in San Diego, CA. Founded by Alex Stillings — 15+ years of enterprise IT experience including leadership at Twitter, SpaceX, and Vuori.
+
+## Services
+
+- **Managed IT Services**: Proactive monitoring, helpdesk, patch management, and on-site support for San Diego businesses
+- **Cybersecurity**: Endpoint protection, email security, phishing training, and compliance documentation (HIPAA, CMMC, PCI)
+- **Tech Stack Assessment & Scalability**: Infrastructure audits, growth roadmapping, vCIO advisory, vendor evaluation
+- **Project-Based IT Consulting**: ITSM implementations, employee lifecycle automation, office buildouts, technology migrations
+- **AI Strategy & Adoption**: AI readiness assessments, build vs. buy analysis, implementation planning
+- **Networking Installations & Upgrades**: Structured cabling, wireless infrastructure, switches, firewalls, Starlink satellite internet, and network upgrades for offices and commercial spaces
+- **Audio/Video Consultation**: AV system design, display and conferencing setup, and technology integration for meeting rooms and commercial environments
+- **Website Development**: Business website design, development, and maintenance for small and growing companies
+- **SaaS Software Setup & Support**: Onboarding, configuration, integration, and ongoing support for cloud-based business software and productivity tools
+
+## About
+
+Alex Stillings is the founder of Stillings Technology Group, based in Carlsbad, California. He brings over 15 years of enterprise IT experience, having led technology teams at Twitter (18 M&A integrations), SpaceX, and Vuori. He founded STG to give growing businesses access to corporate-grade IT expertise.
+
+## Service Area
+
+- **Primary**: Greater San Diego County (Carlsbad, North County, Downtown San Diego)
+- **Extended**: Southern California, Orange County, Los Angeles
+- **Remote**: Consulting and vCIO advisory available nationwide
+
+## Technology Stack
+
+50+ platforms including: Okta, Microsoft Entra ID, JAMF Pro, Microsoft Intune, Google Workspace, Microsoft 365, Jira Service Management, Moveworks, Microsoft Copilot, Zero-Trust Architecture, ITAR compliance, TS/SCI clearance (previously granted).
+
+## Contact
+
+- Website: https://stillings.tech
+- Email: hello@stillings.tech
+- Consultation: https://stillings.tech/consultation
+
+## Pages
+
+- Homepage: https://stillings.tech
+- Technology Expertise: https://stillings.tech/expertise
+- Free Consultation: https://stillings.tech/consultation
