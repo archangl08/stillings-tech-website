@@ -36,6 +36,13 @@ nav{position:fixed;top:0;width:100%;z-index:100;padding:18px 0;transition:all .3
 .nav-back:hover svg{transform:translateX(-3px)}
 .menu-toggle{display:none;background:none;border:none;cursor:pointer;padding:8px}
 .menu-toggle svg{stroke:white;width:28px;height:28px}
+.mobile-menu{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(13,33,55,0.98);z-index:200;flex-direction:column;align-items:center;justify-content:center;gap:32px}
+.mobile-menu.open{display:flex}
+.mobile-menu a{color:var(--white);text-decoration:none;font-size:20px;font-weight:500;letter-spacing:1px;transition:color .2s}
+.mobile-menu a:hover{color:var(--light-accent)}
+.mobile-menu .nav-cta{background:var(--accent);padding:14px 36px;border-radius:8px;font-weight:600;font-size:18px}
+.mobile-close{position:absolute;top:24px;right:24px;background:none;border:none;cursor:pointer;padding:8px}
+.mobile-close svg{stroke:white;width:32px;height:32px}
 
 /* === PAGE HERO === */
 .page-hero{overflow:hidden;background:linear-gradient(135deg,var(--navy) 0%,var(--primary) 55%,#1a4a6e 100%);padding:140px 40px 80px;position:relative;overflow:hidden}
@@ -135,12 +142,12 @@ footer{background:var(--navy);padding:40px 40px 28px;border-top:1px solid rgba(2
         <text x="60" y="38" font-family="Sora,'Plus Jakarta Sans',sans-serif" font-weight="400" font-size="9.2" fill="#48B8D0" textLength="152" lengthAdjust="spacing">TECHNOLOGY GROUP</text>
       </svg>
     </a>
-    <div class="nav-links">
+        <div class="nav-links">
       <a href="https://stillings.tech#services">Services</a>
       <a href="https://stillings.tech/about">About</a>
       <a href="https://stillings.tech#process">How We Work</a>
       <a href="https://stillings.tech/expertise">Tech Stack</a>
-      <a href="https://stillings.tech#service-area">Service Area</a>
+      <a href="https://stillings.tech/service-area">Service Area</a>
       <a href="https://stillings.tech/consultation" class="nav-cta">Free Consultation</a>
     </div>
     <button class="menu-toggle" aria-label="Menu">
@@ -148,6 +155,19 @@ footer{background:var(--navy);padding:40px 40px 28px;border-top:1px solid rgba(2
     </button>
   </div>
 </nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" id="mobileClose" aria-label="Close menu">
+    <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </button>
+  <a href="https://stillings.tech#services" class="mobile-nav-link">Services</a>
+  <a href="https://stillings.tech/about" class="mobile-nav-link">About</a>
+  <a href="https://stillings.tech#process" class="mobile-nav-link">How We Work</a>
+  <a href="https://stillings.tech/expertise" class="mobile-nav-link">Tech Stack</a>
+  <a href="https://stillings.tech/service-area" class="mobile-nav-link">Service Area</a>
+  <a href="https://stillings.tech/consultation" class="nav-cta mobile-nav-link">Free Consultation</a>
+</div>
 
 <!-- PAGE HERO -->
 <section class="page-hero">
@@ -287,5 +307,18 @@ footer{background:var(--navy);padding:40px 40px 28px;border-top:1px solid rgba(2
 </footer>
 
 <script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}</script>
+
+<script>
+const _mt=document.querySelector('.menu-toggle');
+const _mm=document.getElementById('mobileMenu');
+const _mc=document.getElementById('mobileClose');
+if(_mt&&_mm&&_mc){
+  _mt.addEventListener('click',()=>{_mm.classList.add('open');document.body.style.overflow='hidden'});
+  _mc.addEventListener('click',()=>{_mm.classList.remove('open');document.body.style.overflow=''});
+  document.querySelectorAll('.mobile-nav-link').forEach(a=>{
+    a.addEventListener('click',()=>{_mm.classList.remove('open');document.body.style.overflow=''});
+  });
+}
+</script>
 </body>
 </html>
