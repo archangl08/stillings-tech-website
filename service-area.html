@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IT Service Area | San Diego County & Southern California | Stillings Technology Group</title>
+<meta name="description" content="Stillings Technology Group provides on-site IT support throughout San Diego County and remote consulting across Southern California. Based in Carlsbad, CA.">
+<link rel="canonical" href="https://stillings.tech/service-area">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://stillings.tech/#business",
+      "name": "Stillings Technology Group",
+      "url": "https://stillings.tech",
+      "email": "hello@stillings.tech",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "1084 N El Camino Real STE B # 267",
+        "addressLocality": "Encinitas",
+        "addressRegion": "CA",
+        "postalCode": "92024",
+        "addressCountry": "US"
+      },
+      "areaServed": [
+        { "@type": "City", "name": "Carlsbad" },
+        { "@type": "City", "name": "Encinitas" },
+        { "@type": "City", "name": "Oceanside" },
+        { "@type": "City", "name": "Vista" },
+        { "@type": "City", "name": "San Marcos" },
+        { "@type": "City", "name": "Escondido" },
+        { "@type": "City", "name": "La Jolla" },
+        { "@type": "City", "name": "San Diego" },
+        { "@type": "City", "name": "Rancho Bernardo" },
+        { "@type": "City", "name": "Poway" },
+        { "@type": "City", "name": "El Cajon" },
+        { "@type": "City", "name": "Chula Vista" },
+        { "@type": "City", "name": "Fallbrook" },
+        { "@type": "City", "name": "Temecula" }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://stillings.tech/" },
+        { "@type": "ListItem", "position": 2, "name": "Service Area", "item": "https://stillings.tech/service-area" }
+      ]
+    }
+  ]
+}
+</script>
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://stillings.tech/service-area">
+<meta property="og:title" content="IT Service Area | San Diego County & Southern California | Stillings Technology Group">
+<meta property="og:description" content="On-site IT support throughout San Diego County. Remote consulting across Southern California and beyond. Based in Carlsbad, CA.">
+<meta property="og:image" content="https://stillings.tech/og-image.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;700&family=DM+Serif+Display&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{overflow-x:hidden;max-width:100%;touch-action:pan-y}
+:root{
+  --navy:#0D2137;--primary:#1B3A5C;--accent:#2E86AB;--light-accent:#48B8D0;
+  --bg-light:#E8F1F8;--text:#2a2a2a;--text-light:#6b7280;--white:#ffffff;
+  --serif:'DM Serif Display',Georgia,serif;--sans:'Plus Jakarta Sans','Segoe UI',sans-serif;
+  --warm:#f0f7fb;
+}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);color:var(--text);background:var(--white);overflow-x:hidden;max-width:100%;position:relative}
+
+/* === NAV === */
+nav{position:fixed;top:0;width:100%;z-index:100;padding:18px 0;transition:all .3s;background:rgba(13,33,55,0.97);backdrop-filter:blur(12px);box-shadow:0 2px 20px rgba(0,0,0,0.15)}
+.nav-inner{max-width:1200px;margin:0 auto;padding:0 40px;display:flex;align-items:center;justify-content:space-between}
+.logo{display:flex;align-items:center;text-decoration:none}
+.logo svg{display:block}
+.nav-links{display:flex;gap:32px;align-items:center}
+.nav-links a{color:rgba(255,255,255,0.8);text-decoration:none;font-size:14px;font-weight:500;letter-spacing:.5px;transition:color .2s}
+.nav-links a:hover{color:var(--white)}
+.nav-links a.active{color:var(--light-accent)}
+.nav-cta{background:var(--accent)!important;color:var(--white)!important;padding:10px 24px;border-radius:6px;font-weight:600;transition:all .2s!important}
+.nav-cta:hover{background:var(--light-accent)!important;transform:translateY(-1px)}
+.menu-toggle{display:none;background:none;border:none;cursor:pointer;padding:8px}
+.menu-toggle svg{stroke:white;width:28px;height:28px}
+.mobile-menu{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(13,33,55,0.98);z-index:200;flex-direction:column;align-items:center;justify-content:center;gap:32px}
+.mobile-menu.open{display:flex}
+.mobile-menu a{color:var(--white);text-decoration:none;font-size:20px;font-weight:500;letter-spacing:1px;transition:color .2s}
+.mobile-menu a:hover{color:var(--light-accent)}
+.mobile-menu .nav-cta{background:var(--accent);padding:14px 36px;border-radius:8px;font-weight:600;font-size:18px}
+.mobile-close{position:absolute;top:24px;right:24px;background:none;border:none;cursor:pointer;padding:8px}
+.mobile-close svg{stroke:white;width:32px;height:32px}
+
+/* === PAGE HERO === */
+.page-hero{background:linear-gradient(135deg,var(--navy) 0%,var(--primary) 55%,#1a4a6e 100%);padding:140px 40px 80px;position:relative;overflow:hidden}
+.page-hero::before{content:'';position:absolute;inset:0;
+  background:radial-gradient(ellipse at 70% 25%,rgba(46,134,171,0.15) 0%,transparent 60%),
+              radial-gradient(ellipse at 15% 80%,rgba(72,184,208,0.08) 0%,transparent 50%);pointer-events:none}
+.page-hero-grid{position:absolute;inset:0;
+  background-image:linear-gradient(rgba(255,255,255,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.03) 1px,transparent 1px);
+  background-size:60px 60px;pointer-events:none}
+.page-hero-inner{max-width:1200px;margin:0 auto;position:relative;z-index:2;display:grid;grid-template-columns:1fr 300px;gap:64px;align-items:center}
+.breadcrumb{display:flex;align-items:center;gap:8px;margin-bottom:24px}
+.breadcrumb a{color:rgba(255,255,255,0.45);text-decoration:none;font-size:13px;transition:color .2s}
+.breadcrumb a:hover{color:var(--light-accent)}
+.breadcrumb span{color:rgba(255,255,255,0.25);font-size:13px}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(46,134,171,0.15);border:1px solid rgba(46,134,171,0.3);
+  padding:8px 18px;border-radius:100px;margin-bottom:28px}
+.hero-badge span{font-size:12px;color:var(--light-accent);letter-spacing:2px;text-transform:uppercase;font-weight:600}
+.hero-badge .dot{width:6px;height:6px;background:var(--light-accent);border-radius:50%;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+.page-hero h1{font-family:var(--serif);font-size:clamp(36px,4.5vw,58px);color:var(--white);line-height:1.1;margin-bottom:20px}
+.page-hero h1 em{font-style:normal;color:var(--light-accent)}
+.page-hero p{font-size:18px;color:rgba(255,255,255,0.7);line-height:1.7;margin-bottom:32px;max-width:540px}
+.hero-points{display:flex;flex-direction:column;gap:12px}
+.hero-point{display:flex;align-items:center;gap:12px;color:rgba(255,255,255,0.65);font-size:14px}
+.hero-point svg{width:18px;height:18px;stroke:var(--light-accent);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}
+
+/* Hero map panel */
+.hero-map-panel{display:flex;align-items:center;justify-content:center}
+
+/* === GLOBAL === */
+section{padding:80px 40px}
+.section-inner{max-width:1200px;margin:0 auto}
+.section-label{display:inline-block;font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--accent);font-weight:700;margin-bottom:12px}
+.section-title{font-family:var(--serif);font-size:clamp(28px,3.5vw,44px);color:var(--primary);line-height:1.2;margin-bottom:16px}
+.section-desc{font-size:17px;color:var(--text-light);max-width:640px;line-height:1.7}
+
+/* === COVERAGE TIERS === */
+.coverage{background:var(--white)}
+.tiers-layout{display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-top:48px}
+.tier-card{border-radius:20px;border:1px solid #e5e7eb;overflow:hidden;transition:all .3s}
+.tier-card:hover{box-shadow:0 12px 40px rgba(27,58,92,0.08);transform:translateY(-2px)}
+.tier-card.featured{border-color:var(--accent)}
+.tier-card-top{padding:32px 32px 24px;background:var(--white)}
+.tier-card.featured .tier-card-top{background:linear-gradient(135deg,var(--navy),var(--primary))}
+.tier-badge{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:5px 14px;border-radius:100px;margin-bottom:20px}
+.tier-badge.onsite{background:var(--bg-light);color:var(--accent)}
+.tier-badge.remote{background:rgba(72,184,208,0.15);color:var(--light-accent)}
+.tier-card-top h3{font-family:var(--serif);font-size:26px;margin-bottom:10px}
+.tier-card:not(.featured) .tier-card-top h3{color:var(--primary)}
+.tier-card.featured .tier-card-top h3{color:var(--white)}
+.tier-geo{font-size:14px;font-weight:600;letter-spacing:.3px;margin-bottom:14px}
+.tier-card:not(.featured) .tier-geo{color:var(--accent)}
+.tier-card.featured .tier-geo{color:var(--light-accent)}
+.tier-card-top p{font-size:15px;line-height:1.7}
+.tier-card:not(.featured) .tier-card-top p{color:var(--text-light)}
+.tier-card.featured .tier-card-top p{color:rgba(255,255,255,0.7)}
+.tier-card-body{padding:24px 32px 32px;background:var(--warm);border-top:1px solid #e5e7eb}
+.tier-card.featured .tier-card-body{background:rgba(232,241,248,0.5);border-top-color:rgba(46,134,171,0.2)}
+.tier-services-label{font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--text-light);margin-bottom:14px}
+.tier-tags{display:flex;flex-wrap:wrap;gap:8px}
+.tier-tags span{font-size:12px;background:var(--white);color:var(--accent);padding:6px 14px;border-radius:100px;font-weight:600;letter-spacing:.3px;border:1px solid rgba(46,134,171,0.15)}
+
+/* === CITIES GRID === */
+.cities{background:var(--warm)}
+.cities-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:40px}
+.city-item{background:var(--white);border:1px solid #e5e7eb;border-radius:12px;padding:16px 20px;display:flex;align-items:center;gap:12px;transition:all .3s}
+.city-item:hover{border-color:var(--accent);box-shadow:0 4px 16px rgba(27,58,92,0.06);transform:translateY(-1px)}
+.city-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+.city-dot.primary{background:var(--accent)}
+.city-dot.secondary{background:var(--light-accent)}
+.city-item-text h4{font-size:14px;font-weight:700;color:var(--primary)}
+.city-item-text p{font-size:12px;color:var(--text-light);margin-top:2px}
+.cities-note{margin-top:24px;text-align:center;font-size:14px;color:var(--text-light)}
+.cities-note strong{color:var(--accent)}
+
+/* === RESPONSE TIME === */
+.response{background:var(--navy);position:relative;overflow:hidden}
+.response::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 60% 40%,rgba(72,184,208,0.08),transparent 60%);pointer-events:none}
+.response-inner{position:relative;z-index:1}
+.response-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:48px;border:1px solid rgba(255,255,255,0.08);border-radius:16px;overflow:hidden}
+.response-item{padding:36px 32px;border-right:1px solid rgba(255,255,255,0.08)}
+.response-item:last-child{border-right:none}
+.response-icon{width:48px;height:48px;border-radius:12px;background:rgba(46,134,171,0.15);display:flex;align-items:center;justify-content:center;margin-bottom:20px}
+.response-icon svg{width:24px;height:24px;stroke:var(--light-accent);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.response-item h4{font-family:var(--serif);font-size:20px;color:var(--white);margin-bottom:8px}
+.response-item p{font-size:14px;color:rgba(255,255,255,0.5);line-height:1.6}
+.response-highlight{font-family:var(--serif);font-size:28px;color:var(--light-accent);display:block;margin-bottom:6px}
+
+/* === CTA === */
+.cta{background:linear-gradient(135deg,var(--navy),var(--primary));position:relative;overflow:hidden}
+.cta::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 30% 50%,rgba(72,184,208,0.1),transparent 60%);pointer-events:none}
+.cta-inner{text-align:center;position:relative;z-index:1;max-width:700px;margin:0 auto}
+.cta h2{font-family:var(--serif);font-size:clamp(28px,4vw,44px);color:var(--white);margin-bottom:16px}
+.cta p{font-size:17px;color:rgba(255,255,255,0.7);margin-bottom:32px;line-height:1.7}
+.btn-primary{background:var(--accent);color:var(--white);padding:16px 36px;border-radius:8px;text-decoration:none;font-weight:600;font-size:16px;
+  transition:all .3s;display:inline-flex;align-items:center;gap:8px}
+.btn-primary:hover{background:var(--light-accent);transform:translateY(-2px);box-shadow:0 8px 30px rgba(46,134,171,0.3)}
+.cta .btn-primary{font-size:17px;padding:17px 40px}
+.cta-contact{margin-top:36px;display:flex;justify-content:center;gap:40px;flex-wrap:wrap}
+.cta-contact a{color:rgba(255,255,255,0.6);text-decoration:none;font-size:14px;transition:color .2s;display:flex;align-items:center;gap:8px}
+.cta-contact a svg{width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.cta-contact a:hover{color:var(--white)}
+
+/* === FOOTER === */
+footer{background:var(--navy);padding:40px 40px 28px;border-top:1px solid rgba(255,255,255,0.06)}
+.footer-inner{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px}
+.footer-name{font-family:var(--serif);font-size:18px;color:var(--white);letter-spacing:1px}
+.footer-sub{font-size:9px;color:rgba(255,255,255,0.3);letter-spacing:3px;text-transform:uppercase}
+.footer-copy{font-size:13px;color:rgba(255,255,255,0.3)}
+.footer-links{display:flex;gap:24px;flex-wrap:wrap}
+.footer-links a{color:rgba(255,255,255,0.4);text-decoration:none;font-size:13px;transition:color .2s}
+.footer-links a:hover{color:var(--white)}
+
+/* === RESPONSIVE === */
+@media(max-width:900px){
+  .nav-links{display:none}
+  .menu-toggle{display:block}
+  .page-hero-inner{grid-template-columns:1fr;gap:32px}
+  .hero-map-panel{display:none}
+  section{padding:60px 24px}
+  .tiers-layout{grid-template-columns:1fr}
+  .cities-grid{grid-template-columns:repeat(2,1fr)}
+  .response-grid{grid-template-columns:1fr}
+  .response-item{border-right:none;border-bottom:1px solid rgba(255,255,255,0.08)}
+  .response-item:last-child{border-bottom:none}
+  footer{padding:28px 24px}
+  .footer-inner{flex-direction:column;align-items:flex-start;gap:16px}
+}
+@media(max-width:500px){
+  .cities-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="https://stillings.tech/" class="logo" aria-label="Stillings Technology Group">
+      <svg height="40" viewBox="0 0 260 40" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:block;overflow:visible">
+        <rect x="0"  y="29" width="8" height="11" rx="2" fill="#48B8D0"/>
+        <rect x="11" y="23" width="8" height="17" rx="2" fill="#3AA3BE"/>
+        <rect x="22" y="16" width="8" height="24" rx="2" fill="#2E86AB"/>
+        <rect x="33" y="8"  width="8" height="32" rx="2" fill="#246089"/>
+        <rect x="44" y="1"  width="8" height="39" rx="2" fill="#1B3A5C"/>
+        <text x="60" y="26" font-family="Sora,'Plus Jakarta Sans',sans-serif" font-weight="700" font-size="22" letter-spacing="2" fill="white" textLength="152" lengthAdjust="spacing">STILLINGS</text>
+        <text x="60" y="38" font-family="Sora,'Plus Jakarta Sans',sans-serif" font-weight="400" font-size="9.2" fill="#48B8D0" textLength="152" lengthAdjust="spacing">TECHNOLOGY GROUP</text>
+      </svg>
+    </a>
+    <div class="nav-links">
+      <a href="https://stillings.tech/#services">Services</a>
+      <a href="https://stillings.tech/about">About</a>
+      <a href="https://stillings.tech/#process">How We Work</a>
+      <a href="https://stillings.tech/expertise">Tech Stack</a>
+      <a href="https://stillings.tech/service-area" class="active">Service Area</a>
+      <a href="https://stillings.tech/consultation" class="nav-cta">Free Consultation</a>
+    </div>
+    <button class="menu-toggle" aria-label="Menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" id="mobileClose" aria-label="Close menu">
+    <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </button>
+  <a href="https://stillings.tech/#services" class="mobile-nav-link">Services</a>
+  <a href="https://stillings.tech/about" class="mobile-nav-link">About</a>
+  <a href="https://stillings.tech/#process" class="mobile-nav-link">How We Work</a>
+  <a href="https://stillings.tech/expertise" class="mobile-nav-link">Tech Stack</a>
+  <a href="https://stillings.tech/service-area" class="mobile-nav-link">Service Area</a>
+  <a href="https://stillings.tech/consultation" class="nav-cta mobile-nav-link">Free Consultation</a>
+</div>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <div class="page-hero-grid"></div>
+  <div class="page-hero-inner">
+    <div>
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="https://stillings.tech/">Home</a>
+        <span>/</span>
+        <span style="color:rgba(255,255,255,0.7)">Service Area</span>
+      </nav>
+      <div class="hero-badge">
+        <span class="dot"></span>
+        <span>Carlsbad, CA &bull; San Diego County &bull; SoCal</span>
+      </div>
+      <h1>Based in <em>Carlsbad.</em><br>Not limited to it.</h1>
+      <p>On-site IT support and managed services throughout San Diego County, with strategic consulting available remotely across Southern California and nationwide.</p>
+      <div class="hero-points">
+        <div class="hero-point">
+          <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          Same-day and next-day on-site response for San Diego County
+        </div>
+        <div class="hero-point">
+          <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          Remote consulting available anywhere in the US
+        </div>
+        <div class="hero-point">
+          <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          No long-term contracts required to get started
+        </div>
+      </div>
+    </div>
+    <div class="hero-map-panel">
+    <!-- Map -->
+   <svg class="hero-map" width="260" height="380" viewBox="0 0 260 380" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect width="260" height="380" fill="rgba(72,184,208,0.06)"/>
+     <!-- Pacific Ocean Label -->
+    <text 
+        x="28" 
+        y="290"
+        transform="rotate(-90 28 290)"
+        font-family="Plus Jakarta Sans,sans-serif"
+        font-size="9"
+        letter-spacing="4"
+        fill="rgba(255,255,255,0.22)"
+        text-transform="uppercase">
+        PACIFIC OCEAN
+    </text>
+    <path d="M40 0 
+             L35 30 
+             C 30 60, 45 80, 55 95 
+             C 65 110, 75 130, 85 160 
+             L105 210 
+             L135 280 
+             L165 350 
+             L180 380 
+             L260 380 
+             L260 0 Z" 
+          fill="rgba(27,58,92,0.18)" stroke="rgba(255,255,255,0.25)" stroke-width="1.5"/>
+
+    <line x1="85" y1="160" x2="260" y2="160" stroke="rgba(255,255,255,0.07)" stroke-width="1" stroke-dasharray="5 4"/>
+    <line x1="120" y1="245" x2="260" y2="245" stroke="rgba(255,255,255,0.07)" stroke-width="1" stroke-dasharray="5 4"/>
+
+    <circle cx="58" cy="105" r="4" fill="rgba(255,255,255,0.3)"/>
+    <text x="125" y="105" font-family="Plus Jakarta Sans,sans-serif" font-size="10" fill="rgba(255,255,255,0.4)" text-anchor="end">Los Angeles</text>
+
+    <circle cx="85" cy="165" r="3" fill="rgba(255,255,255,0.22)"/>
+    <text x="95" y="170" font-family="Plus Jakarta Sans,sans-serif" font-size="10" fill="rgba(255,255,255,0.35)">Orange County</text>
+
+    <circle cx="155" cy="325" r="3.5" fill="rgba(255,255,255,0.25)"/>
+    <text x="165" y="330" font-family="Plus Jakarta Sans,sans-serif" font-size="10" fill="rgba(255,255,255,0.35)">San Diego</text>
+
+    <g transform="translate(125, 255)">
+        <circle cx="0" cy="0" r="42" stroke="rgba(46,134,171,0.10)" stroke-width="1.5" fill="none"/>
+        <circle cx="0" cy="0" r="28" stroke="rgba(46,134,171,0.22)" stroke-width="1.5" fill="none"/>
+        <circle cx="0" cy="0" r="14" stroke="rgba(72,184,208,0.55)" stroke-width="1.5" fill="none"/>
+        <line x1="-20" y1="0" x2="20" y2="0" stroke="rgba(72,184,208,0.4)" stroke-width="1"/>
+        <line x1="0" y1="-20" x2="0" y2="20" stroke="rgba(72,184,208,0.4)" stroke-width="1"/>
+        <circle cx="0" cy="0" r="4.5" fill="#48B8D0"/>
+        
+        <line x1="5" y1="-5" x2="30" y2="-25" stroke="rgba(72,184,208,0.55)" stroke-width="1"/>
+        <text x="35" y="-28" font-family="Plus Jakarta Sans,sans-serif" font-size="11" font-weight="700" fill="#48B8D0">Carlsbad, CA</text>
+    </g>
+</svg>
+
+    </div>
+  </div>
+</div>
+
+<!-- COVERAGE TIERS -->
+<section class="coverage">
+  <div class="section-inner">
+    <span class="section-label">Coverage</span>
+    <h2 class="section-title">Two ways we work. One standard of service.</h2>
+    <p class="section-desc">Whether you need someone on-site tomorrow or a strategic partner you can call from anywhere — we've got you covered.</p>
+    <div class="tiers-layout">
+
+      <div class="tier-card featured">
+        <div class="tier-card-top">
+          <div class="tier-badge remote">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            On-Site Available
+          </div>
+          <h3>Greater San Diego County</h3>
+          <p class="tier-geo">Carlsbad · Encinitas · Oceanside · La Jolla · Downtown SD · Rancho Bernardo · Poway · Chula Vista · and more</p>
+          <p>Full-service managed IT and consulting with on-site support available throughout the county. Proactive monitoring, hands-on infrastructure work, and a technician who actually shows up — same day or next day for most locations.</p>
+        </div>
+        <div class="tier-card-body">
+          <div class="tier-services-label">Included Services</div>
+          <div class="tier-tags">
+            <span>On-Site IT Support</span>
+            <span>Managed Services</span>
+            <span>Cybersecurity</span>
+            <span>Network Installations</span>
+            <span>AV Integration</span>
+            <span>HIPAA Compliance</span>
+            <span>CMMC Compliance</span>
+            <span>Consulting</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="tier-card">
+        <div class="tier-card-top">
+          <div class="tier-badge onsite">Remote Delivery</div>
+          <h3>Southern California & Beyond</h3>
+          <p class="tier-geo">Orange County · Los Angeles · Riverside · Remote clients nationwide</p>
+          <p>Strategic consulting, fractional CIO engagements, vCIO advisory, and technology roadmapping — delivered remotely. Enterprise-level expertise without geography as a barrier. If you need someone at a high level who understands how technology scales, location isn't a problem.</p>
+        </div>
+        <div class="tier-card-body">
+          <div class="tier-services-label">Included Services</div>
+          <div class="tier-tags">
+            <span>vCIO Advisory</span>
+            <span>Fractional CIO</span>
+            <span>Tech Stack Assessment</span>
+            <span>AI Strategy</span>
+            <span>Strategy & Roadmapping</span>
+            <span>Project Consulting</span>
+            <span>SaaS Optimization</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CITIES -->
+<section class="cities">
+  <div class="section-inner">
+    <span class="section-label">San Diego County</span>
+    <h2 class="section-title">Cities & communities we serve on-site.</h2>
+    <p class="section-desc">We cover all of San Diego County. Here are some of the cities and neighborhoods where clients are already working with us.</p>
+    <div class="cities-grid">
+      <div class="city-item">
+        <div class="city-dot primary"></div>
+        <div class="city-item-text"><h4>Carlsbad</h4><p>Home base · North County Coastal</p></div>
+      </div>
+      <div class="city-item">
+        <div class="city-dot primary"></div>
+        <div class="city-item-text"><h4>Encinitas</h4><p>North County Coastal</p></div>
+      </div>
+      <div class="city-item">
+        <div class="city-dot primary"></div>
+        <div class="city-item-text"><h4>Oceanside</h4><p>North County Coastal</p></div>
+      </div>
+      <div class="city-item">
+        <div class="city-dot primary"></div>
+        <div class="city-item-text"><h4>La Jolla</h4><p>Biotech · Medical · Coastal</p></div>
+      </div>
+      <div class="city-item">
+        <div class="city-dot primary"></div>
+        <div class="city-item-text"><h4>Rancho Bernardo</h4><p>I-15 Tech Corridor · Defense</p></div>
+      </div>
+      <div class="city-item">
+        <div class="city-dot primary"></div>
+        <div class="city-item-text"><h4>San Diego (Downtown)</h4><p>Professional Services · Finance</p></div>
+      </div>
+      <div class="city-item">
+        <div class="city-dot primary"></div>
+        <div class="city-item-text"><h4>Poway</h4><p>North County Inland</p></div>
+      </div>
+      <div class="city-item">
+        <div class="city-dot primary"></div>
+        <div class="city-item-text"><h4>Chula Vista</h4><p>South Bay</p></div>
+      </div>
+      <div class="city-item">
+        <div class="city-dot secondary"></div>
+        <div class="city-item-text"><h4>Vista</h4><p>North County Inland</p></div>
+      </div>
+      <div class="city-item">
+        <div class="city-dot secondary"></div>
+        <div class="city-item-text"><h4>San Marcos</h4><p>North County Inland</p></div>
+      </div>
+      <div class="city-item">
+        <div class="city-dot secondary"></div>
+        <div class="city-item-text"><h4>Escondido</h4><p>North County Inland</p></div>
+      </div>
+      <div class="city-item">
+        <div class="city-dot secondary"></div>
+        <div class="city-item-text"><h4>Fallbrook</h4><p>North County</p></div>
+      </div>
+      <div class="city-item">
+        <div class="city-dot secondary"></div>
+        <div class="city-item-text"><h4>El Cajon</h4><p>East County</p></div>
+      </div>
+      <div class="city-item">
+        <div class="city-dot secondary"></div>
+        <div class="city-item-text"><h4>Santee</h4><p>East County</p></div>
+      </div>
+      <div class="city-item">
+        <div class="city-dot secondary"></div>
+        <div class="city-item-text"><h4>Del Mar</h4><p>Coastal · Torrey Pines</p></div>
+      </div>
+      <div class="city-item">
+        <div class="city-dot secondary"></div>
+        <div class="city-item-text"><h4>Solana Beach</h4><p>North County Coastal</p></div>
+      </div>
+    </div>
+    <p class="cities-note">Don't see your city? <strong>We cover all of San Diego County</strong> — reach out and we'll confirm coverage for your location.</p>
+  </div>
+</section>
+
+<!-- RESPONSE & COVERAGE DETAILS -->
+<section class="response">
+  <div class="section-inner response-inner">
+    <span class="section-label" style="color:var(--light-accent)">What to Expect</span>
+    <h2 class="section-title" style="color:var(--white);margin-bottom:0">Responsive. Local. Accountable.</h2>
+    <div class="response-grid">
+      <div class="response-item">
+        <div class="response-icon">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <h4>Response Time</h4>
+        <span class="response-highlight">Same / Next Day</span>
+        <p>For most San Diego County locations, on-site response is available same day or next business day. Remote support is available immediately during business hours.</p>
+      </div>
+      <div class="response-item">
+        <div class="response-icon">
+          <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        </div>
+        <h4>On-Site Coverage</h4>
+        <span class="response-highlight">All of SD County</span>
+        <p>From Oceanside to Chula Vista, East County to the coast — we travel throughout San Diego County for on-site work. No extra travel fees within the county.</p>
+      </div>
+      <div class="response-item">
+        <div class="response-icon">
+          <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+        </div>
+        <h4>Remote Consulting</h4>
+        <span class="response-highlight">Anywhere in the US</span>
+        <p>Strategic consulting, fractional CIO work, and project-based engagements are available remotely to clients across California and nationwide.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta" id="contact">
+  <div class="section-inner">
+    <div class="cta-inner">
+      <h2>Ready to talk about your business?</h2>
+      <p>Whether you're in Carlsbad or across the county — a free consultation is the easiest way to find out if we're the right fit.</p>
+      <a href="https://stillings.tech/consultation" class="btn-primary">Schedule a Free Consultation
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+      <div class="cta-contact">
+        <a href="mailto:hello@stillings.tech">
+          <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          hello@stillings.tech
+        </a>
+        <a href="https://stillings.tech/service-area">
+          <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Carlsbad, CA
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div style="display:flex;align-items:center;gap:10px">
+      <div style="display:flex;gap:2px;align-items:flex-end;padding-bottom:2px">
+        <div style="width:4px;height:8px;background:#48B8D0;border-radius:2px"></div>
+        <div style="width:4px;height:13px;background:#3AA3BE;border-radius:2px"></div>
+        <div style="width:4px;height:18px;background:#2E86AB;border-radius:2px"></div>
+        <div style="width:4px;height:23px;background:#246089;border-radius:2px"></div>
+        <div style="width:4px;height:28px;background:#1B3A5C;border-radius:2px"></div>
+      </div>
+      <div>
+        <div class="footer-name">STILLINGS</div>
+        <div class="footer-sub">Technology Group</div>
+      </div>
+    </div>
+    <div class="footer-links">
+      <a href="https://stillings.tech/#services">Services</a>
+      <a href="https://stillings.tech/about">About</a>
+      <a href="https://stillings.tech/expertise">Tech Stack</a>
+      <a href="https://stillings.tech/service-area">Service Area</a>
+      <a href="https://stillings.tech/consultation">Consultation</a>
+    </div>
+    <div class="footer-copy">&copy; 2026 Stillings Technology Group. All rights reserved.</div>
+  </div>
+</footer>
+
+<script>
+const menuToggle=document.querySelector('.menu-toggle');
+const mobileMenu=document.getElementById('mobileMenu');
+const mobileClose=document.getElementById('mobileClose');
+menuToggle.addEventListener('click',()=>{mobileMenu.classList.add('open');document.body.style.overflow='hidden'});
+mobileClose.addEventListener('click',()=>{mobileMenu.classList.remove('open');document.body.style.overflow=''});
+document.querySelectorAll('.mobile-nav-link').forEach(a=>{
+  a.addEventListener('click',()=>{mobileMenu.classList.remove('open');document.body.style.overflow=''});
+});
+
+const obs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting){e.target.style.opacity='1';e.target.style.transform='translateY(0)'}});
+},{threshold:0.1,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.tier-card,.city-item,.response-item').forEach(el=>{
+  el.style.opacity='0';el.style.transform='translateY(20px)';el.style.transition='opacity .6s ease, transform .6s ease';
+  obs.observe(el);
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SEO Audit Request | Stillings Technology Group</title>
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://stillings.tech/seo">
+<meta property="og:title" content="SEO Audit Request | Stillings Technology Group">
+<meta property="og:description" content="Get a scored SEO audit for your business website — covering Google rankings and AI search visibility. Based in Carlsbad, serving North County SD and beyond.">
+<meta property="og:image" content="https://stillings.tech/og-image.png">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="SEO Audit Request | Stillings Technology Group">
+<meta name="twitter:description" content="Get a scored SEO audit covering Google rankings and AI search visibility.">
+<meta name="twitter:image" content="https://stillings.tech/og-image.png">
+
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;700&family=DM+Serif+Display&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --navy:#0D2137;--primary:#1B3A5C;--accent:#2E86AB;--light-accent:#48B8D0;
+  --bg-light:#E8F1F8;--text:#2a2a2a;--text-light:#6b7280;--white:#ffffff;
+  --serif:'DM Serif Display',Georgia,serif;--sans:'Plus Jakarta Sans','Segoe UI',sans-serif;
+  --warm:#f0f7fb;
+}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);color:var(--text);background:var(--white);overflow-x:hidden}
+
+/* === NAV === */
+nav{position:fixed;top:0;width:100%;z-index:100;padding:18px 0;transition:all .3s;background:rgba(13,33,55,0.97);backdrop-filter:blur(12px);box-shadow:0 2px 20px rgba(0,0,0,0.15)}
+.nav-inner{max-width:1200px;margin:0 auto;padding:0 40px;display:flex;align-items:center;justify-content:space-between}
+.logo{display:flex;align-items:center;text-decoration:none}
+.logo svg{display:block}
+.nav-links{display:flex;gap:32px;align-items:center}
+.nav-links a{color:rgba(255,255,255,0.8);text-decoration:none;font-size:14px;font-weight:500;letter-spacing:.5px;transition:color .2s}
+.nav-links a:hover{color:var(--white)}
+.nav-cta{background:var(--accent)!important;color:var(--white)!important;padding:10px 24px;border-radius:6px;font-weight:600;transition:all .2s!important}
+.nav-cta:hover{background:var(--light-accent)!important;transform:translateY(-1px)}
+.menu-toggle{display:none;background:none;border:none;cursor:pointer;padding:8px}
+.menu-toggle svg{stroke:white;width:28px;height:28px}
+
+/* === PAGE HERO === */
+.page-hero{background:linear-gradient(135deg,var(--navy) 0%,var(--primary) 55%,#1a4a6e 100%);padding:140px 40px 80px;position:relative;overflow:hidden}
+.page-hero::before{content:'';position:absolute;inset:0;
+  background:radial-gradient(ellipse at 75% 30%,rgba(46,134,171,0.15) 0%,transparent 60%),
+              radial-gradient(ellipse at 15% 80%,rgba(72,184,208,0.08) 0%,transparent 50%);pointer-events:none}
+.page-hero-grid{position:absolute;inset:0;
+  background-image:linear-gradient(rgba(255,255,255,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.03) 1px,transparent 1px);
+  background-size:60px 60px;pointer-events:none}
+.page-hero-inner{max-width:1200px;margin:0 auto;position:relative;z-index:2;display:grid;grid-template-columns:1fr 400px;gap:64px;align-items:center}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(46,134,171,0.15);border:1px solid rgba(46,134,171,0.3);
+  padding:8px 18px;border-radius:100px;margin-bottom:28px}
+.hero-badge span{font-size:12px;color:var(--light-accent);letter-spacing:2px;text-transform:uppercase;font-weight:600}
+.hero-badge .dot{width:6px;height:6px;background:var(--light-accent);border-radius:50%;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+.page-hero h1{font-family:var(--serif);font-size:clamp(36px,4.5vw,60px);color:var(--white);line-height:1.1;margin-bottom:20px}
+.page-hero h1 em{font-style:normal;color:var(--light-accent)}
+.page-hero p{font-size:18px;color:rgba(255,255,255,0.7);line-height:1.7;margin-bottom:32px;max-width:520px}
+.hero-trust{display:flex;flex-direction:column;gap:12px}
+.trust-item{display:flex;align-items:center;gap:12px;color:rgba(255,255,255,0.65);font-size:14px}
+.trust-item svg{width:18px;height:18px;stroke:var(--light-accent);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}
+
+/* === HERO CARD — PACKAGES === */
+.hero-card{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:20px;padding:32px;backdrop-filter:blur(8px)}
+.hero-card-label{font-size:11px;color:var(--light-accent);letter-spacing:2px;text-transform:uppercase;font-weight:600;margin-bottom:20px}
+.pkg-tiers{display:flex;flex-direction:column;gap:12px}
+.pkg-tier{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);border-radius:10px;padding:14px 16px;transition:border-color .2s}
+.pkg-tier:hover{border-color:rgba(72,184,208,0.3)}
+.pkg-tier-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:4px}
+.pkg-tier-name{font-size:13px;font-weight:700;color:var(--white)}
+.pkg-tier-price{font-family:var(--serif);font-size:15px;color:var(--light-accent)}
+.pkg-tier-desc{font-size:11px;color:rgba(255,255,255,0.45);line-height:1.5}
+.pkg-tier.featured{border-color:rgba(72,184,208,0.3);background:rgba(72,184,208,0.06)}
+.pkg-tier.featured .pkg-tier-name{color:var(--light-accent)}
+.hero-card-divider{height:1px;background:rgba(255,255,255,0.08);margin:16px 0}
+.hero-card-note{font-size:12px;color:rgba(255,255,255,0.35);text-align:center;line-height:1.6}
+
+/* === WHAT TO EXPECT STRIP === */
+.expect-strip{background:#0d1e30;border-bottom:1px solid rgba(255,255,255,0.06);padding:28px 40px}
+.expect-inner{max-width:920px;margin:0 auto;display:flex;gap:0;align-items:stretch}
+.expect-step{flex:1;display:flex;gap:14px;align-items:flex-start;padding:0 28px;position:relative}
+.expect-step:first-child{padding-left:0}
+.expect-step:last-child{padding-right:0}
+.expect-step+.expect-step::before{content:'';position:absolute;left:0;top:8px;bottom:8px;width:1px;background:rgba(255,255,255,0.08)}
+.expect-num{width:28px;height:28px;min-width:28px;border-radius:50%;background:var(--accent);color:white;font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;margin-top:1px}
+.expect-text strong{display:block;font-size:13px;color:var(--white);font-weight:600;margin-bottom:2px}
+.expect-text span{font-size:11px;color:rgba(255,255,255,0.4);line-height:1.5}
+
+/* === MAIN FORM SECTION === */
+.form-section{background:var(--warm);padding:80px 40px}
+.form-section-inner{max-width:920px;margin:0 auto}
+.form-card{background:var(--white);border-radius:20px;border:1px solid #e5e7eb;overflow:hidden;box-shadow:0 4px 40px rgba(13,33,55,0.06)}
+.form-header{background:var(--navy);padding:32px 48px;display:flex;align-items:center;justify-content:space-between}
+.form-header-left h2{font-family:var(--serif);font-size:26px;color:var(--white);margin-bottom:4px}
+.form-header-left p{font-size:14px;color:rgba(255,255,255,0.5)}
+.form-header-badge{background:rgba(72,184,208,0.15);border:1px solid rgba(72,184,208,0.25);padding:8px 16px;border-radius:8px;text-align:center;min-width:140px}
+.form-header-badge strong{display:block;font-family:var(--serif);font-size:14px;color:var(--light-accent);line-height:1.3}
+.form-header-badge span{font-size:11px;color:rgba(255,255,255,0.4);letter-spacing:1px;text-transform:uppercase}
+.tally-wrap{padding:8px}
+
+/* === AI CALLOUT BAND === */
+.ai-band{background:linear-gradient(135deg,#0a1929,#0f2a44);border-top:1px solid rgba(72,184,208,0.15);padding:28px 40px}
+.ai-band-inner{max-width:920px;margin:0 auto;display:flex;align-items:center;gap:20px}
+.ai-band-icon{width:40px;height:40px;min-width:40px;background:rgba(72,184,208,0.12);border:1px solid rgba(72,184,208,0.25);border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.ai-band-icon svg{width:20px;height:20px;stroke:var(--light-accent);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.ai-band-text{font-size:14px;color:rgba(255,255,255,0.55);line-height:1.7}
+.ai-band-text strong{color:var(--light-accent)}
+
+/* === TRUST STRIP === */
+.trust-strip{background:var(--white);border-top:1px solid #e5e7eb;padding:48px 40px}
+.trust-inner{max-width:920px;margin:0 auto;display:flex;justify-content:center;gap:64px}
+.trust-tile{display:flex;gap:16px;align-items:center}
+.tt-icon{width:44px;height:44px;min-width:44px;background:var(--bg-light);border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.tt-icon svg{width:22px;height:22px;stroke:var(--accent);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.tt-text strong{display:block;font-size:15px;color:var(--primary);font-weight:600;white-space:nowrap}
+.tt-text span{font-size:13px;color:var(--text-light);display:block;margin-top:2px}
+
+/* === FOOTER === */
+footer{background:var(--navy);padding:40px 40px 28px;border-top:1px solid rgba(255,255,255,0.06)}
+.footer-inner{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px}
+.footer-logo{display:flex;align-items:center;gap:10px}
+.footer-name{font-family:var(--serif);font-size:18px;color:var(--white);letter-spacing:1px}
+.footer-sub{font-size:9px;color:rgba(255,255,255,0.3);letter-spacing:3px;text-transform:uppercase}
+.footer-copy{font-size:13px;color:rgba(255,255,255,0.3)}
+.footer-links{display:flex;gap:24px}
+.footer-links a{color:rgba(255,255,255,0.4);text-decoration:none;font-size:13px;transition:color .2s}
+.footer-links a:hover{color:var(--white)}
+
+/* === RESPONSIVE === */
+@media(max-width:900px){
+  .page-hero-inner{grid-template-columns:1fr}
+  .hero-card{display:none}
+  .expect-strip{padding:24px}
+  .expect-inner{flex-direction:column;gap:16px}
+  .expect-step{padding:0!important}
+  .expect-step+.expect-step::before{display:none}
+  .form-header{padding:24px 28px;flex-direction:column;align-items:flex-start;gap:12px}
+  .trust-inner{flex-direction:column;gap:24px}
+  .ai-band{padding:24px}
+  .nav-links{display:none}
+  .menu-toggle{display:block}
+  .page-hero{padding:120px 24px 60px}
+  .form-section{padding:48px 20px}
+  .trust-strip{padding:40px 24px}
+  footer{padding:32px 24px}
+  .footer-inner{flex-direction:column;align-items:flex-start;gap:16px}
+  .footer-links{flex-wrap:wrap;gap:16px}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="https://stillings.tech" class="logo" aria-label="Stillings Technology Group">
+      <svg height="40" viewBox="0 0 260 40" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:block;overflow:visible">
+        <rect x="0"  y="29" width="8" height="11" rx="2" fill="#48B8D0"/>
+        <rect x="11" y="23" width="8" height="17" rx="2" fill="#3AA3BE"/>
+        <rect x="22" y="16" width="8" height="24" rx="2" fill="#2E86AB"/>
+        <rect x="33" y="8"  width="8" height="32" rx="2" fill="#246089"/>
+        <rect x="44" y="1"  width="8" height="39" rx="2" fill="#1B3A5C"/>
+        <text x="60" y="26" font-family="Sora,'Plus Jakarta Sans',sans-serif" font-weight="700" font-size="22" letter-spacing="2" fill="white" textLength="152" lengthAdjust="spacing">STILLINGS</text>
+        <text x="60" y="38" font-family="Sora,'Plus Jakarta Sans',sans-serif" font-weight="400" font-size="9.2" fill="#48B8D0" textLength="152" lengthAdjust="spacing">TECHNOLOGY GROUP</text>
+      </svg>
+    </a>
+    <div class="nav-links">
+      <a href="https://stillings.tech#services">Services</a>
+      <a href="https://stillings.tech#about">About</a>
+      <a href="https://stillings.tech#approach">Approach</a>
+      <a href="https://stillings.tech#industries">Industries</a>
+      <a href="https://stillings.tech#service-area">Service Area</a>
+      <a href="https://stillings.tech/consultation" class="nav-cta">Schedule a Consultation</a>
+    </div>
+    <button class="menu-toggle" aria-label="Menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+  </div>
+</nav>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="page-hero-grid"></div>
+  <div class="page-hero-inner">
+    <div>
+      <div class="hero-badge"><div class="dot"></div><span>SEO Audit Request</span></div>
+      <h1>Rank on Google.<br><em>Get cited by AI.</em></h1>
+      <p>Most North County businesses have websites that look fine but perform poorly — buried in search results and invisible to AI tools like ChatGPT, Perplexity, and Claude. We find exactly what's holding you back and fix it.</p>
+      <div class="hero-trust">
+        <div class="trust-item">
+          <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          Scored audit delivered before your first call
+        </div>
+        <div class="trust-item">
+          <svg viewBox="0 0 24 24"><path d="M12 2a4 4 0 0 1 4 4 4 4 0 0 1-1.18 2.84L12 12l-2.82-3.16A4 4 0 0 1 8 6a4 4 0 0 1 4-4z"/><path d="M12 12l5.5 5.5"/><path d="M12 12l-5.5 5.5"/><circle cx="6.5" cy="17.5" r="2.5"/><circle cx="17.5" cy="17.5" r="2.5"/></svg>
+          Covers Google rankings and AI search visibility
+        </div>
+        <div class="trust-item">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          Response within one business day
+        </div>
+      </div>
+    </div>
+
+    <!-- HERO CARD: PACKAGE TIERS -->
+    <div class="hero-card">
+      <div class="hero-card-label">Choose your engagement</div>
+      <div class="pkg-tiers">
+        <div class="pkg-tier">
+          <div class="pkg-tier-top">
+            <div class="pkg-tier-name">Audit & Action Plan</div>
+            <div class="pkg-tier-price">$500–$800</div>
+          </div>
+          <div class="pkg-tier-desc">Full scored audit + prioritized fix list. Yours to implement or hand to your developer.</div>
+        </div>
+        <div class="pkg-tier featured">
+          <div class="pkg-tier-top">
+            <div class="pkg-tier-name">We Fix It For You</div>
+            <div class="pkg-tier-price">$1,200–$2,000</div>
+          </div>
+          <div class="pkg-tier-desc">Audit plus we manage Tier 1 & 2 fixes, schema, llms.txt, and GBP optimization.</div>
+        </div>
+        <div class="pkg-tier">
+          <div class="pkg-tier-top">
+            <div class="pkg-tier-name">Semi-Annual Health Check</div>
+            <div class="pkg-tier-price">$350–$500 / review</div>
+          </div>
+          <div class="pkg-tier-desc">Ongoing protection — fresh audit, content review, and AI visibility check twice a year.</div>
+        </div>
+      </div>
+      <div class="hero-card-divider"></div>
+      <div class="hero-card-note">Not sure which fits? Select "exploring" on the form<br>and we'll talk through it on the call.</div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT TO EXPECT STRIP -->
+<div class="expect-strip">
+  <div class="expect-inner">
+    <div class="expect-step">
+      <div class="expect-num">1</div>
+      <div class="expect-text">
+        <strong>Submit this form</strong>
+        <span>Takes about 3 minutes</span>
+      </div>
+    </div>
+    <div class="expect-step">
+      <div class="expect-num">2</div>
+      <div class="expect-text">
+        <strong>We run your initial crawl</strong>
+        <span>Before we even talk</span>
+      </div>
+    </div>
+    <div class="expect-step">
+      <div class="expect-num">3</div>
+      <div class="expect-text">
+        <strong>Discovery call</strong>
+        <span>We walk through findings</span>
+      </div>
+    </div>
+    <div class="expect-step">
+      <div class="expect-num">4</div>
+      <div class="expect-text">
+        <strong>Scoped proposal</strong>
+        <span>Clear price, clear deliverables</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FORM SECTION -->
+<section class="form-section">
+  <div class="form-section-inner">
+    <div class="form-card">
+      <div class="form-header">
+        <div class="form-header-left">
+          <h2>Request Your SEO Audit</h2>
+          <p>Tell us about your website — we'll handle the rest</p>
+        </div>
+        <div class="form-header-badge">
+          <strong>No commitment<br>required</strong>
+          <span>Just a conversation</span>
+        </div>
+      </div>
+
+      <!-- SEO Audit Tally Form -->
+      <div class="tally-wrap">
+        <iframe data-tally-src="https://tally.so/embed/LZvEDJ?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="3241" frameborder="0" marginheight="0" marginwidth="0" title="SEO Audit"></iframe>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- AI SEARCH CALLOUT BAND -->
+<div class="ai-band">
+  <div class="ai-band-inner">
+    <div class="ai-band-icon">
+      <svg viewBox="0 0 24 24"><path d="M12 2a4 4 0 0 1 4 4 4 4 0 0 1-1.18 2.84L12 12l-2.82-3.16A4 4 0 0 1 8 6a4 4 0 0 1 4-4z"/><path d="M12 12l5.5 5.5"/><path d="M12 12l-5.5 5.5"/><circle cx="6.5" cy="17.5" r="2.5"/><circle cx="17.5" cy="17.5" r="2.5"/></svg>
+    </div>
+    <div class="ai-band-text">
+      <strong>We audit for AI search too.</strong> ChatGPT, Perplexity, Claude, and Google AI Overviews are now where many people start their research — and most local business websites are completely invisible to them. Our audit includes an AI Search Readiness score covering schema, <code style="font-size:12px;background:rgba(72,184,208,0.12);color:var(--light-accent);padding:1px 6px;border-radius:3px;font-family:monospace">llms.txt</code>, and structured authority signals. In every audit we've run, this has scored the lowest of any category — and it's fixable in days.
+    </div>
+  </div>
+</div>
+
+<!-- TRUST STRIP -->
+<div class="trust-strip">
+  <div class="trust-inner">
+    <div class="trust-tile">
+      <div class="tt-icon">
+        <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      </div>
+      <div class="tt-text">
+        <strong>Crawl before the call</strong>
+        <span>We do the homework first</span>
+      </div>
+    </div>
+    <div class="trust-tile">
+      <div class="tt-icon">
+        <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+      </div>
+      <div class="tt-text">
+        <strong>Scored & prioritized</strong>
+        <span>Not a generic checklist</span>
+      </div>
+    </div>
+    <div class="trust-tile">
+      <div class="tt-icon">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      </div>
+      <div class="tt-text">
+        <strong>Response within one business day</strong>
+        <span>Real person, real reply</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">
+      <div style="width:3px;height:28px;background:linear-gradient(180deg,#2E86AB,#48B8D0);border-radius:2px"></div>
+      <div>
+        <div class="footer-name">STILLINGS</div>
+        <div class="footer-sub">Technology Group</div>
+      </div>
+    </div>
+    <div class="footer-links">
+      <a href="https://stillings.tech#services">Services</a>
+      <a href="https://stillings.tech#about">About</a>
+      <a href="https://stillings.tech#approach">Approach</a>
+      <a href="https://stillings.tech#industries">Industries</a>
+      <a href="https://stillings.tech#service-area">Service Area</a>
+      <a href="https://stillings.tech/consultation">Consultation</a>
+    </div>
+    <div class="footer-copy">&copy; 2026 Stillings Technology Group. All rights reserved.</div>
+  </div>
+</footer>
+
+<!-- Tally embed script -->
+<script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}</script>
+</body>
+</html>

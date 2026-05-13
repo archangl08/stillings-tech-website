@@ -115,7 +115,7 @@ nav.scrolled{padding:12px 0;box-shadow:0 2px 20px rgba(0,0,0,0.15)}
 .stat{text-align:left}
 .stat-num{font-family:var(--serif);font-size:36px;color:var(--light-accent)}
 .stat-label{font-size:13px;color:rgba(255,255,255,0.5);margin-top:4px;letter-spacing:.5px}
-.hero-nodes{position:absolute;right:5%;top:50%;transform:translateY(-50%);opacity:.12;pointer-events:none}
+.hero-map{position:absolute;right:5%;top:50%;transform:translateY(-50%);opacity:.65;pointer-events:none}
 
 /* === GLOBAL SECTIONS === */
 section{padding:80px 40px}
@@ -123,17 +123,25 @@ section{padding:80px 40px}
 .section-label{display:inline-block;font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--accent);font-weight:700;margin-bottom:12px}
 .section-title{font-family:var(--serif);font-size:clamp(28px,3.5vw,44px);color:var(--primary);line-height:1.2;margin-bottom:16px}
 .section-desc{font-size:17px;color:var(--text-light);max-width:640px;line-height:1.7}
-.icon-wrap{width:52px;height:52px;background:var(--bg-light);border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:24px;flex-shrink:0}
+.icon-wrap{width:52px;height:52px;background:var(--bg-light);border-radius:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
 .icon-wrap svg{width:26px;height:26px;stroke:var(--accent);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
 
 /* === SERVICES === */
 .services{background:var(--white)}
 .services-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:24px;margin-top:48px}
-.service-card{width:calc(33.333% - 16px);min-width:280px;max-width:360px;flex-shrink:0;flex-grow:0;background:var(--white);border:1px solid #e5e7eb;border-radius:16px;padding:32px 28px;transition:all .4s;position:relative;overflow:hidden}
+.service-card{width:calc(33.333% - 16px);min-width:280px;max-width:360px;flex-shrink:0;flex-grow:0;background:var(--white);border:1px solid #e5e7eb;border-radius:16px;transition:all .4s;position:relative;overflow:hidden;cursor:pointer}
 .service-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--accent),var(--light-accent));transform:scaleX(0);transition:transform .4s;transform-origin:left}
-.service-card:hover{border-color:var(--accent);transform:translateY(-4px);box-shadow:0 16px 48px rgba(27,58,92,0.08)}
-.service-card:hover::before{transform:scaleX(1)}
-.service-card h3{font-family:var(--serif);font-size:20px;color:var(--primary);margin-bottom:10px}
+.service-card:hover{border-color:var(--accent);box-shadow:0 16px 48px rgba(27,58,92,0.08)}
+.service-card.open{border-color:var(--accent)}
+.service-card.open::before{transform:scaleX(1)}
+.card-header{display:flex;align-items:center;gap:16px;padding:22px 24px}
+.card-header .icon-wrap{margin-bottom:0}
+.card-header h3{flex:1;font-family:var(--serif);font-size:20px;color:var(--primary);margin:0}
+.card-chevron{width:20px;height:20px;stroke:var(--text-light);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;transition:transform .3s;flex-shrink:0}
+.service-card.open .card-chevron{transform:rotate(180deg)}
+.card-body{max-height:0;overflow:hidden;transition:max-height .4s ease}
+.service-card.open .card-body{max-height:320px}
+.card-body-inner{padding:0 24px 24px}
 .service-card p{font-size:14px;color:var(--text-light);line-height:1.7;margin-bottom:16px}
 .service-tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:20px}
 .service-tags span{font-size:11px;background:var(--bg-light);color:var(--accent);padding:4px 10px;border-radius:100px;font-weight:600;letter-spacing:.3px}
@@ -193,30 +201,6 @@ section{padding:80px 40px}
 .industry-item h4{font-size:13px;color:var(--primary);font-weight:700;line-height:1.3}
 .industry-item p{font-size:11px;color:var(--text-light);margin-top:3px;line-height:1.3}
 
-/* === SERVICE AREA === */
-.service-area{background:var(--white)}
-.area-layout{display:grid;grid-template-columns:300px 1fr;gap:56px;margin-top:48px;align-items:start}
-.area-visual{position:sticky;top:120px}
-.rings-container{position:relative;width:280px;height:280px;margin:0 auto}
-.ring{position:absolute;border-radius:50%;border:2px solid;display:flex;align-items:center;justify-content:center}
-.ring-outer{width:280px;height:280px;top:0;left:0;border-color:rgba(46,134,171,0.15);background:rgba(46,134,171,0.03)}
-.ring-core{width:150px;height:150px;top:65px;left:65px;border-color:var(--accent);background:linear-gradient(135deg,rgba(27,58,92,0.08),rgba(46,134,171,0.12));flex-direction:column;gap:4px}
-.ring-core svg{stroke:var(--accent);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
-.ring-label{position:absolute;font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;white-space:nowrap}
-.ring-label-outer{bottom:-26px;left:50%;transform:translateX(-50%);color:var(--text-light)}
-.ring-label-core{font-size:10px;color:var(--primary);position:static;margin-top:4px}
-.area-tiers{display:flex;flex-direction:column;gap:20px}
-.area-tier{display:flex;gap:20px;padding:24px;background:var(--white);border:1px solid #e5e7eb;border-radius:16px;transition:all .3s}
-.area-tier:hover{border-color:var(--accent);box-shadow:0 8px 32px rgba(27,58,92,0.06)}
-.tier-marker{width:4px;min-width:4px;border-radius:4px;flex-shrink:0}
-.tier-core{background:var(--accent)}
-.tier-outer{background:linear-gradient(180deg,var(--light-accent),rgba(46,134,171,0.3))}
-.tier-content h4{font-family:var(--serif);font-size:18px;color:var(--primary);margin-bottom:4px}
-.tier-geo{font-size:13px;color:var(--accent);font-weight:600;margin-bottom:10px;letter-spacing:.3px}
-.tier-content>p:last-of-type{font-size:14px;color:var(--text-light);line-height:1.7}
-.tier-services{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
-.tier-services span{font-size:11px;background:var(--bg-light);color:var(--accent);padding:3px 10px;border-radius:100px;font-weight:600;letter-spacing:.3px}
-
 /* === CTA === */
 .cta{background:linear-gradient(135deg,var(--navy),var(--primary));position:relative;overflow:hidden}
 .cta::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 30% 50%,rgba(72,184,208,0.1),transparent 60%);pointer-events:none}
@@ -241,7 +225,7 @@ footer{background:var(--navy);padding:40px 40px 28px;border-top:1px solid rgba(2
 
 /* === RESPONSIVE === */
 @media(max-width:900px){
-  .hero-nodes{display:none}
+  .hero-map{display:none}
   .nav-links{display:none}
   .menu-toggle{display:block}
   .hero-stats{flex-direction:column;gap:20px}
@@ -257,11 +241,6 @@ footer{background:var(--navy);padding:40px 40px 28px;border-top:1px solid rgba(2
   .process-steps{grid-template-columns:1fr 1fr;gap:32px}
   .process-steps::before{display:none}
   .industry-strip{grid-template-columns:repeat(3,1fr)}
-  .area-layout{grid-template-columns:1fr;gap:32px}
-  .area-visual{position:static}
-  .rings-container{width:240px;height:240px}
-  .ring-outer{width:240px;height:240px}
-  .ring-core{width:128px;height:128px;top:56px;left:56px}
   footer{padding:28px 24px}
   .footer-inner{flex-direction:column;align-items:flex-start;gap:16px}
 }
@@ -292,7 +271,7 @@ footer{background:var(--navy);padding:40px 40px 28px;border-top:1px solid rgba(2
       <a href="https://stillings.tech/about">About</a>
       <a href="#process">How We Work</a>
       <a href="https://stillings.tech/expertise">Tech Stack</a>
-      <a href="#service-area">Service Area</a>
+      <a href="https://stillings.tech/service-area">Service Area</a>
       <a href="https://stillings.tech/consultation" class="nav-cta">Free Consultation</a>
     </div>
     <button class="menu-toggle" aria-label="Menu">
@@ -310,36 +289,72 @@ footer{background:var(--navy);padding:40px 40px 28px;border-top:1px solid rgba(2
   <a href="https://stillings.tech/about" class="mobile-nav-link">About</a>
   <a href="#process" class="mobile-nav-link">How We Work</a>
   <a href="https://stillings.tech/expertise" class="mobile-nav-link">Tech Stack</a>
-  <a href="#service-area" class="mobile-nav-link">Service Area</a>
+  <a href="https://stillings.tech/service-area" class="mobile-nav-link">Service Area</a>
   <a href="https://stillings.tech/consultation" class="nav-cta mobile-nav-link">Free Consultation</a>
 </div>
 
 <!-- HERO -->
 <section class="hero">
   <div class="hero-grid"></div>
-  <svg class="hero-nodes" width="400" height="400" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
-    <circle cx="200" cy="200" r="100" fill="none" stroke="white" stroke-width="1"/>
-    <circle cx="200" cy="200" r="160" fill="none" stroke="white" stroke-width=".5"/>
-    <circle cx="200" cy="100" r="8" fill="white"/><circle cx="300" cy="200" r="8" fill="white"/>
-    <circle cx="200" cy="300" r="8" fill="white"/><circle cx="100" cy="200" r="8" fill="white"/>
-    <circle cx="280" cy="120" r="5" fill="white"/><circle cx="120" cy="280" r="5" fill="white"/>
-    <circle cx="280" cy="280" r="5" fill="white"/><circle cx="120" cy="120" r="5" fill="white"/>
-    <line x1="200" y1="100" x2="280" y2="120" stroke="white" stroke-width=".5"/>
-    <line x1="280" y1="120" x2="300" y2="200" stroke="white" stroke-width=".5"/>
-    <line x1="300" y1="200" x2="280" y2="280" stroke="white" stroke-width=".5"/>
-    <line x1="280" y1="280" x2="200" y2="300" stroke="white" stroke-width=".5"/>
-    <line x1="200" y1="300" x2="120" y2="280" stroke="white" stroke-width=".5"/>
-    <line x1="120" y1="280" x2="100" y2="200" stroke="white" stroke-width=".5"/>
-    <line x1="100" y1="200" x2="120" y2="120" stroke="white" stroke-width=".5"/>
-    <line x1="120" y1="120" x2="200" y2="100" stroke="white" stroke-width=".5"/>
-  </svg>
+  <!-- Map -->
+   <svg class="hero-map" width="260" height="380" viewBox="0 0 260 380" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect width="260" height="380" fill="rgba(72,184,208,0.06)"/>
+     <!-- Pacific Ocean Label -->
+    <text 
+        x="28" 
+        y="290"
+        transform="rotate(-90 28 290)"
+        font-family="Plus Jakarta Sans,sans-serif"
+        font-size="9"
+        letter-spacing="4"
+        fill="rgba(255,255,255,0.22)"
+        text-transform="uppercase">
+        PACIFIC OCEAN
+    </text>
+    <path d="M40 0 
+             L35 30 
+             C 30 60, 45 80, 55 95 
+             C 65 110, 75 130, 85 160 
+             L105 210 
+             L135 280 
+             L165 350 
+             L180 380 
+             L260 380 
+             L260 0 Z" 
+          fill="rgba(27,58,92,0.18)" stroke="rgba(255,255,255,0.25)" stroke-width="1.5"/>
+
+    <line x1="85" y1="160" x2="260" y2="160" stroke="rgba(255,255,255,0.07)" stroke-width="1" stroke-dasharray="5 4"/>
+    <line x1="120" y1="245" x2="260" y2="245" stroke="rgba(255,255,255,0.07)" stroke-width="1" stroke-dasharray="5 4"/>
+
+    <circle cx="58" cy="105" r="4" fill="rgba(255,255,255,0.3)"/>
+    <text x="125" y="105" font-family="Plus Jakarta Sans,sans-serif" font-size="10" fill="rgba(255,255,255,0.4)" text-anchor="end">Los Angeles</text>
+
+    <circle cx="85" cy="165" r="3" fill="rgba(255,255,255,0.22)"/>
+    <text x="95" y="170" font-family="Plus Jakarta Sans,sans-serif" font-size="10" fill="rgba(255,255,255,0.35)">Orange County</text>
+
+    <circle cx="155" cy="325" r="3.5" fill="rgba(255,255,255,0.25)"/>
+    <text x="165" y="330" font-family="Plus Jakarta Sans,sans-serif" font-size="10" fill="rgba(255,255,255,0.35)">San Diego</text>
+
+    <g transform="translate(125, 255)">
+        <circle cx="0" cy="0" r="42" stroke="rgba(46,134,171,0.10)" stroke-width="1.5" fill="none"/>
+        <circle cx="0" cy="0" r="28" stroke="rgba(46,134,171,0.22)" stroke-width="1.5" fill="none"/>
+        <circle cx="0" cy="0" r="14" stroke="rgba(72,184,208,0.55)" stroke-width="1.5" fill="none"/>
+        <line x1="-20" y1="0" x2="20" y2="0" stroke="rgba(72,184,208,0.4)" stroke-width="1"/>
+        <line x1="0" y1="-20" x2="0" y2="20" stroke="rgba(72,184,208,0.4)" stroke-width="1"/>
+        <circle cx="0" cy="0" r="4.5" fill="#48B8D0"/>
+        
+        <line x1="5" y1="-5" x2="30" y2="-25" stroke="rgba(72,184,208,0.55)" stroke-width="1"/>
+        <text x="35" y="-28" font-family="Plus Jakarta Sans,sans-serif" font-size="11" font-weight="700" fill="#48B8D0">Carlsbad, CA</text>
+    </g>
+</svg>
+
   <div class="hero-content">
     <div class="hero-badge">
       <span class="dot"></span>
-      <span>Based in Carlsbad &bull; Serving San Diego &amp; Beyond</span>
+      <span>Based in Carlsbad, CA &bull; Serving San Diego &amp; Beyond</span>
     </div>
     <h1>Corporate experience. <em>Small business</em> solutions.</h1>
-    <p>IT support and strategic consulting built around your business, not a ticket queue. We partner with owners across San Diego and beyond to solve real problems and keep technology out of the way.</p>
+    <p>From day-to-day IT support to long-term strategy, we handle the full picture — so you can stop worrying about technology and focus on your business.</p>
     <div class="hero-buttons">
       <a href="https://stillings.tech/consultation" class="btn-primary">Schedule a Free Consultation
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
@@ -359,80 +374,145 @@ footer{background:var(--navy);padding:40px 40px 28px;border-top:1px solid rgba(2
   <div class="section-inner">
     <span class="section-label">What We Do</span>
     <h2 class="section-title">Everything your business needs to run on solid technology.</h2>
-    <p class="section-desc">From day-to-day IT support to long-term strategy, we handle the full picture — so you can stop worrying about technology and focus on your business.</p>
+    <p class="section-desc">IT support and strategic consulting built around your business, not a ticket queue. We partner with owners across San Diego and beyond to solve real problems and keep technology out of the way.</p>
 
     <div class="services-grid">
+
       <div class="service-card">
-        <div class="icon-wrap"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
-        <h3>Managed IT Services</h3>
-        <p>Proactive monitoring, helpdesk, patch management, and on-site support. We take ownership so your team stops fighting technology.</p>
-        <div class="service-tags"><span>Monitoring</span><span>Helpdesk</span><span>On-Site</span><span>Vendor Mgmt</span></div>
-        <a href="https://stillings.tech/expertise" class="service-learn">See our full tech stack <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+        <div class="card-header">
+          <div class="icon-wrap"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
+          <h3>Managed IT Services</h3>
+          <svg class="card-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="card-body">
+          <div class="card-body-inner">
+            <p>Proactive monitoring, helpdesk, patch management, and on-site support. We take ownership so your team stops fighting technology.</p>
+            <div class="service-tags"><span>Monitoring</span><span>Helpdesk</span><span>On-Site</span><span>Vendor Mgmt</span></div>
+            <a href="https://stillings.tech/expertise" class="service-learn">See our full tech stack <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+          </div>
+        </div>
       </div>
 
       <div class="service-card">
-        <div class="icon-wrap"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
-        <h3>Cybersecurity</h3>
-        <p>Enterprise-grade protection built for small business budgets. Endpoint security, email filtering, phishing training, and compliance documentation.</p>
-        <div class="service-tags"><span>Endpoint</span><span>Email Security</span><span>HIPAA</span><span>CMMC</span><span>PCI</span></div>
-        <a href="https://stillings.tech/expertise" class="service-learn">See our full tech stack <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+        <div class="card-header">
+          <div class="icon-wrap"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+          <h3>Cybersecurity</h3>
+          <svg class="card-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="card-body">
+          <div class="card-body-inner">
+            <p>Enterprise-grade protection built for small business budgets. Endpoint security, email filtering, phishing training, and compliance documentation.</p>
+            <div class="service-tags"><span>Endpoint</span><span>Email Security</span><span>HIPAA</span><span>CMMC</span><span>PCI</span></div>
+            <a href="https://stillings.tech/expertise" class="service-learn">See our full tech stack <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+          </div>
+        </div>
       </div>
 
       <div class="service-card">
-        <div class="icon-wrap"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg></div>
-        <h3>Tech Stack Assessment</h3>
-        <p>We audit your current infrastructure, identify what's working and what's costing you, then build a roadmap that scales with your business.</p>
-        <div class="service-tags"><span>Audit</span><span>Roadmapping</span><span>vCIO</span><span>Vendor Eval</span></div>
-        <a href="https://stillings.tech/expertise" class="service-learn">See our full tech stack <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+        <div class="card-header">
+          <div class="icon-wrap"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg></div>
+          <h3>Tech Stack Assessment</h3>
+          <svg class="card-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="card-body">
+          <div class="card-body-inner">
+            <p>We audit your current infrastructure, identify what's working and what's costing you, then build a roadmap that scales with your business.</p>
+            <div class="service-tags"><span>Audit</span><span>Roadmapping</span><span>vCIO</span><span>Vendor Eval</span></div>
+            <a href="https://stillings.tech/expertise" class="service-learn">See our full tech stack <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+          </div>
+        </div>
       </div>
 
       <div class="service-card">
-        <div class="icon-wrap"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
-        <h3>Project-Based Consulting</h3>
-        <p>Scoped engagements for specific initiatives — ITSM implementations, lifecycle automation, office buildouts, and technology migrations.</p>
-        <div class="service-tags"><span>ITSM</span><span>Lifecycle</span><span>Migrations</span><span>Automation</span></div>
-        <a href="https://stillings.tech/expertise" class="service-learn">See our full tech stack <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+        <div class="card-header">
+          <div class="icon-wrap"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
+          <h3>Project-Based Consulting</h3>
+          <svg class="card-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="card-body">
+          <div class="card-body-inner">
+            <p>Scoped engagements for specific initiatives — ITSM implementations, lifecycle automation, office buildouts, and technology migrations.</p>
+            <div class="service-tags"><span>ITSM</span><span>Lifecycle</span><span>Migrations</span><span>Automation</span></div>
+            <a href="https://stillings.tech/expertise" class="service-learn">See our full tech stack <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+          </div>
+        </div>
       </div>
 
       <div class="service-card">
-        <div class="icon-wrap"><svg viewBox="0 0 24 24"><path d="M12 2a4 4 0 0 1 4 4 4 4 0 0 1-1.18 2.84L12 12l-2.82-3.16A4 4 0 0 1 8 6a4 4 0 0 1 4-4z"/><path d="M12 12l5.5 5.5"/><path d="M12 12l-5.5 5.5"/><circle cx="6.5" cy="17.5" r="2.5"/><circle cx="17.5" cy="17.5" r="2.5"/></svg></div>
-        <h3>AI Strategy & Adoption</h3>
-        <p>Cut through the noise. We assess where AI creates real value for your business, then build a practical strategy that evolves as the landscape shifts.</p>
-        <div class="service-tags"><span>AI Readiness</span><span>Build vs. Buy</span><span>Implementation</span></div>
-        <a href="https://stillings.tech/expertise" class="service-learn">See our full tech stack <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+        <div class="card-header">
+          <div class="icon-wrap"><svg viewBox="0 0 24 24"><path d="M12 2a4 4 0 0 1 4 4 4 4 0 0 1-1.18 2.84L12 12l-2.82-3.16A4 4 0 0 1 8 6a4 4 0 0 1 4-4z"/><path d="M12 12l5.5 5.5"/><path d="M12 12l-5.5 5.5"/><circle cx="6.5" cy="17.5" r="2.5"/><circle cx="17.5" cy="17.5" r="2.5"/></svg></div>
+          <h3>AI Strategy & Adoption</h3>
+          <svg class="card-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="card-body">
+          <div class="card-body-inner">
+            <p>Cut through the noise. We assess where AI creates real value for your business, then build a practical strategy that evolves as the landscape shifts.</p>
+            <div class="service-tags"><span>AI Readiness</span><span>Build vs. Buy</span><span>Implementation</span></div>
+            <a href="https://stillings.tech/expertise" class="service-learn">See our full tech stack <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+          </div>
+        </div>
       </div>
 
       <div class="service-card">
-        <div class="icon-wrap"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"/><rect x="2" y="14" width="20" height="8" rx="2" ry="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg></div>
-        <h3>Networking Installations & Upgrades</h3>
-        <p>Reliable, properly designed networks for offices and commercial spaces. From structured cabling to wireless infrastructure, switches, and firewalls — built to perform from day one.</p>
-        <div class="service-tags"><span>Meraki</span><span>UniFi</span><span>Starlink</span><span>Wireless</span><span>Firewalls</span></div>
-        <a href="https://stillings.tech/expertise" class="service-learn">See our full tech stack <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+        <div class="card-header">
+          <div class="icon-wrap"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"/><rect x="2" y="14" width="20" height="8" rx="2" ry="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg></div>
+          <h3>Networking Installations & Upgrades</h3>
+          <svg class="card-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="card-body">
+          <div class="card-body-inner">
+            <p>Reliable, properly designed networks for offices and commercial spaces. From structured cabling to wireless infrastructure, switches, and firewalls — built to perform from day one.</p>
+            <div class="service-tags"><span>Meraki</span><span>UniFi</span><span>Starlink</span><span>Wireless</span><span>Firewalls</span></div>
+            <a href="https://stillings.tech/expertise" class="service-learn">See our full tech stack <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+          </div>
+        </div>
       </div>
 
       <div class="service-card">
-        <div class="icon-wrap"><svg viewBox="0 0 24 24"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg></div>
-        <h3>Audio/Video Consultation</h3>
-        <p>Conference rooms, displays, speakers, and AV systems that actually work when you need them. We design and integrate solutions for meeting rooms, huddle spaces, and commercial environments.</p>
-        <div class="service-tags"><span>AV Design</span><span>Conferencing</span><span>Displays</span><span>Integration</span></div>
-        <a href="https://stillings.tech/expertise" class="service-learn">See our full tech stack <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+        <div class="card-header">
+          <div class="icon-wrap"><svg viewBox="0 0 24 24"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg></div>
+          <h3>Audio/Video Consultation</h3>
+          <svg class="card-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="card-body">
+          <div class="card-body-inner">
+            <p>Conference rooms, displays, speakers, and AV systems that actually work when you need them. We design and integrate solutions for meeting rooms, huddle spaces, and commercial environments.</p>
+            <div class="service-tags"><span>AV Design</span><span>Conferencing</span><span>Displays</span><span>Integration</span></div>
+            <a href="https://stillings.tech/expertise" class="service-learn">See our full tech stack <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+          </div>
+        </div>
       </div>
 
       <div class="service-card">
-        <div class="icon-wrap"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
-        <h3>Website Development</h3>
-        <p>Clean, fast websites built for small and growing businesses. We handle design, development, and ongoing maintenance — so your site works as hard as you do.</p>
-        <div class="service-tags"><span>Design</span><span>Development</span><span>Maintenance</span><span>SEO</span></div>
-        <a href="https://stillings.tech/consultation" class="service-learn">Schedule a consultation <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+        <div class="card-header">
+          <div class="icon-wrap"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
+          <h3>Website Development</h3>
+          <svg class="card-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="card-body">
+          <div class="card-body-inner">
+            <p>Clean, fast websites built for small and growing businesses. We handle design, development, and ongoing maintenance — so your site works as hard as you do.</p>
+            <div class="service-tags"><span>Design</span><span>Development</span><span>Maintenance</span><span>SEO</span></div>
+            <a href="https://stillings.tech/consultation" class="service-learn">Schedule a consultation <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+          </div>
+        </div>
       </div>
 
       <div class="service-card">
-        <div class="icon-wrap"><svg viewBox="0 0 24 24"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg></div>
-        <h3>SaaS Software Setup & Support</h3>
-        <p>We get your cloud tools working the way they should. Onboarding, configuration, integrations, and ongoing support for the business software your team depends on.</p>
-        <div class="service-tags"><span>Onboarding</span><span>Configuration</span><span>Integrations</span><span>Support</span></div>
-        <a href="https://stillings.tech/expertise" class="service-learn">See our full tech stack <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+        <div class="card-header">
+          <div class="icon-wrap"><svg viewBox="0 0 24 24"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg></div>
+          <h3>SaaS Software Setup & Support</h3>
+          <svg class="card-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="card-body">
+          <div class="card-body-inner">
+            <p>We get your cloud tools working the way they should. Onboarding, configuration, integrations, and ongoing support for the business software your team depends on.</p>
+            <div class="service-tags"><span>Onboarding</span><span>Configuration</span><span>Integrations</span><span>Support</span></div>
+            <a href="https://stillings.tech/expertise" class="service-learn">See our full tech stack <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+          </div>
+        </div>
       </div>
+
     </div>
   </div>
 </section>
@@ -469,7 +549,6 @@ footer{background:var(--navy);padding:40px 40px 28px;border-top:1px solid rgba(2
     <h2 class="section-title" style="color:var(--white);margin-bottom:0">Results that speak for themselves.</h2>
 
     <div class="proof-top">
-      
       <div class="quote-card">
         <p class="quote-text">"Alex communicates in non-technical terms so I actually understand the solutions being put in place."</p>
         <div class="quote-attr">— Commercial Real Estate Broker, San Diego CA</div>
@@ -569,48 +648,6 @@ footer{background:var(--navy);padding:40px 40px 28px;border-top:1px solid rgba(2
   </div>
 </section>
 
-<!-- SERVICE AREA -->
-<section class="service-area" id="service-area">
-  <div class="section-inner">
-    <span class="section-label">Where We Work</span>
-    <h2 class="section-title">Based in Carlsbad. Not limited to it.</h2>
-    <p class="section-desc">Hands-on IT support close to home, and consulting expertise that travels wherever your business needs it.</p>
-    <div class="area-layout">
-      <div class="area-visual">
-        <div class="rings-container">
-          <div class="ring ring-outer">
-            <span class="ring-label ring-label-outer">Southern California & Beyond</span>
-          </div>
-          <div class="ring ring-core">
-            <svg viewBox="0 0 24 24" width="26" height="26"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            <span class="ring-label ring-label-core">Carlsbad</span>
-          </div>
-        </div>
-      </div>
-      <div class="area-tiers">
-        <div class="area-tier">
-          <div class="tier-marker tier-core"></div>
-          <div class="tier-content">
-            <h4>Greater San Diego County</h4>
-            <p class="tier-geo">Carlsbad, Encinitas, Oceanside, La Jolla, Downtown, Rancho Bernardo, Poway & more</p>
-            <p>Full-service managed IT and consulting with on-site support throughout the county. Proactive monitoring, hands-on infrastructure management, and a team that actually shows up.</p>
-            <div class="tier-services"><span>On-Site IT Support</span><span>Managed Services</span><span>Cybersecurity</span><span>Consulting</span></div>
-          </div>
-        </div>
-        <div class="area-tier">
-          <div class="tier-marker tier-outer"></div>
-          <div class="tier-content">
-            <h4>Southern California & Beyond</h4>
-            <p class="tier-geo">Orange County, Los Angeles, and remote clients nationwide</p>
-            <p>Strategic consulting, fractional CIO engagements, vCIO advisory, and technology roadmapping — delivered remotely. Enterprise-level expertise without geography as a barrier.</p>
-            <div class="tier-services"><span>vCIO Advisory</span><span>Fractional CIO</span><span>Strategy & Roadmapping</span><span>Remote IT Consulting</span></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- CTA -->
 <section class="cta" id="contact">
   <div class="section-inner">
@@ -625,9 +662,9 @@ footer{background:var(--navy);padding:40px 40px 28px;border-top:1px solid rgba(2
           <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
           hello@stillings.tech
         </a>
-        <a href="#">
+        <a href="https://stillings.tech/service-area">
           <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          Carlsbad, California
+          Carlsbad, CA
         </a>
       </div>
     </div>
@@ -654,7 +691,7 @@ footer{background:var(--navy);padding:40px 40px 28px;border-top:1px solid rgba(2
       <a href="#services">Services</a>
       <a href="https://stillings.tech/about">About</a>
       <a href="https://stillings.tech/expertise">Tech Stack</a>
-      <a href="#service-area">Service Area</a>
+      <a href="https://stillings.tech/service-area">Service Area</a>
       <a href="https://stillings.tech/consultation">Consultation</a>
     </div>
     <div class="footer-copy">&copy; 2026 Stillings Technology Group. All rights reserved.</div>
@@ -691,11 +728,24 @@ document.querySelectorAll('a[href^="#"]').forEach(a=>{
   });
 });
 
+/* === ACCORDION SERVICE CARDS === */
+document.querySelectorAll('.service-card').forEach(card=>{
+  card.addEventListener('click',()=>{
+    const isOpen=card.classList.contains('open');
+    document.querySelectorAll('.service-card.open').forEach(c=>c.classList.remove('open'));
+    if(!isOpen)card.classList.add('open');
+  });
+  card.querySelectorAll('a').forEach(a=>{
+    a.addEventListener('click',e=>e.stopPropagation());
+  });
+});
+
+/* === SCROLL ANIMATIONS === */
 const obs=new IntersectionObserver(entries=>{
   entries.forEach(e=>{if(e.isIntersecting){e.target.style.opacity='1';e.target.style.transform='translateY(0)'}});
 },{threshold:0.1,rootMargin:'0px 0px -40px 0px'});
 
-document.querySelectorAll('.service-card,.industry-item,.process-step,.area-tier,.quote-card,.proof-stat').forEach(el=>{
+document.querySelectorAll('.service-card,.industry-item,.process-step,.quote-card,.proof-stat').forEach(el=>{
   el.style.opacity='0';el.style.transform='translateY(20px)';el.style.transition='opacity .6s ease, transform .6s ease';
   obs.observe(el);
 });
