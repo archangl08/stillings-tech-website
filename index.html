@@ -148,6 +148,10 @@ section{padding:80px 40px}
 .service-learn{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;transition:gap .2s}
 .service-learn:hover{gap:10px}
 .service-learn svg{width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.service-list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:6px}
+.service-list li{font-size:13px;color:var(--text-light);padding-left:14px;position:relative;line-height:1.5}
+.service-list li::before{content:'';position:absolute;left:0;top:7px;width:5px;height:5px;border-radius:50%;background:var(--accent)}
+.services-cta{display:flex;gap:16px;justify-content:center;margin-top:40px;flex-wrap:wrap}
 
 /* === ABOUT TEASER === */
 .about-teaser{background:var(--warm)}
@@ -352,7 +356,7 @@ footer{background:var(--navy);padding:40px 40px 28px;border-top:1px solid rgba(2
   <div class="hero-content">
     <div class="hero-badge">
       <span class="dot"></span>
-      <span>Based in Carlsbad, CA &bull; Serving San Diego &amp; Beyond</span>
+      <span>Based in Carlsbad, CA &bull; Serving Southern California &amp; Beyond</span>
     </div>
     <h1>Corporate experience. <em>Small business</em> solutions.</h1>
     <p>From day-to-day IT support to long-term strategy, we handle the full picture — so you can stop worrying about technology and focus on your business.</p>
@@ -375,7 +379,7 @@ footer{background:var(--navy);padding:40px 40px 28px;border-top:1px solid rgba(2
   <div class="section-inner">
     <span class="section-label">What We Do</span>
     <h2 class="section-title">Everything your business needs to run on solid technology.</h2>
-    <p class="section-desc">IT support and strategic consulting built around your business, not a ticket queue. We partner with owners across San Diego and beyond to solve real problems and keep technology out of the way.</p>
+    <p class="section-desc">IT support and strategic consulting built around your business, not a ticket queue. We partner with owners across San Diego, Orange County, Los Angeles, and beyond to solve real problems and keep technology running smoothly.</p>
 
     <div class="services-grid">
 
@@ -387,9 +391,8 @@ footer{background:var(--navy);padding:40px 40px 28px;border-top:1px solid rgba(2
         </div>
         <div class="card-body">
           <div class="card-body-inner">
-            <p>Proactive monitoring, helpdesk, patch management, and on-site support. We take ownership so your team stops fighting technology.</p>
-            <div class="service-tags"><span>Monitoring</span><span>Helpdesk</span><span>On-Site</span><span>Vendor Mgmt</span></div>
-            <a href="https://stillings.tech/expertise" class="service-learn">See our full tech stack <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+            <p>We take ownership of your IT to free up your team. You gain access to:</p>
+            <ul class="service-list"><li>Proactive monitoring</li><li>Helpdesk</li><li>Patch management</li><li>On-site support</li><li>Vendor management</li></ul>
           </div>
         </div>
       </div>
@@ -402,9 +405,8 @@ footer{background:var(--navy);padding:40px 40px 28px;border-top:1px solid rgba(2
         </div>
         <div class="card-body">
           <div class="card-body-inner">
-            <p>Enterprise-grade protection built for small business budgets. Endpoint security, email filtering, phishing training, and compliance documentation.</p>
-            <div class="service-tags"><span>Endpoint</span><span>Email Security</span><span>HIPAA</span><span>CMMC</span><span>PCI</span></div>
-            <a href="https://stillings.tech/expertise" class="service-learn">See our full tech stack <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+            <p>Enterprise-grade protection built for small business budgets, including but not limited to:</p>
+            <ul class="service-list"><li>Endpoint security</li><li>Email filtering</li><li>Phishing training</li><li>Compliance documentation</li><li>HIPAA, CMMC &amp; PCI</li></ul>
           </div>
         </div>
       </div>
@@ -417,9 +419,8 @@ footer{background:var(--navy);padding:40px 40px 28px;border-top:1px solid rgba(2
         </div>
         <div class="card-body">
           <div class="card-body-inner">
-            <p>We audit your current infrastructure, identify what's working and what's costing you, then build a roadmap that scales with your business.</p>
-            <div class="service-tags"><span>Audit</span><span>Roadmapping</span><span>vCIO</span><span>Vendor Eval</span></div>
-            <a href="https://stillings.tech/expertise" class="service-learn">See our full tech stack <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+            <p>We audit your current infrastructure and build a scalable roadmap that may include:</p>
+            <ul class="service-list"><li>Software tool recommendations</li><li>vCIO advisory</li><li>Vendor evaluation</li></ul>
           </div>
         </div>
       </div>
@@ -432,9 +433,8 @@ footer{background:var(--navy);padding:40px 40px 28px;border-top:1px solid rgba(2
         </div>
         <div class="card-body">
           <div class="card-body-inner">
-            <p>Scoped engagements for specific initiatives — ITSM implementations, lifecycle automation, office buildouts, and technology migrations.</p>
-            <div class="service-tags"><span>ITSM</span><span>Lifecycle</span><span>Migrations</span><span>Automation</span></div>
-            <a href="https://stillings.tech/expertise" class="service-learn">See our full tech stack <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+            <p>Scoped engagements for specific initiatives that could include:</p>
+            <ul class="service-list"><li>ITSM implementations</li><li>Lifecycle automation</li><li>Office buildouts</li><li>Technology migrations</li></ul>
           </div>
         </div>
       </div>
@@ -447,9 +447,8 @@ footer{background:var(--navy);padding:40px 40px 28px;border-top:1px solid rgba(2
         </div>
         <div class="card-body">
           <div class="card-body-inner">
-            <p>Cut through the noise. We assess where AI creates real value for your business, then build a practical strategy that evolves as the landscape shifts.</p>
-            <div class="service-tags"><span>AI Readiness</span><span>Build vs. Buy</span><span>Implementation</span></div>
-            <a href="https://stillings.tech/expertise" class="service-learn">See our full tech stack <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+            <p>We assess where AI creates real value for your business, then help you implement the right tools to meet your needs:</p>
+            <ul class="service-list"><li>AI readiness assessment</li><li>Build vs. Buy analysis</li><li>Implementation planning</li></ul>
           </div>
         </div>
       </div>
@@ -462,9 +461,8 @@ footer{background:var(--navy);padding:40px 40px 28px;border-top:1px solid rgba(2
         </div>
         <div class="card-body">
           <div class="card-body-inner">
-            <p>Reliable, properly designed networks for offices and commercial spaces. From structured cabling to wireless infrastructure, switches, and firewalls — built to perform from day one.</p>
-            <div class="service-tags"><span>Meraki</span><span>UniFi</span><span>Starlink</span><span>Wireless</span><span>Firewalls</span></div>
-            <a href="https://stillings.tech/expertise" class="service-learn">See our full tech stack <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+            <p>We deliver reliable, properly designed networks for offices and commercial spaces — from structured cabling to wireless infrastructure, switches, firewalls, and more:</p>
+            <ul class="service-list"><li>Meraki</li><li>UniFi</li><li>Starlink</li><li>Wireless</li><li>Firewalls</li></ul>
           </div>
         </div>
       </div>
@@ -477,9 +475,8 @@ footer{background:var(--navy);padding:40px 40px 28px;border-top:1px solid rgba(2
         </div>
         <div class="card-body">
           <div class="card-body-inner">
-            <p>Conference rooms, displays, speakers, and AV systems that actually work when you need them. We design and integrate solutions for meeting rooms, huddle spaces, and commercial environments.</p>
-            <div class="service-tags"><span>AV Design</span><span>Conferencing</span><span>Displays</span><span>Integration</span></div>
-            <a href="https://stillings.tech/expertise" class="service-learn">See our full tech stack <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+            <p>We design and integrate solutions for meeting rooms, huddle spaces, and commercial environments:</p>
+            <ul class="service-list"><li>AV design</li><li>Conferencing</li><li>Displays</li><li>System integration</li></ul>
           </div>
         </div>
       </div>
@@ -492,9 +489,8 @@ footer{background:var(--navy);padding:40px 40px 28px;border-top:1px solid rgba(2
         </div>
         <div class="card-body">
           <div class="card-body-inner">
-            <p>Clean, fast websites built for small and growing businesses. We handle design, development, and ongoing maintenance — so your site works as hard as you do.</p>
-            <div class="service-tags"><span>Design</span><span>Development</span><span>Maintenance</span><span>SEO</span></div>
-            <a href="https://stillings.tech/consultation" class="service-learn">Schedule a consultation <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+            <p>We handle design, development, and ongoing maintenance so your website works as hard as you do:</p>
+            <ul class="service-list"><li>Design</li><li>Development</li><li>Maintenance</li><li>SEO</li></ul>
           </div>
         </div>
       </div>
@@ -507,14 +503,37 @@ footer{background:var(--navy);padding:40px 40px 28px;border-top:1px solid rgba(2
         </div>
         <div class="card-body">
           <div class="card-body-inner">
-            <p>We get your cloud tools working the way they should. Onboarding, configuration, integrations, and ongoing support for the business software your team depends on.</p>
-            <div class="service-tags"><span>Onboarding</span><span>Configuration</span><span>Integrations</span><span>Support</span></div>
-            <a href="https://stillings.tech/expertise" class="service-learn">See our full tech stack <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+            <p>We offer onboarding, configuration, integrations, and ongoing support for the cloud tools your business depends on:</p>
+            <ul class="service-list"><li>Onboarding</li><li>Configuration</li><li>Integrations</li><li>Ongoing support</li></ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <div class="card-header">
+          <div class="icon-wrap"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+          <h3>Fractional CIO</h3>
+          <svg class="card-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="card-body">
+          <div class="card-body-inner">
+            <p>Strategic IT leadership without the full-time cost. We act as your CIO — owning technology decisions, vendor relationships, and roadmapping so you can focus on the business:</p>
+            <ul class="service-list"><li>IT strategy & roadmapping</li><li>Budget planning</li><li>Vendor negotiation</li><li>Board & executive reporting</li><li>Technology due diligence</li></ul>
           </div>
         </div>
       </div>
 
     </div>
+
+    <div class="services-cta">
+      <a href="https://stillings.tech/consultation" class="btn-primary">Schedule a Free Consultation
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+      <a href="https://stillings.tech/expertise" class="btn-outline">View our full tech stack
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+    </div>
+
   </div>
 </section>
 
@@ -552,22 +571,21 @@ footer{background:var(--navy);padding:40px 40px 28px;border-top:1px solid rgba(2
     <div class="proof-top">
       <div class="quote-card">
         <p class="quote-text">"Alex communicates in non-technical terms so I actually understand the solutions being put in place."</p>
-        <div class="quote-attr">— Commercial Real Estate Broker, San Diego CA</div>
+        <div class="quote-attr">— Jake Olson, Commercial Real Estate Broker, San Diego CA</div>
       </div>
       <div class="quote-card">
         <p class="quote-text">"Wait... why does everything just work?"</p>
-        <div class="quote-attr">— Client, Fallbrook CA &nbsp;·&nbsp; After a full WiFi infrastructure install with near-zero downtime</div>
+        <div class="quote-attr">— Allison Solander, Fallbrook CA &nbsp;·&nbsp; After a full WiFi infrastructure install with near-zero downtime</div>
       </div>
     </div>
-
-    <div class="proof-stats">
+<div class="proof-stats">
       <div class="proof-stat">
         <div class="proof-stat-num">65–80%</div>
         <div class="proof-stat-label">Helpdesk ticket deflection via AI-powered support at a 700-person company</div>
       </div>
       <div class="proof-stat">
         <div class="proof-stat-num">2,400+</div>
-        <div class="proof-stat-label">Employees onboarded annually via fully automated provisioning workflows</div>
+        <div class="proof-stat-label">Employees onboarded annually via fully automated onboarding workflows</div>
       </div>
     </div>
   </div>
@@ -576,33 +594,33 @@ footer{background:var(--navy);padding:40px 40px 28px;border-top:1px solid rgba(2
 <!-- HOW WE WORK -->
 <section class="process" id="process">
   <div class="section-inner">
-    <span class="section-label">How We Work</span>
-    <h2 class="section-title">Simple, transparent, no surprises.</h2>
-    <p class="section-desc">Getting started isn't complicated. Here's what to expect when you reach out.</p>
+    <span class="section-label">Work with us</span>
+    <h2 class="section-title">Transparent IT roadmaps customized to your business.</h2>
+    <p class="section-desc">Here’s what you can expect when you work with Stillings Technology Group.</p>
     <div class="process-steps">
       <div class="process-step">
         <div class="step-circle"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
-        <div class="step-num">STEP 01</div>
-        <h4>Conversation</h4>
-        <p>We sit down (or jump on a call) and learn about your business, your pain points, and where you want to go.</p>
+        <div class="step-num">STEP 1</div>
+        <h4>Free Consultation</h4>
+        <p>We’ll connect virtually for 30 minutes to discuss your business, pain points, and technology needs.</p>
       </div>
       <div class="process-step">
         <div class="step-circle"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
-        <div class="step-num">STEP 02</div>
+        <div class="step-num">STEP 2</div>
         <h4>Assessment</h4>
-        <p>We evaluate your current technology and operations, identify gaps, and map out what's working and what isn't.</p>
+        <p>If Stillings Technology Group can help your business, we’ll evaluate your current technology infrastructure and IT operations, identify gaps, and map out your goals.</p>
       </div>
       <div class="process-step">
         <div class="step-circle"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
-        <div class="step-num">STEP 03</div>
+        <div class="step-num">STEP 3</div>
         <h4>Custom Plan</h4>
-        <p>You get a clear, jargon-free roadmap with priorities, timelines, and transparent pricing. No surprises.</p>
+        <p>You’ll receive a clear, jargon-free roadmap that details your priorities and timelines, plus a proposal with transparent pricing.</p>
       </div>
       <div class="process-step">
         <div class="step-circle"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
-        <div class="step-num">STEP 04</div>
+        <div class="step-num">STEP 4</div>
         <h4>Partnership</h4>
-        <p>We execute, confirm everything is working, and document what was done. Project complete — or ongoing support locked in.</p>
+        <p>We execute on your custom roadmap, confirm that software and tools are running smoothly, and document our work.</p>
       </div>
     </div>
   </div>
@@ -613,7 +631,7 @@ footer{background:var(--navy);padding:40px 40px 28px;border-top:1px solid rgba(2
   <div class="section-inner">
     <span class="section-label">Who We Serve</span>
     <h2 class="section-title">Industries we know inside and out.</h2>
-    <p class="section-desc">San Diego's economy is diverse — and so is our expertise.</p>
+    <p class="section-desc">We have experience in diverse corporate and small business environments—and are adding new industries all the time.</p>
     <div class="industry-strip">
       <div class="industry-item">
         <div class="industry-icon"><svg viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
@@ -632,18 +650,10 @@ footer{background:var(--navy);padding:40px 40px 28px;border-top:1px solid rgba(2
       </div>
       <div class="industry-item">
         <div class="industry-icon"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
-        <h4>Hospitality & Tourism</h4>
+        <h4>Retail & Lifestyle</h4>
         <p>POS, WiFi, PCI</p>
       </div>
-      <div class="industry-item">
-        <div class="industry-icon"><svg viewBox="0 0 24 24"><path d="M6 3v18"/><path d="M18 3v18"/><path d="M6 8h12"/><path d="M6 16h12"/><path d="M6 12h12"/></svg></div>
-        <h4>Life Sciences & Biotech</h4>
-        <p>Regulated data, compliance</p>
-      </div>
-      <div class="industry-item">
-        <div class="industry-icon"><svg viewBox="0 0 24 24"><rect x="1" y="6" width="18" height="12" rx="2"/><line x1="23" y1="13" x2="23" y2="11"/><line x1="23" y1="17" x2="23" y2="15"/><line x1="23" y1="9" x2="23" y2="7"/></svg></div>
-        <h4>Construction & Trades</h4>
-        <p>Field ops, project tools</p>
+  
       </div>
     </div>
   </div>
@@ -654,7 +664,7 @@ footer{background:var(--navy);padding:40px 40px 28px;border-top:1px solid rgba(2
   <div class="section-inner">
     <div class="cta-inner">
       <h2>Let's talk about what's next for your business.</h2>
-      <p>Whether you need IT support that actually shows up, a consultant who understands operations, or both — we'd love to hear what you're working on.</p>
+      <p>Let's talk tech. If you need reliable IT support and a consultant who truly understands operations, I’d love to connect about your business and how I can help fulfill its technology needs.</p>
       <a href="https://stillings.tech/consultation" class="btn-primary">Schedule a Free Consultation
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
       </a>
