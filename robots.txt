@@ -1,1 +1,21 @@
 Sitemap: https://stillings.tech/sitemap.xml
+
+# Training crawlers — block
+User-agent: CCBot
+Disallow: /
+
+# AI Search/Retrieval — ALLOW (needed for AI Overviews, ChatGPT, Perplexity)
+User-agent: GPTBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
