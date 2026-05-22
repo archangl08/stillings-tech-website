@@ -7,7 +7,7 @@
 #      corresponding use.
 # (c)  If the website operator does not include a Content-Signal for a
 #      corresponding use, the website operator neither grants nor restricts
-#      permission via Content-Signal with respect to the corresponding use.
+#      permission via Content-Signal for that use.
 
 # The content signals and their meanings are:
 
@@ -23,35 +23,26 @@
 # RIGHTS UNDER ARTICLE 4 OF THE EUROPEAN UNION DIRECTIVE 2019/790 ON COPYRIGHT
 # AND RELATED RIGHTS IN THE DIGITAL SINGLE MARKET.
 
+# Search indexing and AI-powered search answers: ALLOWED
+# AI model training: NOT ALLOWED
 User-agent: *
-Content-Signal: search=yes,ai-train=no
+Content-Signal: search=yes,ai-input=yes,ai-train=no
 Allow: /
 
 Sitemap: https://stillings.tech/sitemap.xml
 
-User-agent: Amazonbot
-Disallow: /
-
-User-agent: Applebot-Extended
+# --- AI TRAINING crawlers — blocked ---
+User-agent: CCBot
 Disallow: /
 
 User-agent: Bytespider
 Disallow: /
 
-User-agent: CCBot
-Disallow: /
-
-User-agent: ClaudeBot
-Disallow: /
-
-User-agent: CloudflareBrowserRenderingCrawler
-Disallow: /
-
-User-agent: Google-Extended
-Disallow: /
-
-User-agent: GPTBot
-Disallow: /
-
-User-agent: meta-externalagent
-Disallow: /
+# --- AI SEARCH/RETRIEVAL crawlers — allowed (see Content-Signal above) ---
+# GPTBot: ChatGPT Search
+# ClaudeBot: Anthropic Claude
+# Google-Extended: Gemini, AI Overviews
+# meta-externalagent: Meta AI
+# Amazonbot: Amazon AI
+# Applebot-Extended: Apple Intelligence
+# PerplexityBot: Perplexity AI
