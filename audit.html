@@ -3,60 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Schedule a Free IT Consultation | Stillings Technology Group | San Diego</title>
-<meta name="description" content="Book a free 30-minute consultation with Stillings Technology Group. No commitment, no jargon — just a conversation about your business technology needs. Serving San Diego and beyond.">
-<link rel="canonical" href="https://stillings.tech/consultation">
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "WebPage",
-      "@id": "https://stillings.tech/consultation#webpage",
-      "url": "https://stillings.tech/consultation",
-      "name": "Schedule a Free Consultation | Stillings Technology Group",
-      "description": "Book a free 30-minute consultation with Alex Stillings. IT support, cybersecurity, and strategic consulting for growing businesses in San Diego.",
-      "isPartOf": { "@id": "https://stillings.tech/#business" },
-      "breadcrumb": {
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://stillings.tech/" },
-          { "@type": "ListItem", "position": 2, "name": "Consultation", "item": "https://stillings.tech/consultation" }
-        ]
-      }
-    },
-    {
-      "@type": "Service",
-      "name": "Free IT Consultation",
-      "provider": {
-        "@type": "ProfessionalService",
-        "@id": "https://stillings.tech/#business",
-        "name": "Stillings Technology Group",
-        "telephone": "(760) 492-6361",
-        "email": "hello@stillings.tech"
-      },
-      "description": "A free 30-minute discovery call to discuss your business technology needs. No commitment required.",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD",
-        "availability": "https://schema.org/InStock"
-      },
-      "areaServed": [
-        { "@type": "City", "name": "Carlsbad" },
-        { "@type": "City", "name": "San Diego" },
-        { "@type": "State", "name": "California" }
-      ]
-    }
-  ]
-}
-</script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<title>Business Tech Stack Audit | Stillings Technology Group</title>
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;700&family=DM+Serif+Display&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-html{overflow-x:hidden;max-width:100%;touch-action:pan-y}
 :root{
   --navy:#0D2137;--primary:#1B3A5C;--accent:#2E86AB;--light-accent:#48B8D0;
   --bg-light:#E8F1F8;--text:#2a2a2a;--text-light:#6b7280;--white:#ffffff;
@@ -64,7 +14,7 @@ html{overflow-x:hidden;max-width:100%;touch-action:pan-y}
   --warm:#f0f7fb;
 }
 html{scroll-behavior:smooth}
-body{font-family:var(--sans);color:var(--text);background:var(--white);overflow-x:hidden;max-width:100%;position:relative}
+body{font-family:var(--sans);color:var(--text);background:var(--white);overflow-x:hidden}
 
 /* === NAV === */
 nav{position:fixed;top:0;width:100%;z-index:100;padding:18px 0;transition:all .3s;background:rgba(13,33,55,0.97);backdrop-filter:blur(12px);box-shadow:0 2px 20px rgba(0,0,0,0.15)}
@@ -76,9 +26,6 @@ nav{position:fixed;top:0;width:100%;z-index:100;padding:18px 0;transition:all .3
 .nav-links a:hover{color:var(--white)}
 .nav-cta{background:var(--accent)!important;color:var(--white)!important;padding:10px 24px;border-radius:6px;font-weight:600;transition:all .2s!important}
 .nav-cta:hover{background:var(--light-accent)!important;transform:translateY(-1px)}
-.nav-back{display:flex;align-items:center;gap:6px;color:rgba(255,255,255,0.6)!important;font-size:13px!important}
-.nav-back svg{width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;transition:transform .2s}
-.nav-back:hover svg{transform:translateX(-3px)}
 .menu-toggle{display:none;background:none;border:none;cursor:pointer;padding:8px}
 .menu-toggle svg{stroke:white;width:28px;height:28px}
 .mobile-menu{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(13,33,55,0.98);z-index:200;flex-direction:column;align-items:center;justify-content:center;gap:32px}
@@ -90,7 +37,7 @@ nav{position:fixed;top:0;width:100%;z-index:100;padding:18px 0;transition:all .3
 .mobile-close svg{stroke:white;width:32px;height:32px}
 
 /* === PAGE HERO === */
-.page-hero{overflow:hidden;background:linear-gradient(135deg,var(--navy) 0%,var(--primary) 55%,#1a4a6e 100%);padding:140px 40px 80px;position:relative;overflow:hidden}
+.page-hero{background:linear-gradient(135deg,var(--navy) 0%,var(--primary) 55%,#1a4a6e 100%);padding:140px 40px 80px;position:relative;overflow:hidden}
 .page-hero::before{content:'';position:absolute;inset:0;
   background:radial-gradient(ellipse at 75% 30%,rgba(46,134,171,0.15) 0%,transparent 60%),
               radial-gradient(ellipse at 15% 80%,rgba(72,184,208,0.08) 0%,transparent 50%);pointer-events:none}
@@ -110,7 +57,7 @@ nav{position:fixed;top:0;width:100%;z-index:100;padding:18px 0;transition:all .3
 .trust-item{display:flex;align-items:center;gap:12px;color:rgba(255,255,255,0.65);font-size:14px}
 .trust-item svg{width:18px;height:18px;stroke:var(--light-accent);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}
 
-/* Hero card preview */
+/* Hero card */
 .hero-card{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:20px;padding:32px;backdrop-filter:blur(8px)}
 .hero-card-label{font-size:11px;color:var(--light-accent);letter-spacing:2px;text-transform:uppercase;font-weight:600;margin-bottom:20px}
 .hero-card-steps{display:flex;flex-direction:column;gap:14px}
@@ -121,12 +68,11 @@ nav{position:fixed;top:0;width:100%;z-index:100;padding:18px 0;transition:all .3
 .hero-card-divider{height:1px;background:rgba(255,255,255,0.08);margin:20px 0}
 .hero-card-note{font-size:13px;color:rgba(255,255,255,0.4);text-align:center;line-height:1.5}
 
-/* === MAIN FORM SECTION === */
+/* === FORM SECTION === */
 .form-section{background:var(--warm);padding:80px 40px}
 .form-section-inner{max-width:920px;margin:0 auto}
 .form-card{background:var(--white);border-radius:20px;border:1px solid #e5e7eb;overflow:hidden;box-shadow:0 4px 40px rgba(13,33,55,0.06)}
 
-/* === TALLY EMBED === */
 .form-header{background:var(--navy);padding:32px 48px;display:flex;align-items:center;justify-content:space-between}
 .form-header-left h2{font-family:var(--serif);font-size:26px;color:var(--white);margin-bottom:4px}
 .form-header-left p{font-size:14px;color:rgba(255,255,255,0.5)}
@@ -135,13 +81,14 @@ nav{position:fixed;top:0;width:100%;z-index:100;padding:18px 0;transition:all .3
 .form-header-badge span{font-size:11px;color:rgba(255,255,255,0.4);letter-spacing:1px;text-transform:uppercase}
 .tally-wrap{padding:8px}
 
-/* === BELOW-FORM TRUST STRIP === */
+/* === TRUST STRIP === */
 .trust-strip{background:var(--white);border-top:1px solid #e5e7eb;padding:48px 40px}
 .trust-inner{max-width:920px;margin:0 auto;display:flex;justify-content:center;gap:64px}
 .trust-tile{display:flex;gap:16px;align-items:center}
 .tt-icon{width:44px;height:44px;min-width:44px;background:var(--bg-light);border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
 .tt-icon svg{width:22px;height:22px;stroke:var(--accent);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
 .tt-text strong{display:block;font-size:15px;color:var(--primary);font-weight:600;white-space:nowrap}
+.tt-text span{font-size:13px;color:var(--text-light)}
 
 /* === FOOTER === */
 footer{background:var(--navy);padding:40px 40px 28px;border-top:1px solid rgba(255,255,255,0.06)}
@@ -159,10 +106,10 @@ footer{background:var(--navy);padding:40px 40px 28px;border-top:1px solid rgba(2
   .page-hero-inner{grid-template-columns:1fr}
   .hero-card{display:none}
   .form-header{padding:24px 28px;flex-direction:column;align-items:flex-start;gap:12px}
-  .trust-inner{grid-template-columns:1fr;gap:20px}
+  .trust-inner{flex-direction:column;gap:20px}
   .nav-links{display:none}
   .menu-toggle{display:block}
-  .page-hero{overflow:hidden;padding:120px 24px 60px}
+  .page-hero{padding:120px 24px 60px}
   .form-section{padding:48px 20px}
   .trust-strip{padding:40px 24px}
   footer{padding:32px 24px}
@@ -187,10 +134,10 @@ footer{background:var(--navy);padding:40px 40px 28px;border-top:1px solid rgba(2
         <text x="60" y="38" font-family="Sora,'Plus Jakarta Sans',sans-serif" font-weight="400" font-size="9.2" fill="#48B8D0" textLength="152" lengthAdjust="spacing">TECHNOLOGY GROUP</text>
       </svg>
     </a>
-        <div class="nav-links">
-      <a href="https://stillings.tech#services">Services</a>
+    <div class="nav-links">
+      <a href="https://stillings.tech/#services">Services</a>
       <a href="https://stillings.tech/about">About</a>
-      <a href="https://stillings.tech#process">How We Work</a>
+      <a href="https://stillings.tech/#process">How We Work</a>
       <a href="https://stillings.tech/expertise">Tech Stack</a>
       <a href="https://stillings.tech/service-area">Service Area</a>
       <a href="https://stillings.tech/consultation" class="nav-cta">Free Consultation</a>
@@ -206,9 +153,9 @@ footer{background:var(--navy);padding:40px 40px 28px;border-top:1px solid rgba(2
   <button class="mobile-close" id="mobileClose" aria-label="Close menu">
     <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
   </button>
-  <a href="https://stillings.tech#services" class="mobile-nav-link">Services</a>
+  <a href="https://stillings.tech/#services" class="mobile-nav-link">Services</a>
   <a href="https://stillings.tech/about" class="mobile-nav-link">About</a>
-  <a href="https://stillings.tech#process" class="mobile-nav-link">How We Work</a>
+  <a href="https://stillings.tech/#process" class="mobile-nav-link">How We Work</a>
   <a href="https://stillings.tech/expertise" class="mobile-nav-link">Tech Stack</a>
   <a href="https://stillings.tech/service-area" class="mobile-nav-link">Service Area</a>
   <a href="https://stillings.tech/consultation" class="nav-cta mobile-nav-link">Free Consultation</a>
@@ -219,38 +166,38 @@ footer{background:var(--navy);padding:40px 40px 28px;border-top:1px solid rgba(2
   <div class="page-hero-grid"></div>
   <div class="page-hero-inner">
     <div>
-      <div class="hero-badge"><div class="dot"></div><span>Free Consultation</span></div>
-      <h1>Let's talk about what's<br><em>next for your business.</em></h1>
-      <p>Tell us what you're working on. Whether you need IT that actually shows up, a consultant who thinks strategically, or both — we'll find the right fit.</p>
+      <div class="hero-badge"><div class="dot"></div><span>Free Tech Audit</span></div>
+      <h1>What does your<br><em>tech stack</em> actually look like?</h1>
+      <p>This quick audit maps the tools your business runs on today — so we can have a focused, useful conversation about what's working, what isn't, and where real improvements are hiding.</p>
       <div class="hero-trust">
         <div class="trust-item">
-          <svg viewBox="0 0 24 24"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
-          No commitment required — just a conversation
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          Takes about 5 minutes to complete
         </div>
         <div class="trust-item">
-          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-          Response within one business day
+          <svg viewBox="0 0 24 24"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+          No sales pitch — just a smarter conversation
         </div>
         <div class="trust-item">
           <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          Serving North County SD and remote clients nationwide
+          Serving Carlsbad, CA and remote clients nationwide
         </div>
       </div>
     </div>
     <div class="hero-card">
-      <div class="hero-card-label">What to expect</div>
+      <div class="hero-card-label">How it works</div>
       <div class="hero-card-steps">
         <div class="hcs">
           <div class="hcs-num">1</div>
           <div class="hcs-text">
-            <strong>Submit this form</strong>
-            <span>Takes about 3 minutes</span>
+            <strong>Complete the audit</strong>
+            <span>~5 minutes, 6 short sections</span>
           </div>
         </div>
         <div class="hcs">
           <div class="hcs-num">2</div>
           <div class="hcs-text">
-            <strong>We review &amp; follow up</strong>
+            <strong>We review your stack</strong>
             <span>Within one business day</span>
           </div>
         </div>
@@ -258,19 +205,19 @@ footer{background:var(--navy);padding:40px 40px 28px;border-top:1px solid rgba(2
           <div class="hcs-num">3</div>
           <div class="hcs-text">
             <strong>30-min discovery call</strong>
-            <span>Phone, video, or in-person</span>
+            <span>Focused on your actual situation</span>
           </div>
         </div>
         <div class="hcs">
           <div class="hcs-num">4</div>
           <div class="hcs-text">
-            <strong>You get a clear plan</strong>
+            <strong>Clear recommendations</strong>
             <span>No jargon. No surprises.</span>
           </div>
         </div>
       </div>
       <div class="hero-card-divider"></div>
-      <div class="hero-card-note">No commitment required.<br>This is just a conversation.</div>
+      <div class="hero-card-note">Free assessment. No commitment required.</div>
     </div>
   </div>
 </section>
@@ -279,21 +226,18 @@ footer{background:var(--navy);padding:40px 40px 28px;border-top:1px solid rgba(2
 <section class="form-section">
   <div class="form-section-inner">
     <div class="form-card">
-
-      <!-- Header -->
       <div class="form-header">
         <div class="form-header-left">
-          <h2>Schedule Your Consultation</h2>
-          <p>All fields marked with * are required</p>
+          <h2>Business Tech Stack Audit</h2>
+          <p>Email, website, CRM, and everything in between</p>
         </div>
         <div class="form-header-badge">
           <strong>Free</strong>
           <span>No cost, no pressure</span>
         </div>
       </div>
-
       <div class="tally-wrap">
-        <iframe data-tally-src="https://tally.so/embed/ob7XAb?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="955" frameborder="0" marginheight="0" marginwidth="0" title="Schedule Your Free Consultation"></iframe>
+        <iframe data-tally-src="https://tally.so/embed/1A6rA4?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="768" frameborder="0" marginheight="0" marginwidth="0" title="Tech Stack Audit"></iframe>
       </div>
     </div>
   </div>
@@ -304,18 +248,11 @@ footer{background:var(--navy);padding:40px 40px 28px;border-top:1px solid rgba(2
   <div class="trust-inner">
     <div class="trust-tile">
       <div class="tt-icon">
-        <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.93 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.86 1h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-      </div>
-      <div class="tt-text">
-        <strong>Real response, every time</strong>
-      </div>
-    </div>
-    <div class="trust-tile">
-      <div class="tt-icon">
         <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
       </div>
       <div class="tt-text">
-        <strong>No obligation</strong>
+        <strong>Your data stays private</strong>
+        <span>Never shared or sold</span>
       </div>
     </div>
     <div class="trust-tile">
@@ -324,42 +261,42 @@ footer{background:var(--navy);padding:40px 40px 28px;border-top:1px solid rgba(2
       </div>
       <div class="tt-text">
         <strong>Response within one business day</strong>
+        <span>Real follow-up, every time</span>
       </div>
     </div>
-  </div>
-</div>
-
-<!-- AUDIT CROSSLINK -->
-<div style="background:var(--warm);border-top:1px solid #e5e7eb;padding:40px 40px">
-  <div style="max-width:920px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap">
-    <div>
-      <div style="font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--accent);font-weight:700;margin-bottom:6px">Not Ready to Book a Call?</div>
-      <div style="font-family:var(--serif);font-size:20px;color:var(--primary);margin-bottom:6px">Start with a free Tech Stack Audit instead.</div>
-      <div style="font-size:14px;color:var(--text-light);line-height:1.6;max-width:480px">Takes about 5 minutes. We review your current tools and follow up with focused, useful observations — no commitment required.</div>
+    <div class="trust-tile">
+      <div class="tt-icon">
+        <svg viewBox="0 0 24 24"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+      </div>
+      <div class="tt-text">
+        <strong>No obligation</strong>
+        <span>Just a smarter starting point</span>
+      </div>
     </div>
-    <a href="https://stillings.tech/audit" style="display:inline-flex;align-items:center;gap:8px;background:var(--white);border:1.5px solid var(--accent);color:var(--accent);padding:13px 24px;border-radius:8px;text-decoration:none;font-weight:600;font-size:14px;white-space:nowrap;transition:all .2s;flex-shrink:0">
-      Take the free audit
-      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-    </a>
   </div>
 </div>
 
 <!-- FOOTER -->
 <footer>
   <div class="footer-inner">
-    <div class="footer-logo">
-      <div style="width:3px;height:28px;background:linear-gradient(180deg,#2E86AB,#48B8D0);border-radius:2px"></div>
+    <div style="display:flex;align-items:center;gap:10px">
+      <div style="display:flex;gap:2px;align-items:flex-end;padding-bottom:2px">
+        <div style="width:4px;height:8px;background:#48B8D0;border-radius:2px"></div>
+        <div style="width:4px;height:13px;background:#3AA3BE;border-radius:2px"></div>
+        <div style="width:4px;height:18px;background:#2E86AB;border-radius:2px"></div>
+        <div style="width:4px;height:23px;background:#246089;border-radius:2px"></div>
+        <div style="width:4px;height:28px;background:#1B3A5C;border-radius:2px"></div>
+      </div>
       <div>
         <div class="footer-name">STILLINGS</div>
         <div class="footer-sub">Technology Group</div>
       </div>
     </div>
     <div class="footer-links">
-      <a href="https://stillings.tech#services">Services</a>
+      <a href="https://stillings.tech/#services">Services</a>
       <a href="https://stillings.tech/about">About</a>
-      <a href="https://stillings.tech#process">How We Work</a>
       <a href="https://stillings.tech/expertise">Tech Stack</a>
-      <a href="https://stillings.tech#service-area">Service Area</a>
+      <a href="https://stillings.tech/service-area">Service Area</a>
       <a href="https://stillings.tech/consultation">Consultation</a>
     </div>
     <div style="font-size:13px;color:rgba(255,255,255,0.35);display:flex;flex-direction:column;gap:4px;text-align:right">
@@ -371,7 +308,6 @@ footer{background:var(--navy);padding:40px 40px 28px;border-top:1px solid rgba(2
 </footer>
 
 <script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}</script>
-
 <script>
 const _mt=document.querySelector('.menu-toggle');
 const _mm=document.getElementById('mobileMenu');
