@@ -148,8 +148,8 @@ nav.scrolled{background:rgba(13,33,55,0.98);backdrop-filter:blur(12px);-webkit-b
 footer{background:var(--navy);padding:40px 40px 28px;border-top:1px solid rgba(255,255,255,0.06)}
 .footer-inner{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px}
 .footer-logo{display:flex;align-items:center;gap:10px}
-.footer-name{font-family:var(--serif);font-size:18px;color:var(--white);letter-spacing:1px}
-.footer-sub{font-size:9px;color:rgba(255,255,255,0.3);letter-spacing:3px;text-transform:uppercase}
+.footer-name{font-family:Sora,"Plus Jakarta Sans",sans-serif;font-size:15px;font-weight:700;color:var(--white);letter-spacing:2px}
+.footer-sub{font-family:Sora,"Plus Jakarta Sans",sans-serif;font-size:8px;color:rgba(255,255,255,0.35);letter-spacing:3.5px;text-transform:uppercase;font-weight:400}
 .footer-copy{font-size:13px;color:rgba(255,255,255,0.3)}
 .footer-links{display:flex;gap:24px}
 .footer-links a{color:rgba(255,255,255,0.4);text-decoration:none;font-size:13px;transition:color .2s}
@@ -401,13 +401,17 @@ footer{background:var(--navy);padding:40px 40px 28px;border-top:1px solid rgba(2
 <!-- FOOTER -->
 <footer>
   <div class="footer-inner">
-    <div class="footer-logo">
-      <div style="width:3px;height:28px;background:linear-gradient(180deg,#2E86AB,#48B8D0);border-radius:2px"></div>
-      <div>
-        <div class="footer-name">STILLINGS</div>
-        <div class="footer-sub">Technology Group</div>
-      </div>
-    </div>
+        <a href="https://stillings.tech/" aria-label="Stillings Technology Group" style="text-decoration:none">
+      <svg height="36" viewBox="0 0 260 40" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:block;overflow:visible">
+        <rect x="0"  y="29" width="8" height="11" rx="2" fill="#48B8D0"/>
+        <rect x="11" y="23" width="8" height="17" rx="2" fill="#3AA3BE"/>
+        <rect x="22" y="16" width="8" height="24" rx="2" fill="#2E86AB"/>
+        <rect x="33" y="8"  width="8" height="32" rx="2" fill="#246089"/>
+        <rect x="44" y="1"  width="8" height="39" rx="2" fill="#1B3A5C"/>
+        <text x="60" y="26" font-family="Sora,'Plus Jakarta Sans',sans-serif" font-weight="700" font-size="22" letter-spacing="2" fill="white" textLength="152" lengthAdjust="spacing">STILLINGS</text>
+        <text x="60" y="38" font-family="Sora,'Plus Jakarta Sans',sans-serif" font-weight="400" font-size="9.2" fill="#48B8D0" textLength="152" lengthAdjust="spacing">TECHNOLOGY GROUP</text>
+      </svg>
+    </a>
     <div class="footer-links">
       <a href="https://stillings.tech#services">Services</a>
       <a href="https://stillings.tech/about">About</a>
