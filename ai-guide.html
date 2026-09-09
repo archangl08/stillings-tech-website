@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Usage Best Practices for Business | Stillings Technology Group</title>
+<meta name="description" content="A practical guide to using AI tools safely at work — turning off training on your data, free vs. paid accounts, and why team-based licensing matters for growing businesses.">
+<link rel="canonical" href="https://stillings.tech/ai-guide">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://stillings.tech/ai-guide#article",
+      "headline": "AI Usage Best Practices for Business",
+      "description": "Practical guidance on AI privacy settings, free vs. paid accounts, and team-based licensing for growing businesses.",
+      "author": { "@id": "https://stillings.tech/#alex" },
+      "publisher": { "@id": "https://stillings.tech/#business" },
+      "datePublished": "2026-09-08",
+      "dateModified": "2026-09-08"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://stillings.tech/ai-guide#webpage",
+      "url": "https://stillings.tech/ai-guide",
+      "name": "AI Usage Best Practices for Business | Stillings Technology Group",
+      "isPartOf": { "@id": "https://stillings.tech/#business" },
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://stillings.tech/" },
+          { "@type": "ListItem", "position": 2, "name": "AI Usage Guide", "item": "https://stillings.tech/ai-guide" }
+        ]
+      }
+    }
+  ]
+}
+</script>
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://stillings.tech/ai-guide">
+<meta property="og:title" content="AI Usage Best Practices for Business | Stillings Technology Group">
+<meta property="og:description" content="Your team is already using AI. Make sure it's not leaking your data.">
+<meta property="og:image" content="https://stillings.tech/og-image.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;700&family=DM+Serif+Display&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{overflow-x:hidden;max-width:100%;touch-action:pan-y;scroll-behavior:smooth}
+:root{
+  --navy:#0D2137;--primary:#1B3A5C;--accent:#2E86AB;--light-accent:#48B8D0;
+  --bg-light:#E8F1F8;--text:#2a2a2a;--text-light:#6b7280;--white:#ffffff;
+  --serif:'DM Serif Display',Georgia,serif;--sans:'Plus Jakarta Sans','Segoe UI',sans-serif;
+  --warm:#f0f7fb;--good:#1a7f4f;--good-bg:#e7f6ee;--bad:#b3261e;--bad-bg:#fceceb;
+}
+body{font-family:var(--sans);color:var(--text);background:var(--white);overflow-x:hidden;max-width:100%;position:relative}
+
+/* NAV */
+nav{position:fixed;top:0;width:100%;z-index:100;padding:18px 0;background:rgba(13,33,55,0.98);backdrop-filter:blur(12px);box-shadow:0 2px 20px rgba(0,0,0,0.12)}
+nav.scrolled{padding:12px 0}
+.nav-inner{max-width:1200px;margin:0 auto;padding:0 40px;display:flex;align-items:center;justify-content:space-between}
+.logo{display:flex;align-items:center;text-decoration:none}
+.logo svg{display:block}
+.nav-links{display:flex;gap:32px;align-items:center}
+.nav-links a{color:rgba(255,255,255,0.8);text-decoration:none;font-size:14px;font-weight:500;letter-spacing:.5px;transition:color .2s}
+.nav-links a:hover{color:var(--white)}
+.nav-cta{background:var(--accent)!important;color:var(--white)!important;padding:10px 24px;border-radius:6px;font-weight:600;transition:all .2s!important}
+.nav-cta:hover{background:var(--light-accent)!important;transform:translateY(-1px)}
+.menu-toggle{display:none;background:none;border:none;cursor:pointer;padding:8px}
+.menu-toggle svg{stroke:white;width:28px;height:28px}
+.mobile-menu{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(13,33,55,0.98);z-index:200;flex-direction:column;align-items:center;justify-content:center;gap:32px}
+.mobile-menu.open{display:flex}
+.mobile-menu a{color:var(--white);text-decoration:none;font-size:20px;font-weight:500;letter-spacing:1px;transition:color .2s}
+.mobile-menu a:hover{color:var(--light-accent)}
+.mobile-menu .nav-cta{background:var(--accent);padding:14px 36px;border-radius:8px;font-weight:600;font-size:18px}
+.mobile-close{position:absolute;top:24px;right:24px;background:none;border:none;cursor:pointer;padding:8px}
+.mobile-close svg{stroke:white;width:32px;height:32px}
+
+/* PAGE HERO */
+.page-hero{background:linear-gradient(135deg,var(--navy) 0%,var(--primary) 55%,#1a4a6e 100%);padding:130px 40px 64px;position:relative;overflow:hidden}
+.page-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 75% 30%,rgba(46,134,171,0.15) 0%,transparent 60%),radial-gradient(ellipse at 15% 80%,rgba(72,184,208,0.08) 0%,transparent 50%);pointer-events:none}
+.page-hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.03) 1px,transparent 1px);background-size:60px 60px;pointer-events:none}
+.page-hero-inner{max-width:760px;margin:0 auto;position:relative;z-index:2;text-align:center}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(46,134,171,0.15);border:1px solid rgba(46,134,171,0.3);padding:8px 18px;border-radius:100px;margin-bottom:22px}
+.hero-badge span{font-size:12px;color:var(--light-accent);letter-spacing:2px;text-transform:uppercase;font-weight:600}
+.hero-badge .dot{width:6px;height:6px;background:var(--light-accent);border-radius:50%;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+.page-hero h1{font-family:var(--serif);font-size:clamp(28px,4vw,44px);color:var(--white);line-height:1.2;margin-bottom:16px}
+.page-hero h1 em{font-style:normal;color:var(--light-accent)}
+.page-hero p{font-size:16px;color:rgba(255,255,255,0.7);max-width:580px;line-height:1.7;margin:0 auto}
+
+/* CONTENT */
+.content{max-width:800px;margin:0 auto;padding:64px 40px}
+.section-label{display:inline-block;font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--accent);font-weight:700;margin-bottom:12px}
+.section-title{font-family:var(--serif);font-size:clamp(24px,3vw,30px);color:var(--primary);line-height:1.3;margin-bottom:16px}
+.section-desc{font-size:16px;color:var(--text-light);line-height:1.8;margin-bottom:8px}
+.content-block{margin-bottom:56px}
+
+/* COMPARISON TABLE */
+.compare-table{width:100%;border-collapse:collapse;margin-top:28px;font-size:14px}
+.compare-table th{text-align:left;padding:14px 16px;background:var(--navy);color:var(--white);font-weight:700;font-size:13px}
+.compare-table th:first-child{border-radius:10px 0 0 0}
+.compare-table th:last-child{border-radius:0 10px 0 0}
+.compare-table td{padding:14px 16px;border-bottom:1px solid #e5e7eb;color:var(--text-light);vertical-align:top}
+.compare-table tr:last-child td{border-bottom:none}
+.compare-table td:first-child{font-weight:700;color:var(--primary);white-space:nowrap}
+.tag-good{display:inline-block;background:var(--good-bg);color:var(--good);font-size:11px;font-weight:700;padding:3px 10px;border-radius:100px;margin-bottom:4px}
+.tag-bad{display:inline-block;background:var(--bad-bg);color:var(--bad);font-size:11px;font-weight:700;padding:3px 10px;border-radius:100px;margin-bottom:4px}
+.table-wrap{overflow-x:auto}
+
+/* RESOURCE CARDS */
+.resource-grid{display:flex;flex-direction:column;gap:12px;margin-top:24px}
+.resource-card{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 22px;border:1px solid #e5e7eb;border-radius:12px;text-decoration:none;transition:all .2s}
+.resource-card:hover{border-color:var(--accent);background:var(--bg-light)}
+.resource-text h4{font-size:15px;font-weight:700;color:var(--primary);margin-bottom:2px}
+.resource-text span{font-size:13px;color:var(--text-light)}
+.resource-arrow{width:18px;height:18px;stroke:var(--accent);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}
+
+/* LICENSING CARDS */
+.license-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:24px}
+.license-card{border:1.5px solid #e5e7eb;border-radius:14px;padding:24px}
+.license-card.recommended{border-color:var(--accent);background:var(--bg-light);position:relative}
+.license-badge{position:absolute;top:-11px;left:20px;background:var(--accent);color:white;font-size:11px;font-weight:700;padding:4px 12px;border-radius:100px;letter-spacing:.5px}
+.license-card h4{font-family:var(--serif);font-size:19px;color:var(--primary);margin-bottom:10px}
+.license-card ul{list-style:none;display:flex;flex-direction:column;gap:8px}
+.license-card li{font-size:13px;color:var(--text-light);padding-left:16px;position:relative;line-height:1.5}
+.license-card li::before{content:'';position:absolute;left:0;top:6px;width:5px;height:5px;border-radius:50%;background:var(--accent)}
+
+/* CALLOUT */
+.callout{background:var(--bg-light);border-left:3px solid var(--accent);border-radius:0 10px 10px 0;padding:20px 24px;margin:28px 0}
+.callout p{font-size:14px;color:var(--primary);line-height:1.7}
+.callout strong{color:var(--primary)}
+
+/* CTA */
+.cta{background:linear-gradient(135deg,var(--navy),var(--primary));position:relative;overflow:hidden;padding:64px 40px}
+.cta::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 30% 50%,rgba(72,184,208,0.1),transparent 60%);pointer-events:none}
+.cta-inner{text-align:center;position:relative;z-index:1;max-width:600px;margin:0 auto}
+.cta h2{font-family:var(--serif);font-size:clamp(24px,3.2vw,34px);color:var(--white);margin-bottom:14px}
+.cta p{font-size:15px;color:rgba(255,255,255,0.7);margin-bottom:28px;line-height:1.7}
+.btn-primary{background:var(--accent);color:var(--white);padding:16px 36px;border-radius:8px;text-decoration:none;font-weight:600;font-size:16px;transition:all .3s;display:inline-flex;align-items:center;gap:8px}
+.btn-primary:hover{background:var(--light-accent);transform:translateY(-2px);box-shadow:0 8px 30px rgba(46,134,171,0.3)}
+.btn-primary svg{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+
+/* FOOTER */
+footer{background:var(--navy);padding:40px 40px 28px;border-top:1px solid rgba(255,255,255,0.06)}
+.footer-inner{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px}
+.footer-name{font-family:Sora,'Plus Jakarta Sans',sans-serif;font-size:15px;font-weight:700;color:var(--white);letter-spacing:2px}
+.footer-sub{font-family:Sora,'Plus Jakarta Sans',sans-serif;font-size:8px;color:rgba(255,255,255,0.35);letter-spacing:3.5px;text-transform:uppercase;font-weight:400}
+.footer-copy{font-size:13px;color:rgba(255,255,255,0.3)}
+.footer-links{display:flex;gap:24px;flex-wrap:wrap}
+.footer-links a{color:rgba(255,255,255,0.4);text-decoration:none;font-size:13px;transition:color .2s}
+.footer-links a:hover{color:var(--white)}
+
+@media(max-width:900px){
+  .nav-links{display:none}
+  .menu-toggle{display:block}
+  .page-hero{padding:110px 24px 48px}
+  .content{padding:48px 24px}
+  .license-grid{grid-template-columns:1fr}
+  .cta{padding:48px 24px}
+  footer{padding:28px 24px}
+  .footer-inner{flex-direction:column;align-items:flex-start;gap:16px}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="https://stillings.tech/" class="logo" aria-label="Stillings Technology Group">
+      <svg height="36" viewBox="0 0 260 40" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:block;overflow:visible">
+        <rect x="0"  y="29" width="8" height="11" rx="2" fill="#48B8D0"/>
+        <rect x="11" y="23" width="8" height="17" rx="2" fill="#3AA3BE"/>
+        <rect x="22" y="16" width="8" height="24" rx="2" fill="#2E86AB"/>
+        <rect x="33" y="8"  width="8" height="32" rx="2" fill="#246089"/>
+        <rect x="44" y="1"  width="8" height="39" rx="2" fill="#1B3A5C"/>
+        <text x="60" y="26" font-family="Sora,'Plus Jakarta Sans',sans-serif" font-weight="700" font-size="22" letter-spacing="2" fill="white" textLength="152" lengthAdjust="spacing">STILLINGS</text>
+        <text x="60" y="38" font-family="Sora,'Plus Jakarta Sans',sans-serif" font-weight="400" font-size="9.2" fill="#48B8D0" textLength="152" lengthAdjust="spacing">TECHNOLOGY GROUP</text>
+      </svg>
+    </a>
+    <div class="nav-links">
+      <a href="https://stillings.tech/#services">Services</a>
+      <a href="https://stillings.tech/about">About</a>
+      <a href="https://stillings.tech/expertise">Tech Stack</a>
+      <a href="https://stillings.tech/service-area">Service Area</a>
+      <a href="https://stillings.tech/consultation" class="nav-cta">Free Consultation</a>
+    </div>
+    <button class="menu-toggle" aria-label="Menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" id="mobileClose" aria-label="Close menu">
+    <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </button>
+  <a href="https://stillings.tech/#services" class="mobile-nav-link">Services</a>
+  <a href="https://stillings.tech/about" class="mobile-nav-link">About</a>
+  <a href="https://stillings.tech/expertise" class="mobile-nav-link">Tech Stack</a>
+  <a href="https://stillings.tech/service-area" class="mobile-nav-link">Service Area</a>
+  <a href="https://stillings.tech/consultation" class="nav-cta mobile-nav-link">Free Consultation</a>
+</div>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="page-hero-grid"></div>
+  <div class="page-hero-inner">
+    <div class="hero-badge"><div class="dot"></div><span>AI at Work</span></div>
+    <h1>Your team is already using AI. <em>Make sure it's not leaking your data.</em></h1>
+    <p>A practical guide to privacy settings, free vs. paid accounts, and why team-based licensing matters as your business grows.</p>
+  </div>
+</section>
+
+<!-- CONTENT -->
+<div class="content">
+
+  <div class="content-block">
+    <span class="section-label">Free vs. Paid</span>
+    <h2 class="section-title">The free tier is often the riskiest one.</h2>
+    <p class="section-desc">This surprises people: on most consumer AI tools, the <strong>free and personal-paid plans</strong> are the ones most likely to use your conversations for training — not the free plan being "safer" because you're not paying. Business and enterprise tiers almost universally exclude your data from training by default. Here's how the major tools currently compare.</p>
+
+    <div class="table-wrap">
+      <table class="compare-table">
+        <tr>
+          <th>Tool</th>
+          <th>Personal / Free Plan</th>
+          <th>Business Plan</th>
+        </tr>
+        <tr>
+          <td>ChatGPT</td>
+          <td><span class="tag-bad">Trains by default</span><br>Must manually opt out in Data Controls</td>
+          <td><span class="tag-good">Excluded by default</span><br>Business, Enterprise, Edu, and API</td>
+        </tr>
+        <tr>
+          <td>Claude</td>
+          <td><span class="tag-bad">Trains by default</span><br>Free, Pro, Max — opt out in Privacy settings</td>
+          <td><span class="tag-good">Excluded by default</span><br>Claude for Work, API, Bedrock, Vertex</td>
+        </tr>
+        <tr>
+          <td>Gemini</td>
+          <td><span class="tag-bad">Broader data use</span><br>Can merge with wider Google activity</td>
+          <td><span class="tag-good">Excluded by default</span><br>Gemini for Google Workspace — stays in your domain</td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="callout">
+      <p><strong>The takeaway:</strong> if anyone on your team is using a personal ChatGPT, Claude, or Gemini account for work — even just to draft an email or summarize a document — there's a real chance that content is being used to train the next model. That includes anything pasted in: client names, financial figures, contract language, HR issues.</p>
+    </div>
+  </div>
+
+  <div class="content-block">
+    <span class="section-label">Turning It Off</span>
+    <h2 class="section-title">If you're on a personal plan, do this today.</h2>
+    <p class="section-desc">These links go straight to each provider's official instructions — settings and menu names shift over time, so these will always be more current than a screenshot.</p>
+
+    <div class="resource-grid">
+      <a href="https://help.openai.com/en/articles/7730893-data-controls-faq" target="_blank" rel="noopener" class="resource-card">
+        <div class="resource-text">
+          <h4>ChatGPT — Data Controls FAQ</h4>
+          <span>Settings → Data Controls → turn off "Improve the model for everyone"</span>
+        </div>
+        <svg class="resource-arrow" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+      <a href="https://privacy.anthropic.com/en/articles/12109829-how-do-i-change-my-model-improvement-privacy-settings" target="_blank" rel="noopener" class="resource-card">
+        <div class="resource-text">
+          <h4>Claude — Model Improvement Privacy Settings</h4>
+          <span>Settings → Privacy → turn off "Help improve Claude"</span>
+        </div>
+        <svg class="resource-arrow" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+    </div>
+  </div>
+
+  <div class="content-block">
+    <span class="section-label">Team Licensing</span>
+    <h2 class="section-title">Why business plans are worth it for growing teams.</h2>
+    <p class="section-desc">Beyond the training question, business-tier plans give you controls that matter as soon as more than one or two people are using AI at work.</p>
+
+    <div class="license-grid">
+      <div class="license-card">
+        <h4>Personal / Individual Plans</h4>
+        <ul>
+          <li>No visibility into what employees are pasting into AI tools</li>
+          <li>No central billing or user management</li>
+          <li>Data may be used for training by default</li>
+          <li>Access doesn't get revoked automatically when someone leaves</li>
+        </ul>
+      </div>
+      <div class="license-card recommended">
+        <div class="license-badge">Recommended for teams</div>
+        <h4>Team / Business Plans</h4>
+        <ul>
+          <li>No training on your data, by default</li>
+          <li>Centralized admin console — add, remove, and manage users</li>
+          <li>SSO support (varies by provider and tier)</li>
+          <li>One invoice, one place to manage spend</li>
+          <li>Access is removed the moment someone offboards</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="callout">
+      <p>Anthropic's Claude Team plan starts around <strong>$25/user/month</strong> — often cheaper than the personal Pro tier once you account for the privacy and admin controls you gain. Most providers price similarly. For a business handling client data, the math almost always favors the team plan.</p>
+    </div>
+  </div>
+
+</div>
+
+<!-- CTA -->
+<section class="cta">
+  <div class="cta-inner">
+    <h2>Not sure what your team is actually using?</h2>
+    <p>We'll help you assess your current AI usage and build a practical, right-sized adoption strategy.</p>
+    <a href="https://stillings.tech/consultation" class="btn-primary">
+      Schedule a Free Consultation
+      <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+    </a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div style="display:flex;align-items:center;gap:20px;flex-wrap:wrap">
+      <a href="https://stillings.tech/" aria-label="Stillings Technology Group" style="text-decoration:none">
+        <svg height="36" viewBox="0 0 260 40" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:block;overflow:visible">
+          <rect x="0"  y="29" width="8" height="11" rx="2" fill="#48B8D0"/>
+          <rect x="11" y="23" width="8" height="17" rx="2" fill="#3AA3BE"/>
+          <rect x="22" y="16" width="8" height="24" rx="2" fill="#2E86AB"/>
+          <rect x="33" y="8"  width="8" height="32" rx="2" fill="#246089"/>
+          <rect x="44" y="1"  width="8" height="39" rx="2" fill="#1B3A5C"/>
+          <text x="60" y="26" font-family="Sora,'Plus Jakarta Sans',sans-serif" font-weight="700" font-size="22" letter-spacing="2" fill="white" textLength="152" lengthAdjust="spacing">STILLINGS</text>
+          <text x="60" y="38" font-family="Sora,'Plus Jakarta Sans',sans-serif" font-weight="400" font-size="9.2" fill="#48B8D0" textLength="152" lengthAdjust="spacing">TECHNOLOGY GROUP</text>
+        </svg>
+      </a>
+      <a href="https://carlsbad.org" target="_blank" rel="noopener" aria-label="Proud Member, Carlsbad Chamber of Commerce" style="display:flex;align-items:center">
+        <img src="carlsbad-chamber-badge.png" alt="Proud Member, Carlsbad Chamber of Commerce 2026" height="56" style="display:block;height:56px;width:auto">
+      </a>
+    </div>
+    <div class="footer-links">
+      <a href="https://stillings.tech/#services">Services</a>
+      <a href="https://stillings.tech/about">About</a>
+      <a href="https://stillings.tech/expertise">Tech Stack</a>
+      <a href="https://stillings.tech/service-area">Service Area</a>
+      <a href="https://stillings.tech/consultation">Consultation</a>
+    </div>
+    <div style="font-size:13px;color:rgba(255,255,255,0.35);display:flex;flex-direction:column;gap:4px;text-align:right">
+      <a href="mailto:hello@stillings.tech" style="color:rgba(255,255,255,0.35);text-decoration:none">hello@stillings.tech</a>
+      <a href="tel:+17604926361" style="color:rgba(255,255,255,0.35);text-decoration:none">(760) 492-6361</a>
+      <a href="https://g.page/r/Cb9NDQ460Wx9EBM/review" target="_blank" rel="noopener" style="color:rgba(255,255,255,0.35);text-decoration:none">Leave a Google review</a>
+    </div>
+    <div class="footer-copy">&copy; 2026 Stillings Technology Group. All rights reserved.</div>
+  </div>
+</footer>
+
+<script>
+const nav=document.getElementById('navbar');
+const menuToggle=document.querySelector('.menu-toggle');
+const mobileMenu=document.getElementById('mobileMenu');
+const mobileClose=document.getElementById('mobileClose');
+window.addEventListener('scroll',()=>{
+  if(window.scrollY>80)nav.classList.add('scrolled');
+  else nav.classList.remove('scrolled');
+},{passive:true});
+menuToggle.addEventListener('click',()=>{mobileMenu.classList.add('open');document.body.style.overflow='hidden'});
+mobileClose.addEventListener('click',()=>{mobileMenu.classList.remove('open');document.body.style.overflow=''});
+document.querySelectorAll('.mobile-nav-link').forEach(a=>{
+  a.addEventListener('click',()=>{mobileMenu.classList.remove('open');document.body.style.overflow=''});
+});
+</script>
+</body>
+</html>

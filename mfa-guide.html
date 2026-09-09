@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MFA & Passkeys: A Practical Guide | Stillings Technology Group</title>
+<meta name="description" content="A plain-English guide to multi-factor authentication and passkeys — what to prioritize, how to roll it out, and where to find official setup instructions for Google Workspace, Microsoft 365, and password managers.">
+<link rel="canonical" href="https://stillings.tech/mfa-guide">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://stillings.tech/mfa-guide#article",
+      "headline": "MFA & Passkeys: A Practical Guide for Small Businesses",
+      "description": "What to prioritize when rolling out multi-factor authentication and passkeys, with links to official setup guides.",
+      "author": { "@id": "https://stillings.tech/#alex" },
+      "publisher": { "@id": "https://stillings.tech/#business" },
+      "datePublished": "2026-09-08",
+      "dateModified": "2026-09-08"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://stillings.tech/mfa-guide#webpage",
+      "url": "https://stillings.tech/mfa-guide",
+      "name": "MFA & Passkeys: A Practical Guide | Stillings Technology Group",
+      "isPartOf": { "@id": "https://stillings.tech/#business" },
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://stillings.tech/" },
+          { "@type": "ListItem", "position": 2, "name": "MFA & Passkeys Guide", "item": "https://stillings.tech/mfa-guide" }
+        ]
+      }
+    }
+  ]
+}
+</script>
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://stillings.tech/mfa-guide">
+<meta property="og:title" content="MFA & Passkeys: A Practical Guide | Stillings Technology Group">
+<meta property="og:description" content="What to prioritize when rolling out multi-factor authentication and passkeys — plain English, no jargon.">
+<meta property="og:image" content="https://stillings.tech/og-image.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;700&family=DM+Serif+Display&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{overflow-x:hidden;max-width:100%;touch-action:pan-y;scroll-behavior:smooth}
+:root{
+  --navy:#0D2137;--primary:#1B3A5C;--accent:#2E86AB;--light-accent:#48B8D0;
+  --bg-light:#E8F1F8;--text:#2a2a2a;--text-light:#6b7280;--white:#ffffff;
+  --serif:'DM Serif Display',Georgia,serif;--sans:'Plus Jakarta Sans','Segoe UI',sans-serif;
+  --warm:#f0f7fb;--good:#1a7f4f;--good-bg:#e7f6ee;--warn:#b45309;--warn-bg:#fef3e2;--bad:#b3261e;--bad-bg:#fceceb;
+}
+body{font-family:var(--sans);color:var(--text);background:var(--white);overflow-x:hidden;max-width:100%;position:relative}
+
+/* NAV */
+nav{position:fixed;top:0;width:100%;z-index:100;padding:18px 0;background:rgba(13,33,55,0.98);backdrop-filter:blur(12px);box-shadow:0 2px 20px rgba(0,0,0,0.12)}
+nav.scrolled{padding:12px 0}
+.nav-inner{max-width:1200px;margin:0 auto;padding:0 40px;display:flex;align-items:center;justify-content:space-between}
+.logo{display:flex;align-items:center;text-decoration:none}
+.logo svg{display:block}
+.nav-links{display:flex;gap:32px;align-items:center}
+.nav-links a{color:rgba(255,255,255,0.8);text-decoration:none;font-size:14px;font-weight:500;letter-spacing:.5px;transition:color .2s}
+.nav-links a:hover{color:var(--white)}
+.nav-cta{background:var(--accent)!important;color:var(--white)!important;padding:10px 24px;border-radius:6px;font-weight:600;transition:all .2s!important}
+.nav-cta:hover{background:var(--light-accent)!important;transform:translateY(-1px)}
+.menu-toggle{display:none;background:none;border:none;cursor:pointer;padding:8px}
+.menu-toggle svg{stroke:white;width:28px;height:28px}
+.mobile-menu{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(13,33,55,0.98);z-index:200;flex-direction:column;align-items:center;justify-content:center;gap:32px}
+.mobile-menu.open{display:flex}
+.mobile-menu a{color:var(--white);text-decoration:none;font-size:20px;font-weight:500;letter-spacing:1px;transition:color .2s}
+.mobile-menu a:hover{color:var(--light-accent)}
+.mobile-menu .nav-cta{background:var(--accent);padding:14px 36px;border-radius:8px;font-weight:600;font-size:18px}
+.mobile-close{position:absolute;top:24px;right:24px;background:none;border:none;cursor:pointer;padding:8px}
+.mobile-close svg{stroke:white;width:32px;height:32px}
+
+/* PAGE HERO */
+.page-hero{background:linear-gradient(135deg,var(--navy) 0%,var(--primary) 55%,#1a4a6e 100%);padding:130px 40px 64px;position:relative;overflow:hidden}
+.page-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 75% 30%,rgba(46,134,171,0.15) 0%,transparent 60%),radial-gradient(ellipse at 15% 80%,rgba(72,184,208,0.08) 0%,transparent 50%);pointer-events:none}
+.page-hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.03) 1px,transparent 1px);background-size:60px 60px;pointer-events:none}
+.page-hero-inner{max-width:760px;margin:0 auto;position:relative;z-index:2;text-align:center}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(46,134,171,0.15);border:1px solid rgba(46,134,171,0.3);padding:8px 18px;border-radius:100px;margin-bottom:22px}
+.hero-badge span{font-size:12px;color:var(--light-accent);letter-spacing:2px;text-transform:uppercase;font-weight:600}
+.hero-badge .dot{width:6px;height:6px;background:var(--light-accent);border-radius:50%;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+.page-hero h1{font-family:var(--serif);font-size:clamp(28px,4vw,44px);color:var(--white);line-height:1.2;margin-bottom:16px}
+.page-hero h1 em{font-style:normal;color:var(--light-accent)}
+.page-hero p{font-size:16px;color:rgba(255,255,255,0.7);max-width:560px;line-height:1.7;margin:0 auto}
+
+/* CONTENT */
+.content{max-width:800px;margin:0 auto;padding:64px 40px}
+.section-label{display:inline-block;font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--accent);font-weight:700;margin-bottom:12px}
+.section-title{font-family:var(--serif);font-size:clamp(24px,3vw,30px);color:var(--primary);line-height:1.3;margin-bottom:16px}
+.section-desc{font-size:16px;color:var(--text-light);line-height:1.8;margin-bottom:8px}
+.content-block{margin-bottom:56px}
+
+/* HIERARCHY TABLE */
+.tier-list{display:flex;flex-direction:column;gap:14px;margin-top:28px}
+.tier-card{display:flex;gap:18px;padding:22px 24px;border-radius:14px;border:1.5px solid #e5e7eb;align-items:flex-start}
+.tier-card.best{border-color:var(--good);background:var(--good-bg)}
+.tier-card.good{border-color:var(--warn);background:var(--warn-bg)}
+.tier-card.last{border-color:var(--bad);background:var(--bad-bg)}
+.tier-rank{font-family:var(--serif);font-size:28px;min-width:44px;line-height:1}
+.tier-card.best .tier-rank{color:var(--good)}
+.tier-card.good .tier-rank{color:var(--warn)}
+.tier-card.last .tier-rank{color:var(--bad)}
+.tier-content h4{font-size:16px;font-weight:700;color:var(--primary);margin-bottom:4px}
+.tier-content p{font-size:14px;color:var(--text-light);line-height:1.65}
+
+/* RESOURCE CARDS */
+.resource-grid{display:flex;flex-direction:column;gap:12px;margin-top:24px}
+.resource-card{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 22px;border:1px solid #e5e7eb;border-radius:12px;text-decoration:none;transition:all .2s}
+.resource-card:hover{border-color:var(--accent);background:var(--bg-light)}
+.resource-text h4{font-size:15px;font-weight:700;color:var(--primary);margin-bottom:2px}
+.resource-text span{font-size:13px;color:var(--text-light)}
+.resource-arrow{width:18px;height:18px;stroke:var(--accent);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}
+
+/* ROLLOUT STEPS */
+.rollout-steps{counter-reset:step;display:flex;flex-direction:column;gap:0;margin-top:24px}
+.rollout-step{display:flex;gap:18px;padding:20px 0;border-bottom:1px solid #e5e7eb}
+.rollout-step:last-child{border-bottom:none}
+.rollout-num{counter-increment:step;font-family:var(--serif);font-size:22px;color:var(--accent);min-width:36px}
+.rollout-num::before{content:counter(step)}
+.rollout-text h4{font-size:15px;font-weight:700;color:var(--primary);margin-bottom:4px}
+.rollout-text p{font-size:14px;color:var(--text-light);line-height:1.65}
+
+/* CALLOUT */
+.callout{background:var(--bg-light);border-left:3px solid var(--accent);border-radius:0 10px 10px 0;padding:20px 24px;margin:28px 0}
+.callout p{font-size:14px;color:var(--primary);line-height:1.7}
+.callout strong{color:var(--primary)}
+
+/* CTA */
+.cta{background:linear-gradient(135deg,var(--navy),var(--primary));position:relative;overflow:hidden;padding:64px 40px}
+.cta::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 30% 50%,rgba(72,184,208,0.1),transparent 60%);pointer-events:none}
+.cta-inner{text-align:center;position:relative;z-index:1;max-width:600px;margin:0 auto}
+.cta h2{font-family:var(--serif);font-size:clamp(24px,3.2vw,34px);color:var(--white);margin-bottom:14px}
+.cta p{font-size:15px;color:rgba(255,255,255,0.7);margin-bottom:28px;line-height:1.7}
+.btn-primary{background:var(--accent);color:var(--white);padding:16px 36px;border-radius:8px;text-decoration:none;font-weight:600;font-size:16px;transition:all .3s;display:inline-flex;align-items:center;gap:8px}
+.btn-primary:hover{background:var(--light-accent);transform:translateY(-2px);box-shadow:0 8px 30px rgba(46,134,171,0.3)}
+.btn-primary svg{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+
+/* FOOTER */
+footer{background:var(--navy);padding:40px 40px 28px;border-top:1px solid rgba(255,255,255,0.06)}
+.footer-inner{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px}
+.footer-name{font-family:Sora,'Plus Jakarta Sans',sans-serif;font-size:15px;font-weight:700;color:var(--white);letter-spacing:2px}
+.footer-sub{font-family:Sora,'Plus Jakarta Sans',sans-serif;font-size:8px;color:rgba(255,255,255,0.35);letter-spacing:3.5px;text-transform:uppercase;font-weight:400}
+.footer-copy{font-size:13px;color:rgba(255,255,255,0.3)}
+.footer-links{display:flex;gap:24px;flex-wrap:wrap}
+.footer-links a{color:rgba(255,255,255,0.4);text-decoration:none;font-size:13px;transition:color .2s}
+.footer-links a:hover{color:var(--white)}
+
+@media(max-width:900px){
+  .nav-links{display:none}
+  .menu-toggle{display:block}
+  .page-hero{padding:110px 24px 48px}
+  .content{padding:48px 24px}
+  .tier-card{flex-direction:column;gap:8px}
+  .resource-card{flex-direction:row}
+  .cta{padding:48px 24px}
+  footer{padding:28px 24px}
+  .footer-inner{flex-direction:column;align-items:flex-start;gap:16px}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="https://stillings.tech/" class="logo" aria-label="Stillings Technology Group">
+      <svg height="36" viewBox="0 0 260 40" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:block;overflow:visible">
+        <rect x="0"  y="29" width="8" height="11" rx="2" fill="#48B8D0"/>
+        <rect x="11" y="23" width="8" height="17" rx="2" fill="#3AA3BE"/>
+        <rect x="22" y="16" width="8" height="24" rx="2" fill="#2E86AB"/>
+        <rect x="33" y="8"  width="8" height="32" rx="2" fill="#246089"/>
+        <rect x="44" y="1"  width="8" height="39" rx="2" fill="#1B3A5C"/>
+        <text x="60" y="26" font-family="Sora,'Plus Jakarta Sans',sans-serif" font-weight="700" font-size="22" letter-spacing="2" fill="white" textLength="152" lengthAdjust="spacing">STILLINGS</text>
+        <text x="60" y="38" font-family="Sora,'Plus Jakarta Sans',sans-serif" font-weight="400" font-size="9.2" fill="#48B8D0" textLength="152" lengthAdjust="spacing">TECHNOLOGY GROUP</text>
+      </svg>
+    </a>
+    <div class="nav-links">
+      <a href="https://stillings.tech/#services">Services</a>
+      <a href="https://stillings.tech/about">About</a>
+      <a href="https://stillings.tech/expertise">Tech Stack</a>
+      <a href="https://stillings.tech/service-area">Service Area</a>
+      <a href="https://stillings.tech/consultation" class="nav-cta">Free Consultation</a>
+    </div>
+    <button class="menu-toggle" aria-label="Menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" id="mobileClose" aria-label="Close menu">
+    <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </button>
+  <a href="https://stillings.tech/#services" class="mobile-nav-link">Services</a>
+  <a href="https://stillings.tech/about" class="mobile-nav-link">About</a>
+  <a href="https://stillings.tech/expertise" class="mobile-nav-link">Tech Stack</a>
+  <a href="https://stillings.tech/service-area" class="mobile-nav-link">Service Area</a>
+  <a href="https://stillings.tech/consultation" class="nav-cta mobile-nav-link">Free Consultation</a>
+</div>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="page-hero-grid"></div>
+  <div class="page-hero-inner">
+    <div class="hero-badge"><div class="dot"></div><span>Security Basics</span></div>
+    <h1>Passwords fail. <em>Here's what actually works.</em></h1>
+    <p>A plain-English guide to multi-factor authentication and passkeys — what to prioritize first, and exactly where to go to set it up.</p>
+  </div>
+</section>
+
+<!-- CONTENT -->
+<div class="content">
+
+  <div class="content-block">
+    <span class="section-label">The Hierarchy</span>
+    <h2 class="section-title">Not all MFA is equal.</h2>
+    <p class="section-desc">"We have MFA" isn't a yes/no question — it's a spectrum. Here's how the common methods stack up, best to worst.</p>
+
+    <div class="tier-list">
+      <div class="tier-card best">
+        <div class="tier-rank">01</div>
+        <div class="tier-content">
+          <h4>Passkeys — the best option available</h4>
+          <p>Built on your device's fingerprint, face scan, or PIN. There's no code to steal, no shared secret to phish — the login is tied to the physical device. NIST and the FIDO Alliance both classify this as "phishing-resistant," a tier above everything else on this list.</p>
+        </div>
+      </div>
+      <div class="tier-card good">
+        <div class="tier-rank">02</div>
+        <div class="tier-content">
+          <h4>Authenticator app codes — good, and widely supported</h4>
+          <p>Apps like Google Authenticator or Microsoft Authenticator generate a rotating code. Better than SMS, but a determined attacker can still trick someone into typing the code into a fake login page in real time.</p>
+        </div>
+      </div>
+      <div class="tier-card last">
+        <div class="tier-rank">03</div>
+        <div class="tier-content">
+          <h4>SMS text codes — better than nothing, but the weakest option</h4>
+          <p>Vulnerable to SIM-swap attacks and interception. Still far better than a password alone, but if it's your only MFA option, it should be a stepping stone, not the destination.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="callout">
+      <p><strong>The practical takeaway:</strong> use passkeys wherever a service supports them well, and keep an authenticator app as your fallback. Reserve SMS for services that don't offer anything better yet.</p>
+    </div>
+  </div>
+
+  <div class="content-block">
+    <span class="section-label">Where To Set It Up</span>
+    <h2 class="section-title">Official setup guides, by platform.</h2>
+    <p class="section-desc">These go directly to the source — Google, Microsoft, and leading password managers keep these updated as their own products change, which is more reliable than any third-party walkthrough (including this one).</p>
+
+    <div class="resource-grid">
+      <a href="https://support.google.com/a/answer/175197" target="_blank" rel="noopener" class="resource-card">
+        <div class="resource-text">
+          <h4>Google Workspace — 2-Step Verification</h4>
+          <span>Official admin guide for enabling passkeys and MFA org-wide</span>
+        </div>
+        <svg class="resource-arrow" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+      <a href="https://learn.microsoft.com/en-us/entra/identity/authentication/how-to-authentication-passkeys-fido2" target="_blank" rel="noopener" class="resource-card">
+        <div class="resource-text">
+          <h4>Microsoft Entra ID — Enable Passkeys (FIDO2)</h4>
+          <span>Official Microsoft Learn guide for Microsoft 365 / Entra ID admins</span>
+        </div>
+        <svg class="resource-arrow" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+      <a href="https://bitwarden.com/help/login-with-passkey/" target="_blank" rel="noopener" class="resource-card">
+        <div class="resource-text">
+          <h4>Bitwarden — Passkey Setup</h4>
+          <span>For teams using a password manager as their passkey vault</span>
+        </div>
+        <svg class="resource-arrow" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+      <a href="https://csrc.nist.gov/pubs/sp/800/63/b/upd2/final" target="_blank" rel="noopener" class="resource-card">
+        <div class="resource-text">
+          <h4>NIST SP 800-63B</h4>
+          <span>The federal digital identity standard that defines "phishing-resistant" MFA</span>
+        </div>
+        <svg class="resource-arrow" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+    </div>
+  </div>
+
+  <div class="content-block">
+    <span class="section-label">Rollout Order</span>
+    <h2 class="section-title">How we recommend rolling this out.</h2>
+    <p class="section-desc">Don't try to flip everything on at once — a staged rollout avoids lockouts and confused employees.</p>
+
+    <div class="rollout-steps">
+      <div class="rollout-step">
+        <div class="rollout-num"></div>
+        <div class="rollout-text">
+          <h4>Email and financial accounts first</h4>
+          <p>These are the accounts attackers target hardest, and the ones with the most damage if compromised. Start here.</p>
+        </div>
+      </div>
+      <div class="rollout-step">
+        <div class="rollout-num"></div>
+        <div class="rollout-text">
+          <h4>Admin and privileged accounts next</h4>
+          <p>Anyone with elevated access — IT admins, finance approvers, executives — should be prioritized right after email.</p>
+        </div>
+      </div>
+      <div class="rollout-step">
+        <div class="rollout-num"></div>
+        <div class="rollout-text">
+          <h4>Critical business SaaS tools</h4>
+          <p>CRM, accounting software, project management — anywhere sensitive company or customer data lives.</p>
+        </div>
+      </div>
+      <div class="rollout-step">
+        <div class="rollout-num"></div>
+        <div class="rollout-text">
+          <h4>Everything else, company-wide</h4>
+          <p>Once the high-value accounts are locked down, extend the same standard to every account and every employee.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- CTA -->
+<section class="cta">
+  <div class="cta-inner">
+    <h2>Not sure where your business actually stands?</h2>
+    <p>We'll walk through your current setup and help you prioritize — no jargon, no pressure.</p>
+    <a href="https://stillings.tech/consultation" class="btn-primary">
+      Schedule a Free Consultation
+      <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+    </a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div style="display:flex;align-items:center;gap:20px;flex-wrap:wrap">
+      <a href="https://stillings.tech/" aria-label="Stillings Technology Group" style="text-decoration:none">
+        <svg height="36" viewBox="0 0 260 40" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:block;overflow:visible">
+          <rect x="0"  y="29" width="8" height="11" rx="2" fill="#48B8D0"/>
+          <rect x="11" y="23" width="8" height="17" rx="2" fill="#3AA3BE"/>
+          <rect x="22" y="16" width="8" height="24" rx="2" fill="#2E86AB"/>
+          <rect x="33" y="8"  width="8" height="32" rx="2" fill="#246089"/>
+          <rect x="44" y="1"  width="8" height="39" rx="2" fill="#1B3A5C"/>
+          <text x="60" y="26" font-family="Sora,'Plus Jakarta Sans',sans-serif" font-weight="700" font-size="22" letter-spacing="2" fill="white" textLength="152" lengthAdjust="spacing">STILLINGS</text>
+          <text x="60" y="38" font-family="Sora,'Plus Jakarta Sans',sans-serif" font-weight="400" font-size="9.2" fill="#48B8D0" textLength="152" lengthAdjust="spacing">TECHNOLOGY GROUP</text>
+        </svg>
+      </a>
+      <a href="https://carlsbad.org" target="_blank" rel="noopener" aria-label="Proud Member, Carlsbad Chamber of Commerce" style="display:flex;align-items:center">
+        <img src="carlsbad-chamber-badge.png" alt="Proud Member, Carlsbad Chamber of Commerce 2026" height="56" style="display:block;height:56px;width:auto">
+      </a>
+    </div>
+    <div class="footer-links">
+      <a href="https://stillings.tech/#services">Services</a>
+      <a href="https://stillings.tech/about">About</a>
+      <a href="https://stillings.tech/expertise">Tech Stack</a>
+      <a href="https://stillings.tech/service-area">Service Area</a>
+      <a href="https://stillings.tech/consultation">Consultation</a>
+    </div>
+    <div style="font-size:13px;color:rgba(255,255,255,0.35);display:flex;flex-direction:column;gap:4px;text-align:right">
+      <a href="mailto:hello@stillings.tech" style="color:rgba(255,255,255,0.35);text-decoration:none">hello@stillings.tech</a>
+      <a href="tel:+17604926361" style="color:rgba(255,255,255,0.35);text-decoration:none">(760) 492-6361</a>
+      <a href="https://g.page/r/Cb9NDQ460Wx9EBM/review" target="_blank" rel="noopener" style="color:rgba(255,255,255,0.35);text-decoration:none">Leave a Google review</a>
+    </div>
+    <div class="footer-copy">&copy; 2026 Stillings Technology Group. All rights reserved.</div>
+  </div>
+</footer>
+
+<script>
+const nav=document.getElementById('navbar');
+const menuToggle=document.querySelector('.menu-toggle');
+const mobileMenu=document.getElementById('mobileMenu');
+const mobileClose=document.getElementById('mobileClose');
+window.addEventListener('scroll',()=>{
+  if(window.scrollY>80)nav.classList.add('scrolled');
+  else nav.classList.remove('scrolled');
+},{passive:true});
+menuToggle.addEventListener('click',()=>{mobileMenu.classList.add('open');document.body.style.overflow='hidden'});
+mobileClose.addEventListener('click',()=>{mobileMenu.classList.remove('open');document.body.style.overflow=''});
+document.querySelectorAll('.mobile-nav-link').forEach(a=>{
+  a.addEventListener('click',()=>{mobileMenu.classList.remove('open');document.body.style.overflow=''});
+});
+</script>
+</body>
+</html>
