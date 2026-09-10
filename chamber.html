@@ -150,6 +150,19 @@ nav.scrolled{padding:12px 0}
 .context-card{background:var(--bg-light);border-radius:14px;padding:24px}
 .context-card h4{font-family:var(--serif);font-size:17px;color:var(--primary);margin-bottom:8px}
 .context-card p{font-size:13px;color:var(--text-light);line-height:1.6}
+.context-card-link{display:inline-flex;align-items:center;gap:5px;font-size:12px;font-weight:700;color:var(--accent);text-decoration:none;margin-top:10px}
+.context-card-link:hover{gap:8px}
+.context-card-link svg{width:12px;height:12px;stroke:currentColor;fill:none;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;transition:gap .2s}
+
+/* KEEP READING */
+.resources-section{padding:0 40px 64px}
+.resources-inner{max-width:800px;margin:0 auto}
+.resource-grid{display:flex;flex-direction:column;gap:12px;margin-top:24px}
+.resource-card{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 22px;border:1px solid #e5e7eb;border-radius:12px;text-decoration:none;transition:all .2s}
+.resource-card:hover{border-color:var(--accent);background:var(--bg-light)}
+.resource-text h4{font-size:15px;font-weight:700;color:var(--primary);margin-bottom:2px}
+.resource-text span{font-size:13px;color:var(--text-light)}
+.resource-arrow{width:18px;height:18px;stroke:var(--accent);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}
 
 /* === CTA === */
 .cta{background:linear-gradient(135deg,var(--navy),var(--primary));position:relative;overflow:hidden;padding:64px 40px}
@@ -178,6 +191,7 @@ footer{background:var(--navy);padding:40px 40px 28px;border-top:1px solid rgba(2
   .quiz-header{padding:24px 24px}
   .quiz-body{padding:24px 24px 32px}
   .context-section{padding:48px 24px}
+  .resources-section{padding:0 24px 48px}
   .context-grid{grid-template-columns:1fr}
   .cta{padding:48px 24px}
   footer{padding:28px 24px}
@@ -353,6 +367,7 @@ footer{background:var(--navy);padding:40px 40px 28px;border-top:1px solid rgba(2
       <div class="context-card">
         <h4>MFA</h4>
         <p>The single most requested control on cyber applications today. Missing MFA is a leading cause of claim disputes.</p>
+        <a href="https://stillings.tech/mfa-guide" class="context-card-link">Read the full guide <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
       </div>
       <div class="context-card">
         <h4>Backups</h4>
@@ -362,6 +377,30 @@ footer{background:var(--navy);padding:40px 40px 28px;border-top:1px solid rgba(2
         <h4>Training</h4>
         <p>Phishing-related incidents are common triggers for claims. Annual training is increasingly expected, not optional.</p>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- KEEP READING -->
+<section class="resources-section">
+  <div class="resources-inner">
+    <span class="section-label">Keep Reading</span>
+    <h2 class="section-title">Two more guides worth a look.</h2>
+    <div class="resource-grid">
+      <a href="https://stillings.tech/mfa-guide" class="resource-card">
+        <div class="resource-text">
+          <h4>MFA & Passkeys: A Practical Guide</h4>
+          <span>What to prioritize and where to set it up</span>
+        </div>
+        <svg class="resource-arrow" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+      <a href="https://stillings.tech/ai-guide" class="resource-card">
+        <div class="resource-text">
+          <h4>AI Usage Best Practices for Business</h4>
+          <span>Privacy settings, free vs. paid accounts, and team licensing</span>
+        </div>
+        <svg class="resource-arrow" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
     </div>
   </div>
 </section>
